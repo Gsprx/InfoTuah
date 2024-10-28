@@ -1,5 +1,85 @@
 @import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
+:root {
+  /* Colors */
+  --nav-background-color: #282a36;
+}
+
 * {
   font-family: "Arvo", serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Prevent Default */
+a {
+  text-decoration: none;
+  color: black;
+}
+
+ul {
+  list-style: none;
+  color: black;
+}
+
+body {
+  padding-top: 60px;
+}
+
+/*----------- HEADER / NAVBAR -----------*/
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+.navbar {
+  background-color: var(--nav-background-color);
+  height: 64px;
+  padding: 0 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar ul {
+  height: inherit;
+}
+
+.navbar li {
+  display: inline-block;
+  margin: 0 2px;
+  height: 100%;
+}
+
+.navbar li a {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 4px;
+  color: white;
+}
+
+.navbar li a:hover {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  color: var(--nav-background-color);
+  background-color: white;
+}
+
+.nav-image-wrapper {
+  width: fit-content;
+  height: fit-content;
+}
+
+.nav-image-wrapper a {
+  display: flex;
+  align-items: center;
+}
+
+.navbar img {
+  width: 56px;
+  height: 56px;
 }
