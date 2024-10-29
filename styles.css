@@ -16,12 +16,12 @@
 /* Prevent Default */
 a {
   text-decoration: none;
-  color: white;
+  color: rgb(81, 112, 156);
 }
 
-ul {
-  list-style: none;
-  color: white;
+a:hover {
+  text-decoration: none;
+  color: rgb(47, 62, 112);
 }
 
 body {
@@ -32,6 +32,50 @@ body {
 
 main {
   min-height: 100%;
+}
+
+strong {
+  color: rgb(113, 128, 144);
+}
+
+/*----------- BODY / MAIN -----------*/
+
+.hero-title h1 {
+  margin-top: 4%;
+  margin-left: 5%;
+  font-size: 400%;
+}
+
+.hero-title h2 {
+  margin-top: 1%;
+  margin-left: 10%;
+  font-size: 320%;
+}
+
+.hero-image-wrapper img {
+  width: 25%;
+  height: 25%;
+  margin-left: 70%;
+  margin-bottom: 4%;
+}
+.hero-buttons {
+  font-size: 350%;
+  margin-left: 20%;
+  margin-bottom: 15%;
+}
+
+.about-details {
+  margin-left: 10%;
+  margin-right: 10%;
+  font-size: 180%;
+  margin-bottom: 5%;
+  margin-top: 10%;
+}
+
+.about-image-wrapper img {
+  height: 30%;
+  width: 50%;
+  margin-left: 15%;
 }
 
 /*----------- HEADER / NAVBAR -----------*/
