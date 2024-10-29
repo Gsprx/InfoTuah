@@ -2,7 +2,7 @@
 
 :root {
   /* Colors */
-  --nav-background-color: #121417;
+  --very-dark-blue: #121417;
   --dark-blue: #1d2225;
 }
 
@@ -25,20 +25,25 @@ ul {
 }
 
 body {
-  padding-top: 70px;
+  padding-top: 70px; /*Since the height of the navbar is 70px and the header is fixed*/
+  height: 100vh;
   background-color: var(--dark-blue);
+}
+
+main {
+  min-height: 100%;
 }
 
 /*----------- HEADER / NAVBAR -----------*/
 header {
-  position: fixed;
+  position: fixed; /*Fixed header position*/
   top: 0;
   width: 100%;
-  z-index: 9999;
+  z-index: 9999; /*High z-index, always on top in the page*/
 }
 
 .navbar {
-  background-color: var(--nav-background-color);
+  background-color: var(--very-dark-blue);
   height: 70px;
   padding: 0 8px;
   display: flex;
@@ -64,11 +69,12 @@ header {
   color: white;
 }
 
+/* Change color and background color on link hover*/
 .navbar li a:hover {
   display: flex;
   align-items: center;
   height: 100%;
-  color: var(--nav-background-color);
+  color: var(--very-dark-blue);
   background-color: white;
 }
 
@@ -85,4 +91,77 @@ header {
 .navbar img {
   width: 56px;
   height: 56px;
+}
+
+/*----------- Footer -----------*/
+footer {
+  margin-top: 8px;
+  height: 240px;
+  background-color: var(--very-dark-blue);
+  padding: 16px;
+  padding-left: 24px;
+}
+
+.footer-contents {
+  max-width: 550px; /*Max width of footer base contents no more than 550 pixels*/
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+/*Footer contact us, privacy policy and terms of service links*/
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/*Contact us icons*/
+.footer-contact-us {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.footer-contact-us a {
+  display: block;
+  width: 28px; /*Set width same as icon's*/
+  height: 28px; /*Set height same as icon's*/
+
+  transition: transform 0.2s ease 0s; /*Transition settings*/
+}
+
+/*Link hovered transition*/
+.footer-contact-us a:hover {
+  transform: translateY(-4px); /*When link hovered move it up 4 pixels*/
+}
+
+.footer-contact-us a svg {
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(162deg)
+    brightness(101%) contrast(104%);
+}
+
+/*Privacy Policy and Terms of Service links*/
+.footer-privacy-terms a {
+  margin: 0 8px;
+}
+/*Underline on hover*/
+.footer-privacy-terms a:hover {
+  text-decoration: underline;
+}
+
+.footer-text {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.footer-text p {
+  font-size: small;
+}
+
+.footer-copyright {
+  font-size: small;
 }
