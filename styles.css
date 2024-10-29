@@ -91,13 +91,20 @@ strong {
   font-size: 350%;
   margin-left: 2%;
   margin-bottom: 5%;
+  color: rgb(80, 65, 121);
 }
 
 .course-header h2 {
   font-size: 300%;
   margin-left: 10%;
   margin-bottom: 1%;
-  color: rgb(100, 107, 180);
+  color: rgb(99, 106, 179);
+}
+
+.course-header h3 {
+  /* This tag is usually paired with course-description ol */
+  margin-bottom: 3%;
+  margin-left: 2%;
 }
 
 .course-image img {
@@ -112,6 +119,12 @@ strong {
   margin-right: 14%;
   font-size: 170%;
   margin-bottom: 2%;
+}
+
+.course-description ol {
+  font-size: 200%;
+  padding-left: 15%;
+  padding-bottom: 5%;
 }
 
 .course-link {
