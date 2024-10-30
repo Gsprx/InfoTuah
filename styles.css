@@ -279,6 +279,7 @@ strong {
 
 .content ol {
   margin-bottom: 10%;
+  list-style: lower-roman;
 }
 .content ol li h3 {
   font-size: 130%;
@@ -288,6 +289,10 @@ strong {
 
 .content code {
   background-color: rgb(0, 0, 0);
+}
+
+.content lecture-video-return-to-ut {
+  font-size: 2300%;
 }
 /*----------- HEADER / NAVBAR -----------*/
 header {
