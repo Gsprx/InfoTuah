@@ -84,8 +84,10 @@ strong {
 
 /*-------- CONTENT PAGES --------*/
 .return-link {
+  margin-top: 1%;
   margin-left: 1%;
   margin-bottom: 2%;
+  font-style: italic;
 }
 
 .course-header h1 {
@@ -218,6 +220,74 @@ strong {
 .lecture-rating {
   margin-bottom: 10%;
   font-style: italic;
+}
+
+.content {
+  font-size: 180%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.content-header h1 {
+  font-size: 190%;
+  color: rgb(99, 106, 179);
+  margin-bottom: 3%;
+}
+
+.content-header h2 {
+  font-size: 160%;
+  color: rgb(67, 72, 126);
+  margin-bottom: 3%;
+}
+
+.content-title {
+  font-size: 180%;
+  margin-bottom: 2%;
+}
+
+.content-creator {
+  margin-bottom: 2%;
+}
+
+.content-date {
+  margin-bottom: 2%;
+}
+
+.content-description {
+  margin-bottom: 2%;
+}
+
+.content-rating {
+  margin-bottom: 8%;
+}
+
+.content ul {
+  list-style-type: square;
+}
+
+.content ol li:nth-child(odd) {
+  background-color: var(--very-dark-blue);
+}
+
+.content ol li:nth-child(even) {
+  background-color: #19182c;
+}
+
+.content ol li {
+  margin-bottom: 3%;
+}
+
+.content ol {
+  margin-bottom: 10%;
+}
+.content ol li h3 {
+  font-size: 130%;
+  margin-bottom: 2%;
+  font-style: italic;
+}
+
+.content code {
+  background-color: rgb(0, 0, 0);
 }
 /*----------- HEADER / NAVBAR -----------*/
 header {
