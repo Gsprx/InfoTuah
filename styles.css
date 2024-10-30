@@ -194,19 +194,30 @@ header {
 /*----------- Footer -----------*/
 footer {
   margin-top: 8px;
-  height: 240px;
+  height: 156px;
   background-color: var(--very-dark-blue);
   padding: 16px;
   padding-left: 24px;
 }
 
 .footer-contents {
-  max-width: 550px; /*Max width of footer base contents no more than 550 pixels*/
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer-left {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: flex-start;
+}
+
+.footer-right {
+  max-width: 550px; /*Max width of footer base contents no more than 550 pixels*/
 }
 
 /*Footer contact us, privacy policy and terms of service links*/
@@ -263,67 +274,4 @@ footer {
 
 .footer-copyright {
   font-size: small;
-}
-
-/*----------- SUBCOURSE MAIN -----------*/
-
-/*Main Content*/
-.main-container {
-  margin-top: 12px;
-  padding: 0 24px;
-}
-
-/*Return Button*/
-.return-button {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  width: fit-content;
-  margin-bottom: 12px;
-}
-/*Return Button on hover*/
-.return-button:hover {
-  text-decoration: underline;
-}
-
-/*Main Header*/
-.main-container h1 {
-  margin-bottom: 24px;
-}
-
-.container {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-
-/*Content Subheader*/
-.container h2 {
-  margin-bottom: 12px;
-}
-
-/*Book*/
-
-/*Book Wrapper*/
-.book-card {
-  background-color: var(--dark-grey);
-  border: 2px solid var(--very-dark-blue);
-  border-radius: 12px;
-  padding: 8px;
-  min-width: 200px;
-}
-
-/*Book Image Wrapper*/
-.book-card-image-wrapper {
-  width: fit-content;
-  height: fit-content;
-}
-.book-card-image-wrapper a {
-  display: block;
-  height: 100%;
-}
-
-.book-card-image-wrapper img {
-  max-width: 100%;
-  max-height: 100%;
 }
