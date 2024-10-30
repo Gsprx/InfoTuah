@@ -37,135 +37,188 @@
     </header>
 
     <main>
-      <!-- Return Link -->
-      <a href="index.html">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          height="24px"
-          viewBox="0 -960 960 960"
-          width="24px"
-          fill="#5f6368"
-        >
-          <path
-            d="M280-200v-80h284q63 0 109.5-40T720-420q0-60-46.5-100T564-560H312l104 104-56 56-200-200 200-200 56 56-104 104h252q97 0 166.5 63T800-420q0 94-69.5 157T564-200H280Z"
-          />
-        </svg>
-        Return To HomePage
-      </a>
+      <div class="return-link">
+        <!-- Return Link -->
+        <a href="index.html">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24px"
+            viewBox="0 -960 960 960"
+            width="24px"
+            fill="#5f6368"
+          >
+            <path
+              d="M280-200v-80h284q63 0 109.5-40T720-420q0-60-46.5-100T564-560H312l104 104-56 56-200-200 200-200 56 56-104 104h252q97 0 166.5 63T800-420q0 94-69.5 157T564-200H280Z"
+            />
+          </svg>
+          Return To HomePage
+        </a>
+      </div>
 
-      <h1>InfoTuah Available Courses:</h1>
+      <div class="course-header">
+        <h1>InfoTuah Available Courses</h1>
+      </div>
 
       <ul>
-        <!-- Software Engineering part -->
-        <li>
-          <h2>Software Engineering</h2>
-          <!-- Software Engineering course description -->
-        </li>
-        <img src="public/courses/SE_Image.jpg" alt="SE_Image" />
-        <p>
-          The <strong>software engineering course</strong> provides a
-          comprehensive overview of the field, covering
-          <strong> principles and practices </strong> involved in the
-          <strong
-            >design, development, and maintenance of software systems</strong
-          >.
-        </p>
-        <p>
-          Key topics include <strong>requirements analysis</strong>,
-          <strong>system design</strong>, <strong>coding</strong>,
-          <strong>testing methodologies</strong>, and
-          <strong>deployment strategies</strong>.
-        </p>
-        <p>
-          The course emphasizes the importance of
-          <strong>best practices</strong> and
-          <strong>collaborative techniques</strong>, preparing students to adapt
-          to evolving technologies and tools.
-        </p>
-        <p>
-          By the end of the course, learners will understand how to create
-          <strong>efficient</strong>, <strong>reliable</strong>, and
-          <strong>user-friendly applications</strong>, equipping them with the
-          skills needed to excel in various industries.
-        </p>
-        <!-- Software Engineering course link -->
-        <p>
-          <em
-            >Check out the Software Engineering course
-            <strong><a href="se_course.html">here</a></strong></em
-          >.
-        </p>
-
-        <!-- Artificial Intelligence part -->
-        <li>
-          <h2>Artificial Intelligence</h2>
-          <img src="public/courses/AI_Image.jpg" alt="AI_Image" />
-          <!-- Artificial Intelligence course description -->
-        </li>
-        <p>
-          The <strong>artificial intelligence course</strong> is designed to
-          give you a solid introduction to the exciting world of AI through
-          <strong>engaging video lectures</strong> and
-          <strong>easy-to-follow written materials</strong>.
-        </p>
-        <p>
-          You’ll dive into essential topics like
-          <strong>machine learning</strong>,
-          <strong>natural language processing</strong>,
-          <strong>computer vision</strong>, and
-          <strong>neural networks</strong>.
-        </p>
-        <p>
-          The focus is on building your
-          <strong>understanding of the theory and concepts</strong>, so you’ll
-          be well-prepared for future studies or a career in this dynamic field.
-        </p>
-        <p>
-          By the end of the course, you’ll have a good grasp of
-          <strong>AI principles</strong> and be ready to explore more.
-        </p>
-        <!-- Artificial Intelligence course link -->
-        <p>
-          <em
-            >Check out the Artificial Intelligence course
-            <strong><a href="ai_course.html">here</a></strong></em
-          >.
-        </p>
-
+        <section class="course-description">
+          <!-- Software Engineering part -->
+          <li>
+            <div class="course-header">
+              <h2>Software Engineering</h2>
+            </div>
+            <!-- Software Engineering course description -->
+            <div class="course-image">
+              <img src="public/courses/SE_Image.jpg" alt="SE_Image" />
+            </div>
+            <div class="course-description-text">
+              <p>
+                The <strong>software engineering course</strong> provides a
+                comprehensive overview of the field, covering
+                <strong> principles and practices </strong> involved in the
+                <strong
+                  >design, development, and maintenance of software
+                  systems</strong
+                >.
+              </p>
+            </div>
+            <div class="course-description-text">
+              <p>
+                Key topics include <strong>requirements analysis</strong>,
+                <strong>system design</strong>, <strong>coding</strong>,
+                <strong>testing methodologies</strong>, and
+                <strong>deployment strategies</strong>.
+              </p>
+            </div>
+            <div class="course-description-text">
+              <p>
+                The course emphasizes the importance of
+                <strong>best practices</strong> and
+                <strong>collaborative techniques</strong>, preparing students to
+                adapt to evolving technologies and tools.
+              </p>
+            </div>
+            <div class="course-description-text">
+              <p>
+                By the end of the course, learners will understand how to create
+                <strong>efficient</strong>, <strong>reliable</strong>, and
+                <strong>user-friendly applications</strong>, equipping them with
+                the skills needed to excel in various industries.
+              </p>
+            </div>
+            <!-- Software Engineering course link -->
+            <div class="course-link">
+              <p>
+                <em
+                  >Check out the Software Engineering course
+                  <strong><a href="se_course.html">here</a></strong></em
+                >.
+              </p>
+            </div>
+          </li>
+        </section>
+        <section class="course-description">
+          <!-- Artificial Intelligence part -->
+          <li>
+            <div class="course-header">
+              <h2>Artificial Intelligence</h2>
+            </div>
+            <div class="course-image">
+              <img src="public/courses/AI_Image.jpg" alt="AI_Image" />
+            </div>
+            <!-- Artificial Intelligence course description -->
+            <div class="course-description-text">
+              <p>
+                The <strong>artificial intelligence course</strong> is designed
+                to give you a solid introduction to the exciting world of AI
+                through <strong>engaging video lectures</strong> and
+                <strong>easy-to-follow written materials</strong>.
+              </p>
+            </div>
+            <div class="course-description-text">
+              <p>
+                You’ll dive into essential topics like
+                <strong>machine learning</strong>,
+                <strong>natural language processing</strong>,
+                <strong>computer vision</strong>, and
+                <strong>neural networks</strong>.
+              </p>
+            </div>
+            <div class="course-description-text">
+              <p>
+                The focus is on building your
+                <strong>understanding of the theory and concepts</strong>, so
+                you’ll be well-prepared for future studies or a career in this
+                dynamic field.
+              </p>
+            </div>
+            <div class="course-description-text">
+              <p>
+                By the end of the course, you’ll have a good grasp of
+                <strong>AI principles</strong> and be ready to explore more.
+              </p>
+            </div>
+            <!-- Artificial Intelligence course link -->
+            <div class="course-link">
+              <p>
+                <em
+                  >Check out the Artificial Intelligence course
+                  <strong><a href="ai_course.html">here</a></strong></em
+                >.
+              </p>
+            </div>
+          </li>
+        </section>
         <!-- Databases part -->
-        <li>
-          <h2>Databases</h2>
-          <img src="public/courses/DB_Image.jpg" alt="DB_Image" />
-          <!-- Databases course description -->
-        </li>
-        <p>
-          The <strong>databases course</strong> offers a comprehensive
-          introduction to the essential concepts and techniques for managing
-          data effectively.
-        </p>
-        <p>
-          You’ll explore key topics such as <strong>database design</strong>,
-          <strong>SQL</strong>, <strong>data modeling</strong>, and
-          <strong>database management systems</strong>.
-        </p>
-        <p>
-          The course focuses on helping you understand how to
-          <strong>organize, retrieve, and manipulate</strong> data efficiently,
-          preparing you for future studies or a career in
-          <strong>data management</strong>.
-        </p>
-        <p>
-          By the end of the course, you’ll have a solid foundation in
-          <strong>database principles</strong> and be equipped to tackle
-          real-world data challenges.
-        </p>
-        <!-- Databases course link -->
-        <p>
-          <em
-            >Check out the Databases course
-            <strong><a href="db_course.html">here</a></strong></em
-          >.
-        </p>
+        <section class="course-description">
+          <li>
+            <div class="course-header">
+              <h2>Databases</h2>
+            </div>
+            <div class="course-image">
+              <img src="public/courses/DB_Image.jpg" alt="DB_Image" />
+            </div>
+            <!-- Databases course description -->
+            <div class="course-description-text">
+              <p>
+                The <strong>databases course</strong> offers a comprehensive
+                introduction to the essential concepts and techniques for
+                managing data effectively.
+              </p>
+            </div>
+            <div class="course-description-text">
+              <p>
+                You’ll explore key topics such as
+                <strong>database design</strong>, <strong>SQL</strong>,
+                <strong>data modeling</strong>, and
+                <strong>database management systems</strong>.
+              </p>
+            </div>
+            <div class="course-description-text">
+              <p>
+                The course focuses on helping you understand how to
+                <strong>organize, retrieve, and manipulate</strong> data
+                efficiently, preparing you for future studies or a career in
+                <strong>data management</strong>.
+              </p>
+            </div>
+            <div class="course-description-text">
+              <p>
+                By the end of the course, you’ll have a solid foundation in
+                <strong>database principles</strong> and be equipped to tackle
+                real-world data challenges.
+              </p>
+            </div>
+            <!-- Databases course link -->
+            <div class="course-link">
+              <p>
+                <em
+                  >Check out the Databases course
+                  <strong><a href="db_course.html">here</a></strong></em
+                >.
+              </p>
+            </div>
+          </li>
+        </section>
       </ul>
     </main>
 
