@@ -4,6 +4,7 @@
   /* Colors */
   --very-dark-blue: #121417;
   --dark-blue: #1d2225;
+  --dark-grey: #262b2e;
 }
 
 * {
@@ -71,9 +72,6 @@ header {
 
 /* Change color and background color on link hover*/
 .navbar li a:hover {
-  display: flex;
-  align-items: center;
-  height: 100%;
   color: var(--very-dark-blue);
   background-color: white;
 }
@@ -125,6 +123,12 @@ footer {
   gap: 8px;
 }
 
+/*Invert the color of the icons*/
+.footer-contact-us a svg {
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(162deg)
+    brightness(101%) contrast(104%);
+}
+
 .footer-contact-us a {
   display: block;
   width: 28px; /*Set width same as icon's*/
@@ -136,11 +140,6 @@ footer {
 /*Link hovered transition*/
 .footer-contact-us a:hover {
   transform: translateY(-4px); /*When link hovered move it up 4 pixels*/
-}
-
-.footer-contact-us a svg {
-  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(162deg)
-    brightness(101%) contrast(104%);
 }
 
 /*Privacy Policy and Terms of Service links*/
@@ -164,4 +163,67 @@ footer {
 
 .footer-copyright {
   font-size: small;
+}
+
+/*----------- SUBCOURSE MAIN -----------*/
+
+/*Main Content*/
+.main-container {
+  margin-top: 12px;
+  padding: 0 24px;
+}
+
+/*Return Button*/
+.return-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  margin-bottom: 12px;
+}
+/*Return Button on hover*/
+.return-button:hover {
+  text-decoration: underline;
+}
+
+/*Main Header*/
+.main-container h1 {
+  margin-bottom: 24px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/*Content Subheader*/
+.container h2 {
+  margin-bottom: 12px;
+}
+
+/*Book*/
+
+/*Book Wrapper*/
+.book-card {
+  background-color: var(--dark-grey);
+  border: 2px solid var(--very-dark-blue);
+  border-radius: 12px;
+  padding: 8px;
+  min-width: 200px;
+}
+
+/*Book Image Wrapper*/
+.book-card-image-wrapper {
+  width: fit-content;
+  height: fit-content;
+}
+.book-card-image-wrapper a {
+  display: block;
+  height: 100%;
+}
+
+.book-card-image-wrapper img {
+  max-width: 100%;
+  max-height: 100%;
 }
