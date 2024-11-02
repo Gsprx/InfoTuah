@@ -94,7 +94,7 @@ strong {
   font-size: 350%;
   margin-left: 2%;
   margin-bottom: 1%;
-  color: rgb(80, 65, 121);
+  color: rgb(130, 126, 139);
 }
 
 .course-header h2 {
@@ -102,7 +102,7 @@ strong {
   margin-left: 10%;
   margin-bottom: 3%;
   margin-top: 4%;
-  color: rgb(99, 106, 179);
+  color: rgb(93, 90, 100);
 }
 
 .course-header h3 {
@@ -230,18 +230,18 @@ strong {
 
 .content-header h1 {
   font-size: 190%;
-  color: rgb(99, 106, 179);
+  color: rgb(130, 126, 139);
   margin-bottom: 3%;
 }
 
 .content-header h2 {
   font-size: 160%;
-  color: rgb(67, 72, 126);
+  color: rgb(93, 90, 100);
   margin-bottom: 3%;
 }
 
 .content-title {
-  font-size: 180%;
+  font-size: 150%;
   margin-bottom: 2%;
 }
 
