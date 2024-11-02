@@ -387,6 +387,64 @@ header {
   height: 56px;
 }
 
+/* Navbar Links Dropdown*/
+.courses-dropdown {
+  display: block;
+  width: 14em;
+  background-color: var(--very-dark-blue);
+  position: fixed;
+  top: 4.4em;
+  right: 1em;
+}
+
+.courses-dropdown ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.courses-dropdown li {
+  height: 2.5em;
+  width: 100%;
+}
+
+.courses-dropdown li a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: inherit;
+  color: white;
+  padding: 0 12px;
+}
+
+.courses-dropdown li a svg {
+  fill: white;
+  transform: rotate(90deg);
+}
+
+.courses-dropdown li a:hover {
+  color: var(--very-dark-blue);
+  background-color: white;
+}
+
+.courses-dropdown li a:hover svg {
+  fill: var(--very-dark-blue);
+  transform: rotate(0);
+}
+
+.subcourses-dropdown {
+  display: none;
+  width: 14em;
+  background-color: var(--very-dark-blue);
+  position: fixed;
+  right: 15em;
+}
+
+.subcourses-dropdown li {
+  height: 3em;
+}
+
 /*----------- Footer -----------*/
 footer {
   margin-top: 8px;
