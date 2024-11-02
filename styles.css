@@ -93,7 +93,7 @@ strong {
 .course-header h1 {
   font-size: 350%;
   margin-left: 2%;
-  margin-bottom: 1%;
+  margin-bottom: 3%;
   color: rgb(130, 126, 139);
 }
 
@@ -139,12 +139,12 @@ strong {
 }
 
 .book-card-image-wrapper img {
-  width: 25%;
-  height: 50%;
+  width: 20%;
+  height: 45%;
   margin-left: 5%;
   margin-top: 0%;
   margin-bottom: 1%;
-  margin-right: 20%;
+  margin-right: 30%;
   float: right;
 }
 
@@ -170,13 +170,14 @@ strong {
   list-style: square;
   color: black;
 }
+
 .book-authors {
   margin-bottom: 1%;
   font-weight: bolder;
 }
 .book-publishers {
   margin-top: 2%;
-  margin-bottom: 1%;
+  margin-bottom: 2%;
   font-weight: bolder;
 }
 .book-description {
@@ -189,7 +190,7 @@ strong {
 }
 
 .book-rating {
-  margin-bottom: 3%;
+  margin-bottom: 2%;
   font-style: italic;
 }
 
@@ -217,7 +218,7 @@ strong {
 }
 
 .lecture-contributors {
-  margin-bottom: 1%;
+  margin-bottom: 2%;
   font-weight: bolder;
 }
 
