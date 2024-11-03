@@ -113,10 +113,12 @@ strong {
 }
 
 .course-image img {
-  height: 10%;
-  width: 25%;
-  margin-bottom: 2%;
-  margin-left: 11%;
+  height: 7%;
+  width: 21%;
+  margin-bottom: 8%;
+  margin-left: 12%;
+  margin-right: 1%;
+  float: left;
 }
 
 .course-description-text {
