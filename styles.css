@@ -160,16 +160,9 @@ strong {
   font-weight: bolder;
   margin-bottom: 3%;
 }
+
 .course-content ul {
-  list-style: disc;
-}
-.course-content .book-card .book-card-title {
-  list-style: square;
-  color: black;
-}
-.course-content .lecture-card .lecture-card-title {
-  list-style: square;
-  color: black;
+  list-style: none;
 }
 
 .book-authors {
