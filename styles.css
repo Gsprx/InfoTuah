@@ -439,6 +439,9 @@ header {
   background-color: var(--very-dark-blue);
   height: 70px;
   padding: 0 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .navbar ul {
@@ -452,6 +455,8 @@ header {
 }
 
 .navbar li a {
+  display: flex;
+  align-items: center;
   height: 100%;
   padding: 0 4px;
   color: white;
@@ -469,6 +474,8 @@ header {
 }
 
 .nav-image-wrapper a {
+  display: flex;
+  align-items: center;
 }
 
 .navbar img {
@@ -488,6 +495,9 @@ header {
 
 .courses-dropdown ul {
   list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .courses-dropdown li {
@@ -496,6 +506,9 @@ header {
 }
 
 .courses-dropdown li a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   height: inherit;
   color: white;
   padding: 0 12px;
@@ -539,10 +552,18 @@ footer {
 
 .footer-contents {
   height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .footer-left {
   height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
 }
 
 .footer-right {
@@ -551,11 +572,16 @@ footer {
 
 /*Footer contact us, privacy policy and terms of service links*/
 .footer-links {
+  display: flex;
+  align-items: center;
   gap: 16px;
 }
 
 /*Contact us icons*/
 .footer-contact-us {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
 }
 
 /*Invert the color of the icons*/
@@ -587,6 +613,9 @@ footer {
 }
 
 .footer-text {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 .footer-text p {
