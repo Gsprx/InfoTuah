@@ -26,16 +26,22 @@ a:hover {
 }
 
 body {
-  padding-top: 70px; /*Since the height of the navbar is 70px and the header is fixed*/
+  /* Basic Grid */
   height: 100vh;
   background-color: var(--dark-blue);
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: repeat(21, 100px);
 }
 
 main {
+  /* Main subgrid relative to Body grid */
   min-height: 100%;
   display: grid;
+  grid-column: 1/4;
+  grid-row: 2/18;
   grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: repeat(10, 250px);
+  grid-template-rows: repeat(18, 100px);
 }
 
 strong {
@@ -47,62 +53,109 @@ strong {
 /*-- INDEX/HERO --*/
 
 .hero-section {
-  /* Generic rule for text in the hero section */
+  /* Hero subgrid relative to Main grid */
   font-size: 200%;
   display: grid;
-  grid-row: 1/4;
+  grid-row: 1/7;
   grid-column: 1/4;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: repeat(5, 100px);
 }
 
-.hero-title h1 {
-  /* Specific rule for h1 of hero title part */
+#hero-title1 {
+  /* H1 Hero Title positioned in the hero subgrid */
   font-size: 200%;
+  grid-column: 2/4;
+  grid-row: 1/2;
+  justify-self: center;
 }
 
-.hero-title h2 {
-  /* Specific rule for h2 of hero title part, inline from h1*/
+#hero-title2 {
+  /* H2 Hero Title positioned in the hero subgrid */
   font-size: 150%;
+  grid-column: 2/4;
+  grid-row: 2/3;
+  justify-self: center;
+}
+
+.hero-image-wrapper {
+  /* Hero image positioning on the hero grid */
+  grid-column: 1/2;
+  grid-row: 1/3;
+  justify-self: center;
 }
 
 .hero-image-wrapper img {
-  /* Float rule for the index logo image relative to hero title*/
-  width: 20%;
-  height: 20%;
+  /* Hero Image Scaling */
+  width: 300px;
+  height: 300px;
 }
 .hero-buttons {
   /* Specific rule for the hero button (> Our Courses)*/
   font-size: 150%;
+  grid-column: 2/4;
+  grid-row: 4/5;
+  justify-self: center;
 }
 
 .about-section {
-  grid-template-columns: 2fr 1fr;
-  grid-template-rows: repeat(3, 250px);
-  row-gap: 50px;
+  /* About section subgrid relative to Main grid */
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: repeat(10, 100px);
   display: grid;
-  grid-column: 2/4;
-  grid-row: 4/8;
+  grid-column: 1/4;
+  grid-row: 6/16;
+  row-gap: 30px;
 }
 
 .about-details {
   /* Generic rule for text inside the about section of the index page */
   font-size: 180%;
-  display: grid;
-}
-
-#about-list {
-  display: flex;
-  flex-direction: column;
-  grid-column: 1/3;
-  grid-row: 1/5;
-}
-#about-list li {
-  display: flex;
 }
 
 .about-image-wrapper img {
-  /* Float image to the right of the about text */
-  height: 240px;
-  width: 400px;
+  /* Image scaling for about text in index */
+  height: 300px;
+  width: 550px;
+}
+
+#about-info-box1 {
+  /* Flexbox with text and image, placed in the about section grid */
+  display: flex;
+  column-gap: 40px;
+  justify-items: center;
+  align-items: center;
+  flex-direction: row;
+  grid-column: 1/4;
+  grid-row: 1/4;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+#about-info-box2 {
+  /* Flexbox with image and text, placed in the about section grid */
+  display: flex;
+  column-gap: 40px;
+  justify-items: center;
+  align-items: center;
+  flex-direction: row-reverse;
+  grid-column: 1/4;
+  grid-row: 5/7;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+#about-info-box3 {
+  /* Flexbox with text and image, placed in the about section grid */
+  display: flex;
+  column-gap: 40px;
+  justify-items: center;
+  align-items: center;
+  flex-direction: row;
+  grid-column: 1/4;
+  grid-row: 8/11;
+  margin-left: 50px;
+  margin-right: 50px;
 }
 
 /*-------- CONTENT PAGES --------*/
@@ -445,6 +498,8 @@ header {
   top: 0;
   width: 100%;
   z-index: 9999; /*High z-index, always on top in the page*/
+  grid-column: 1/4;
+  grid-row: 1/2;
 }
 
 .navbar {
@@ -555,10 +610,10 @@ header {
 
 /*----------- Footer -----------*/
 footer {
-  margin-top: 8px;
-  height: 156px;
+  grid-column: 1/4;
+  grid-row: 20/21;
   background-color: var(--very-dark-blue);
-  padding: 16px;
+  padding: 80px;
   padding-left: 24px;
 }
 
@@ -635,5 +690,6 @@ footer {
 }
 
 .footer-copyright {
+  margin-top: 24px;
   font-size: small;
 }
