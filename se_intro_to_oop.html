@@ -140,23 +140,69 @@
 
     <!-- Page main -->
     <main id="se-intro-oop-main">
-      <div class="return-link">
-        <!-- Return Link -->
-        <a href="se_course.html">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            height="24px"
-            viewBox="0 -960 960 960"
-            width="24px"
-            fill="#5f6368"
-          >
-            <path
-              d="M280-200v-80h284q63 0 109.5-40T720-420q0-60-46.5-100T564-560H312l104 104-56 56-200-200 200-200 56 56-104 104h252q97 0 166.5 63T800-420q0 94-69.5 157T564-200H280Z"
-            />
-          </svg>
-          Return To Course
-        </a>
-      </div>
+      <aside>
+        <div class="return-link">
+          <!-- Return Link -->
+          <a href="se_course.html">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="#5f6368"
+            >
+              <path
+                d="M280-200v-80h284q63 0 109.5-40T720-420q0-60-46.5-100T564-560H312l104 104-56 56-200-200 200-200 56 56-104 104h252q97 0 166.5 63T800-420q0 94-69.5 157T564-200H280Z"
+              />
+            </svg>
+            Return To Course
+          </a>
+        </div>
+        <!--  Subcourse Sidebar that shows all the available content -->
+        <div class="subcourse-sidebar">
+          <h3><strong>Course Content:</strong></h3>
+          <div class="subcourse-sidebar-books">
+            <h4><strong>Books:</strong></h4>
+            <span
+              ><a href="#se-intro-oop-book1"
+                >OOP: Learn Object Oriented Thinking and Programming (using
+                Java)
+              </a></span
+            >
+            <span
+              ><a href="#se-intro-oop-book2"
+                >Data Structures and Algorithms With Object-Oriented Design
+                Patterns in Java</a
+              ></span
+            >
+            <span
+              ><a href="#se-intro-oop-book3"
+                >Object Oriented Programming in Java
+              </a></span
+            >
+          </div>
+          <div class="subcourse-sidebar-lectures">
+            <h4><strong>Lectures:</strong></h4>
+            <span
+              ><a href="#se-intro-oop-lec1"
+                >Python OOP Tutorials - Working with Classes</a
+              ></span
+            >
+            <span
+              ><a href="#se-intro-oop-lec2"
+                >6.0001 Introduction to Computer Science and Programming in
+                Python
+              </a></span
+            >
+            <span
+              ><a href="#se-intro-oop-lec3"
+                >Object Oriented Programming (OOP) in C++ Course
+              </a></span
+            >
+          </div>
+        </div>
+      </aside>
+
       <section class="course-content" id="se-intro-oop-content">
         <div class="course-header">
           <h1>Introduction to Object Oriented Programming</h1>
@@ -169,7 +215,7 @@
           </div>
 
           <!-- Book -->
-          <div class="book-card">
+          <div class="book-card" id="se-intro-oop-book1">
             <!-- Book details-->
             <div class="book-card-details">
               <ul>
@@ -228,7 +274,7 @@
           </div>
 
           <!-- Book -->
-          <div class="book-card">
+          <div class="book-card" id="se-intro-oop-book2">
             <!-- Book details-->
             <div class="book-card-details">
               <ul>
@@ -287,7 +333,7 @@
 
           <!-- Book -->
 
-          <div class="book-card">
+          <div class="book-card" id="se-intro-oop-book3">
             <!-- Book details-->
             <div class="book-card-details">
               <ul>
@@ -353,7 +399,7 @@
           </div>
 
           <!-- Lecture -->
-          <div class="lecture-card">
+          <div class="lecture-card" id="se-intro-oop-lec1">
             <!-- Lecture details-->
             <div class="lecture-card-details">
               <ul>
@@ -404,7 +450,7 @@
           </div>
 
           <!-- Lecture -->
-          <div class="lecture-card">
+          <div class="lecture-card" id="se-intro-oop-lec2">
             <!-- Lecture details-->
             <div class="lecture-card-details">
               <ul>
@@ -461,7 +507,7 @@
           </div>
 
           <!-- Lecture -->
-          <div class="lecture-card">
+          <div class="lecture-card" id="se-intro-oop-lec3">
             <!-- Lecture details-->
             <div class="lecture-card-details">
               <ul>
