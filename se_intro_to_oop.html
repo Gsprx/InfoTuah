@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="styles.css" />
     <title>InfoTuah | Intro to Object Oriented Programming</title>
   </head>
-  <body>
+  <body id="se-intro-oop-body">
     <!-- Navbar -->
     <header>
       <nav class="navbar">
@@ -139,396 +139,384 @@
     </header>
 
     <!-- Page main -->
-    <main>
-      <div class="main-container">
-        <div class="return-link">
-          <!-- Return Link -->
-          <a href="se_course.html">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="24px"
-              viewBox="0 -960 960 960"
-              width="24px"
-              fill="#5f6368"
-            >
-              <path
-                d="M280-200v-80h284q63 0 109.5-40T720-420q0-60-46.5-100T564-560H312l104 104-56 56-200-200 200-200 56 56-104 104h252q97 0 166.5 63T800-420q0 94-69.5 157T564-200H280Z"
-              />
-            </svg>
-            Return To Course
-          </a>
+    <main id="se-intro-oop-main">
+      <div class="return-link">
+        <!-- Return Link -->
+        <a href="se_course.html">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24px"
+            viewBox="0 -960 960 960"
+            width="24px"
+            fill="#5f6368"
+          >
+            <path
+              d="M280-200v-80h284q63 0 109.5-40T720-420q0-60-46.5-100T564-560H312l104 104-56 56-200-200 200-200 56 56-104 104h252q97 0 166.5 63T800-420q0 94-69.5 157T564-200H280Z"
+            />
+          </svg>
+          Return To Course
+        </a>
+      </div>
+      <section class="course-content" id="se-intro-oop-content">
+        <div class="course-header">
+          <h1>Introduction to Object Oriented Programming</h1>
         </div>
-        <section class="course-content">
-          <div class="course-header">
-            <h1>Introduction to Object Oriented Programming</h1>
-          </div>
-          <!-- Books -->
+
+        <!-- Books -->
+        <div class="container-books" id="se-intro-oop-books">
           <div class="course-header">
             <h2>Featured Books</h2>
           </div>
-          <ul class="content-parent">
-            <!-- Book -->
-            <li>
-              <div class="book-card">
-                <!-- Book details-->
-                <div class="book-card-details">
-                  <ul>
-                    <!-- Title -->
-                    <li class="book-card-title">
-                      <a href="">
-                        OOP: Learn Object Oriented Thinking and Programming
-                        (using Java)
-                      </a>
-                    </li>
-                    <!-- Book Image -->
-                    <div class="book-card-image-wrapper">
-                      <a href="">
-                        <img
-                          src="public/se_intro_to_oop/books/OOP-Learn-Object-Oriented-Thinking-and-Programming.png"
-                          alt="public/se_intro_to_oop/books/OOP-Learn-Object-Oriented-Thinking-and-Programming.png"
-                        />
-                      </a>
-                    </div>
-                    <!-- Authors/Publishers -->
-                    <li>
-                      <div class="book-authors">
-                        <p><strong>Authors:</strong></p>
-                      </div>
-                      <span>Rudolf Pecinovsky</span>
 
-                      <div class="book-publishers">
-                        <p><strong>Publishers:</strong></p>
-                      </div>
-                      <span>Eva & Tomas Bruckner</span>
-                    </li>
-                    <!-- Pages Count -->
-                    <li>
-                      <div class="book-pages"><span>528</span> pages</div>
-                    </li>
-                    <!-- Rating -->
-                    <li>
-                      <div class="book-rating">
-                        <span>4</span> / 5 (<span>25</span> reviews)
-                      </div>
-                    </li>
-                    <!-- Description -->
-                    <li>
-                      <div class="book-description">
-                        <span>
-                          The whole textbook is designed as a record of the
-                          dialogue of the author with his daughter who wants to
-                          learn programming. The author endeavors not to explain
-                          the Java programming language to the readers, but to
-                          teach them real programming.
-                        </span>
-                      </div>
-                    </li>
-                  </ul>
+          <!-- Book -->
+          <div class="book-card">
+            <!-- Book details-->
+            <div class="book-card-details">
+              <ul>
+                <!-- Title -->
+                <li class="book-card-title">
+                  <a href="">
+                    OOP: Learn Object Oriented Thinking and Programming (using
+                    Java)
+                  </a>
+                </li>
+                <!-- Book Image -->
+                <div class="book-card-image-wrapper">
+                  <a href="">
+                    <img
+                      src="public/se_intro_to_oop/books/OOP-Learn-Object-Oriented-Thinking-and-Programming.png"
+                      alt="public/se_intro_to_oop/books/OOP-Learn-Object-Oriented-Thinking-and-Programming.png"
+                    />
+                  </a>
                 </div>
-              </div>
-            </li>
+                <!-- Authors/Publishers -->
+                <li>
+                  <div class="book-authors">
+                    <p><strong>Authors:</strong></p>
+                  </div>
+                  <span>Rudolf Pecinovsky</span>
 
-            <!-- Book -->
-            <li>
-              <div class="book-card">
-                <!-- Book details-->
-                <div class="book-card-details">
-                  <ul>
-                    <!-- Title -->
-                    <li class="book-card-title">
-                      <a href="">
-                        Data Structures and Algorithms With Object-Oriented
-                        Design Patterns in Java
-                      </a>
-                    </li>
-                    <!-- Book Image -->
-                    <div class="book-card-image-wrapper">
-                      <a href="">
-                        <img
-                          src="public/se_intro_to_oop/books/1460249461-51lYrZoodNL._SX382_BO1,204,203,200_.jpg"
-                          alt="public/se_intro_to_oop/books/1460249461-51lYrZoodNL._SX382_BO1,204,203,200_.jpg"
-                        />
-                      </a>
-                    </div>
-                    <!-- Authors/Publishers -->
-                    <li>
-                      <div class="book-authors">
-                        <p><strong>Authors:</strong></p>
-                      </div>
-                      <span>Bruno R. Preiss</span>
+                  <div class="book-publishers">
+                    <p><strong>Publishers:</strong></p>
+                  </div>
+                  <span>Eva & Tomas Bruckner</span>
+                </li>
+                <!-- Pages Count -->
+                <li>
+                  <div class="book-pages"><span>528</span> pages</div>
+                </li>
+                <!-- Rating -->
+                <li>
+                  <div class="book-rating">
+                    <span>4</span> / 5 (<span>25</span> reviews)
+                  </div>
+                </li>
+                <!-- Description -->
+                <li>
+                  <div class="book-description">
+                    <span>
+                      The whole textbook is designed as a record of the dialogue
+                      of the author with his daughter who wants to learn
+                      programming. The author endeavors not to explain the Java
+                      programming language to the readers, but to teach them
+                      real programming.
+                    </span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
 
-                      <div class="book-publishers">
-                        <p><strong>Publishers:</strong></p>
-                      </div>
-                      <span>John Wiley & Sons</span>
-                    </li>
-                    <!-- Pages Count -->
-                    <li>
-                      <div class="book-pages"><span>656</span> pages</div>
-                    </li>
-                    <!-- Rating -->
-                    <li>
-                      <div class="book-rating">
-                        <span>3.9</span> / 5 (<span>10</span> reviews)
-                      </div>
-                    </li>
-                    <!-- Description -->
-                    <li>
-                      <div class="book-description">
-                        <span>
-                          Covers the fundamentals of data structures and
-                          algorithms -- the basic elements from which large and
-                          complex software artifacts are built -- using Java
-                          programming language.
-                        </span>
-                      </div>
-                    </li>
-                  </ul>
+          <!-- Book -->
+          <div class="book-card">
+            <!-- Book details-->
+            <div class="book-card-details">
+              <ul>
+                <!-- Title -->
+                <li class="book-card-title">
+                  <a href="">
+                    Data Structures and Algorithms With Object-Oriented Design
+                    Patterns in Java
+                  </a>
+                </li>
+                <!-- Book Image -->
+                <div class="book-card-image-wrapper">
+                  <a href="">
+                    <img
+                      src="public/se_intro_to_oop/books/1460249461-51lYrZoodNL._SX382_BO1,204,203,200_.jpg"
+                      alt="public/se_intro_to_oop/books/1460249461-51lYrZoodNL._SX382_BO1,204,203,200_.jpg"
+                    />
+                  </a>
                 </div>
-              </div>
-            </li>
-            <!-- Book -->
-            <li>
-              <div class="book-card">
-                <!-- Book details-->
-                <div class="book-card-details">
-                  <ul>
-                    <!-- Title -->
-                    <li class="book-card-title">
-                      <a href=""> Object Oriented Programming in Java </a>
-                    </li>
-                    <!-- Book Image -->
-                    <div class="book-card-image-wrapper">
-                      <a href="">
-                        <img
-                          src="public/se_intro_to_oop/books/Object-Oriented-Programming-in-Java-by-Rick-Halterman.jpg"
-                          alt="public/se_intro_to_oop/books/Object-Oriented-Programming-in-Java-by-Rick-Halterman.jpg"
-                        />
-                      </a>
-                    </div>
-                    <!-- Authors/Publishers -->
-                    <li>
-                      <div class="book-authors">
-                        <p><strong>Authors:</strong></p>
-                      </div>
-                      <span>Rick Halterman</span>
+                <!-- Authors/Publishers -->
+                <li>
+                  <div class="book-authors">
+                    <p><strong>Authors:</strong></p>
+                  </div>
+                  <span>Bruno R. Preiss</span>
 
-                      <div class="book-publishers">
-                        <p><strong>Publishers:</strong></p>
-                      </div>
-                      <span>Southern Adventist University</span>
-                    </li>
-                    <!-- Pages Count -->
-                    <li>
-                      <div class="book-pages"><span>1008</span> pages</div>
-                    </li>
-                    <!-- Rating -->
-                    <li>
-                      <div class="book-rating">
-                        <span>4.5</span> / 5 (<span>18</span> reviews)
-                      </div>
-                    </li>
-                    <!-- Description -->
-                    <li>
-                      <div class="book-description">
-                        <span>
-                          Designed for those new to programming, this book
-                          provides step-by-step lessons that cover OOP
-                          (object-oriented programming) and the Java language
-                          comprehensively with clear examples, code, and
-                          figures. You'll use Java's built-in objects to create
-                          applets. Design your own classes and assemble them
-                          into sophisticated, complete programs that run inside
-                          an HTML browser or as stand-alone applications.
-                        </span>
-                      </div>
-                    </li>
-                  </ul>
+                  <div class="book-publishers">
+                    <p><strong>Publishers:</strong></p>
+                  </div>
+                  <span>John Wiley & Sons</span>
+                </li>
+                <!-- Pages Count -->
+                <li>
+                  <div class="book-pages"><span>656</span> pages</div>
+                </li>
+                <!-- Rating -->
+                <li>
+                  <div class="book-rating">
+                    <span>3.9</span> / 5 (<span>10</span> reviews)
+                  </div>
+                </li>
+                <!-- Description -->
+                <li>
+                  <div class="book-description">
+                    <span>
+                      Covers the fundamentals of data structures and algorithms
+                      -- the basic elements from which large and complex
+                      software artifacts are built -- using Java programming
+                      language.
+                    </span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Book -->
+
+          <div class="book-card">
+            <!-- Book details-->
+            <div class="book-card-details">
+              <ul>
+                <!-- Title -->
+                <li class="book-card-title">
+                  <a href=""> Object Oriented Programming in Java </a>
+                </li>
+                <!-- Book Image -->
+                <div class="book-card-image-wrapper">
+                  <a href="">
+                    <img
+                      src="public/se_intro_to_oop/books/Object-Oriented-Programming-in-Java-by-Rick-Halterman.jpg"
+                      alt="public/se_intro_to_oop/books/Object-Oriented-Programming-in-Java-by-Rick-Halterman.jpg"
+                    />
+                  </a>
                 </div>
-              </div>
-            </li>
-          </ul>
+                <!-- Authors/Publishers -->
+                <li>
+                  <div class="book-authors">
+                    <p><strong>Authors:</strong></p>
+                  </div>
+                  <span>Rick Halterman</span>
 
-          <!-- Lectures -->
+                  <div class="book-publishers">
+                    <p><strong>Publishers:</strong></p>
+                  </div>
+                  <span>Southern Adventist University</span>
+                </li>
+                <!-- Pages Count -->
+                <li>
+                  <div class="book-pages"><span>1008</span> pages</div>
+                </li>
+                <!-- Rating -->
+                <li>
+                  <div class="book-rating">
+                    <span>4.5</span> / 5 (<span>18</span> reviews)
+                  </div>
+                </li>
+                <!-- Description -->
+                <li>
+                  <div class="book-description">
+                    <span>
+                      Designed for those new to programming, this book provides
+                      step-by-step lessons that cover OOP (object-oriented
+                      programming) and the Java language comprehensively with
+                      clear examples, code, and figures. You'll use Java's
+                      built-in objects to create applets. Design your own
+                      classes and assemble them into sophisticated, complete
+                      programs that run inside an HTML browser or as stand-alone
+                      applications.
+                    </span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lectures -->
+        <div class="container-lectures" id="se-intro-oop-lectures">
           <div class="course-header">
             <h2>Featured Lectures</h2>
           </div>
-          <ul>
-            <!-- Lecture -->
-            <li>
-              <div class="lecture-card">
-                <!-- Lecture details-->
-                <div class="lecture-card-details">
-                  <ul>
-                    <!-- Title -->
-                    <li class="lecture-card-title">
-                      <a href="">
-                        Python OOP Tutorials - Working with Classes
-                      </a>
-                    </li>
-                    <!-- Lecture Image -->
-                    <div class="lecture-card-image-wrapper">
-                      <a href="">
-                        <img
-                          src="public/se_intro_to_oop/lectures/hqdefault.jpg"
-                          alt="public/se_intro_to_oop/lectures/hqdefault.jpg"
-                        />
-                      </a>
-                    </div>
-                    <!-- Contributors -->
-                    <li>
-                      <div class="lecture-contributors">
-                        <p><strong>Contributors:</strong></p>
-                      </div>
-                      <span>Corey Schafer</span>
-                    </li>
-                    <!-- Duration -->
-                    <li>
-                      <div class="lecture-duration"><span>1.5</span> hours</div>
-                    </li>
-                    <!-- Rating -->
-                    <li>
-                      <div class="lecture-rating">
-                        <span>4.9</span> / 5 (<span>65100</span> reviews)
-                      </div>
-                    </li>
-                    <!-- Description -->
-                    <li>
-                      <div class="lecture-description">
-                        <span>
-                          Python Object-Oriented Tutorials. In this series, we
-                          will be learning how to create classes in Python, and
-                          also the best practices for working with these
-                          classes. We will go over class/instance variables,
-                          inheritance, getters/setters, and much more.
-                        </span>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </li>
 
-            <!-- Lecture -->
-            <li>
-              <div class="lecture-card">
-                <!-- Lecture details-->
-                <div class="lecture-card-details">
-                  <ul>
-                    <!-- Title -->
-                    <li class="lecture-card-title">
-                      <a href="">
-                        6.0001 Introduction to Computer Science and Programming
-                        in Python. Fall 2016
-                      </a>
-                    </li>
-                    <!-- Lecture Image -->
-                    <div class="lecture-card-image-wrapper">
-                      <a href="">
-                        <img
-                          src="public/se_intro_to_oop/lectures/hq720.webp"
-                          alt="public/se_intro_to_oop/lectures/hq720.webp"
-                        />
-                      </a>
-                    </div>
-                    <!-- Contributors -->
-                    <li>
-                      <div class="lecture-contributors">
-                        <p><strong>Contributors:</strong></p>
-                      </div>
-                      <span>Ana Bell</span>, <span>Eric Grimson</span>
-                    </li>
-                    <!-- Duration -->
-                    <li>
-                      <div class="lecture-duration"><span>10</span> hours</div>
-                    </li>
-                    <!-- Rating -->
-                    <li>
-                      <div class="lecture-rating">
-                        <span>4.8</span> / 5 (<span>9100</span> reviews)
-                      </div>
-                    </li>
-                    <!-- Description -->
-                    <li>
-                      <div class="lecture-description">
-                        <span>
-                          6.0001 Introduction to Computer Science and
-                          Programming in Python is intended for students with
-                          little or no programming experience. It aims to
-                          provide students with an understanding of the role
-                          computation can play in solving problems and to help
-                          students, regardless of their major, feel justifiably
-                          confident of their ability to write small programs
-                          that allow them to accomplish useful goals. The class
-                          uses the Python 3.5 programming language.
-                        </span>
-                      </div>
-                    </li>
-                  </ul>
+          <!-- Lecture -->
+          <div class="lecture-card">
+            <!-- Lecture details-->
+            <div class="lecture-card-details">
+              <ul>
+                <!-- Title -->
+                <li class="lecture-card-title">
+                  <a href=""> Python OOP Tutorials - Working with Classes </a>
+                </li>
+                <!-- Lecture Image -->
+                <div class="lecture-card-image-wrapper">
+                  <a href="">
+                    <img
+                      src="public/se_intro_to_oop/lectures/hqdefault.jpg"
+                      alt="public/se_intro_to_oop/lectures/hqdefault.jpg"
+                    />
+                  </a>
                 </div>
-              </div>
-            </li>
+                <!-- Contributors -->
+                <li>
+                  <div class="lecture-contributors">
+                    <p><strong>Contributors:</strong></p>
+                  </div>
+                  <span>Corey Schafer</span>
+                </li>
+                <!-- Duration -->
+                <li>
+                  <div class="lecture-duration"><span>1.5</span> hours</div>
+                </li>
+                <!-- Rating -->
+                <li>
+                  <div class="lecture-rating">
+                    <span>4.9</span> / 5 (<span>65100</span> reviews)
+                  </div>
+                </li>
+                <!-- Description -->
+                <li>
+                  <div class="lecture-description">
+                    <span>
+                      Python Object-Oriented Tutorials. In this series, we will
+                      be learning how to create classes in Python, and also the
+                      best practices for working with these classes. We will go
+                      over class/instance variables, inheritance,
+                      getters/setters, and much more.
+                    </span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
 
-            <!-- Lecture -->
-            <li>
-              <div class="lecture-card">
-                <!-- Lecture details-->
-                <div class="lecture-card-details">
-                  <ul>
-                    <!-- Title -->
-                    <li class="lecture-card-title">
-                      <a href="">
-                        Object Oriented Programming (OOP) in C++ Course
-                      </a>
-                    </li>
-                    <!-- Lecture Image -->
-                    <div class="lecture-card-image-wrapper">
-                      <a href="">
-                        <img
-                          src="public/se_intro_to_oop/lectures/hqdefault1.jpg"
-                          alt="public/se_intro_to_oop/lectures/hqdefault1.jpg"
-                        />
-                      </a>
-                    </div>
-                    <!-- Contributors -->
-                    <li>
-                      <div class="lecture-contributors">
-                        <p><strong> Contributors: </strong></p>
-                      </div>
-                      <span>Saldina Nurak</span>
-                    </li>
-                    <!-- Duration -->
-                    <li>
-                      <div class="lecture-duration"><span>5</span> hours</div>
-                    </li>
-                    <!-- Rating -->
-                    <li>
-                      <div class="lecture-rating">
-                        <span>4.5</span> / 5 (<span>70739</span> reviews)
-                      </div>
-                    </li>
-                    <!-- Description -->
-                    <li>
-                      <div class="lecture-description">
-                        <span>
-                          This playlist offers a step-by-step introduction to
-                          the fundamentals of Object-Oriented Programming (OOP)
-                          in C++. You’ll learn the core concepts such as classes
-                          and objects, encapsulation, inheritance, polymorphism,
-                          and abstraction. Through practical examples and clear
-                          explanations, this series will help you build a strong
-                          foundation in C++ OOP, preparing you for more advanced
-                          programming techniques.
-                        </span>
-                      </div>
-                    </li>
-                  </ul>
+          <!-- Lecture -->
+          <div class="lecture-card">
+            <!-- Lecture details-->
+            <div class="lecture-card-details">
+              <ul>
+                <!-- Title -->
+                <li class="lecture-card-title">
+                  <a href="">
+                    6.0001 Introduction to Computer Science and Programming in
+                    Python. Fall 2016
+                  </a>
+                </li>
+                <!-- Lecture Image -->
+                <div class="lecture-card-image-wrapper">
+                  <a href="">
+                    <img
+                      src="public/se_intro_to_oop/lectures/hq720.webp"
+                      alt="public/se_intro_to_oop/lectures/hq720.webp"
+                    />
+                  </a>
                 </div>
-              </div>
-            </li>
-          </ul>
-        </section>
-      </div>
+                <!-- Contributors -->
+                <li>
+                  <div class="lecture-contributors">
+                    <p><strong>Contributors:</strong></p>
+                  </div>
+                  <span>Ana Bell</span>, <span>Eric Grimson</span>
+                </li>
+                <!-- Duration -->
+                <li>
+                  <div class="lecture-duration"><span>10</span> hours</div>
+                </li>
+                <!-- Rating -->
+                <li>
+                  <div class="lecture-rating">
+                    <span>4.8</span> / 5 (<span>9100</span> reviews)
+                  </div>
+                </li>
+                <!-- Description -->
+                <li>
+                  <div class="lecture-description">
+                    <span>
+                      6.0001 Introduction to Computer Science and Programming in
+                      Python is intended for students with little or no
+                      programming experience. It aims to provide students with
+                      an understanding of the role computation can play in
+                      solving problems and to help students, regardless of their
+                      major, feel justifiably confident of their ability to
+                      write small programs that allow them to accomplish useful
+                      goals. The class uses the Python 3.5 programming language.
+                    </span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Lecture -->
+          <div class="lecture-card">
+            <!-- Lecture details-->
+            <div class="lecture-card-details">
+              <ul>
+                <!-- Title -->
+                <li class="lecture-card-title">
+                  <a href="">
+                    Object Oriented Programming (OOP) in C++ Course
+                  </a>
+                </li>
+                <!-- Lecture Image -->
+                <div class="lecture-card-image-wrapper">
+                  <a href="">
+                    <img
+                      src="public/se_intro_to_oop/lectures/hqdefault1.jpg"
+                      alt="public/se_intro_to_oop/lectures/hqdefault1.jpg"
+                    />
+                  </a>
+                </div>
+                <!-- Contributors -->
+                <li>
+                  <div class="lecture-contributors">
+                    <p><strong> Contributors: </strong></p>
+                  </div>
+                  <span>Saldina Nurak</span>
+                </li>
+                <!-- Duration -->
+                <li>
+                  <div class="lecture-duration"><span>5</span> hours</div>
+                </li>
+                <!-- Rating -->
+                <li>
+                  <div class="lecture-rating">
+                    <span>4.5</span> / 5 (<span>70739</span> reviews)
+                  </div>
+                </li>
+                <!-- Description -->
+                <li>
+                  <div class="lecture-description">
+                    <span>
+                      This playlist offers a step-by-step introduction to the
+                      fundamentals of Object-Oriented Programming (OOP) in C++.
+                      You’ll learn the core concepts such as classes and
+                      objects, encapsulation, inheritance, polymorphism, and
+                      abstraction. Through practical examples and clear
+                      explanations, this series will help you build a strong
+                      foundation in C++ OOP, preparing you for more advanced
+                      programming techniques.
+                    </span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- Footer -->
