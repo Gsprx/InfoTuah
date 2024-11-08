@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="styles.css" />
     <title>InfoTuah | Intro to Machine Learning</title>
   </head>
-  <body>
+  <body id="ai-intro-ml-body">
     <!-- Navbar -->
     <header>
       <nav class="navbar">
@@ -139,402 +139,383 @@
     </header>
 
     <!-- Page main -->
-    <main>
-      <section class="course-content">
-        <div class="return-link">
-          <!-- Return Link -->
-          <a href="ai_course.html">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="24px"
-              viewBox="0 -960 960 960"
-              width="24px"
-              fill="#5f6368"
-            >
-              <path
-                d="M280-200v-80h284q63 0 109.5-40T720-420q0-60-46.5-100T564-560H312l104 104-56 56-200-200 200-200 56 56-104 104h252q97 0 166.5 63T800-420q0 94-69.5 157T564-200H280Z"
-              />
-            </svg>
-            Return To Course
-          </a>
-        </div>
+    <main id="ai-intro-ml-main">
+      <div class="return-link">
+        <!-- Return Link -->
+        <a href="ai_course.html">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24px"
+            viewBox="0 -960 960 960"
+            width="24px"
+            fill="#5f6368"
+          >
+            <path
+              d="M280-200v-80h284q63 0 109.5-40T720-420q0-60-46.5-100T564-560H312l104 104-56 56-200-200 200-200 56 56-104 104h252q97 0 166.5 63T800-420q0 94-69.5 157T564-200H280Z"
+            />
+          </svg>
+          Return To Course
+        </a>
+      </div>
 
-        <div class="course-header">
+      <section class="course-content" id="ai-intro-ml-content">
+        <div class="course-header" id="course-content-main-header">
           <h1>Introduction to Machine Learning</h1>
         </div>
+
         <!-- Books -->
-        <div class="container-books">
-          <div class="course-header">
+        <div class="container-books" id="ai-intro-ml-books">
+          <div class="course-header" id="course-content-book-header">
             <h2>Featured Books</h2>
           </div>
-          <ul>
-            <!-- Book -->
-            <li>
-              <div class="book-card">
-                <!-- Book details-->
-                <div class="book-card-details">
-                  <ul>
-                    <!-- Title -->
-                    <li class="book-card-title">
-                      <a href="">
-                        Understanding Machine Learning: From Theory to
-                        Algorithms
-                      </a>
-                    </li>
-                    <!-- Book Image -->
-                    <div class="book-card-image-wrapper">
-                      <a href="">
-                        <img
-                          src="public/ai_intro_to_ml/books/1_-cuSPrlAhGH7HWmz51pk6w.jpg"
-                          alt="public/ai_intro_to_ml/books/1_-cuSPrlAhGH7HWmz51pk6w.jpg"
-                        />
-                      </a>
-                    </div>
-                    <!-- Authors/Publishers -->
-                    <li>
-                      <div class="book-authors">
-                        <p><strong>Authors:</strong></p>
-                        <span>Shai Shalev-Shwartz</span>,
-                        <span>Shai Ben-David</span>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="book-publishers">
-                        <p><strong>Publishers:</strong></p>
-                        <span>Cambridge University Press</span>
-                      </div>
-                    </li>
-                    <!-- Pages Count -->
-                    <li>
-                      <div class="book-pages"><span>449</span> pages</div>
-                    </li>
-                    <!-- Rating -->
-                    <li>
-                      <div class="book-rating">
-                        <span>4.3</span> / 5 (<span>278</span> reviews)
-                      </div>
-                    </li>
-                    <!-- Description -->
-                    <li>
-                      <div class="book-description">
-                        <span>
-                          The book provides an extensive theoretical account of
-                          the fundamental ideas underlying machine learning and
-                          the mathematical derivations that transform these
-                          principles into practical algorithms.
-                        </span>
-                      </div>
-                    </li>
-                  </ul>
+          <!-- Book -->
+          <div class="book-card">
+            <!-- Book details-->
+            <div class="book-card-details">
+              <ul>
+                <!-- Title -->
+                <li class="book-card-title">
+                  <a href="">
+                    Understanding Machine Learning: From Theory to Algorithms
+                  </a>
+                </li>
+                <!-- Book Image -->
+                <div class="book-card-image-wrapper">
+                  <a href="">
+                    <img
+                      src="public/ai_intro_to_ml/books/1_-cuSPrlAhGH7HWmz51pk6w.jpg"
+                      alt="public/ai_intro_to_ml/books/1_-cuSPrlAhGH7HWmz51pk6w.jpg"
+                    />
+                  </a>
                 </div>
-              </div>
-            </li>
+                <!-- Authors/Publishers -->
+                <li>
+                  <div class="book-authors">
+                    <p><strong>Authors:</strong></p>
+                    <span>Shai Shalev-Shwartz</span>,
+                    <span>Shai Ben-David</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="book-publishers">
+                    <p><strong>Publishers:</strong></p>
+                    <span>Cambridge University Press</span>
+                  </div>
+                </li>
+                <!-- Pages Count -->
+                <li>
+                  <div class="book-pages"><span>449</span> pages</div>
+                </li>
+                <!-- Rating -->
+                <li>
+                  <div class="book-rating">
+                    <span>4.3</span> / 5 (<span>278</span> reviews)
+                  </div>
+                </li>
+                <!-- Description -->
+                <li>
+                  <div class="book-description">
+                    <span>
+                      The book provides an extensive theoretical account of the
+                      fundamental ideas underlying machine learning and the
+                      mathematical derivations that transform these principles
+                      into practical algorithms.
+                    </span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
 
-            <!-- Book -->
-            <li>
-              <div class="book-card">
-                <!-- Book details -->
-                <div class="book-card-details">
-                  <ul>
-                    <!-- Title -->
-                    <li class="book-card-title">
-                      <a href=""> Algorithms For Decision Making </a>
-                    </li>
-                    <!-- Book Image -->
-                    <div class="book-card-image-wrapper">
-                      <a href="">
-                        <img
-                          src="public/ai_intro_to_ml/books/1_EsIqvx9aMxx8zNuw9igm5g.jpg"
-                          alt="public/ai_intro_to_ml/books/1_EsIqvx9aMxx8zNuw9igm5g.jpg"
-                        />
-                      </a>
-                    </div>
-                    <!-- Authors/Publishers -->
-                    <li>
-                      <div class="book-authors">
-                        <p><strong>Authors:</strong></p>
-                        <span>Mykel J. Kochenderfer</span>,
-                        <span>Tim A. Wheeler</span>,
-                        <span>Kyle H. Wray</span>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="book-publishers">
-                        <p><strong>Publishers:</strong></p>
-                        <span>Massachusetts Institute of Technology</span>
-                      </div>
-                    </li>
-                    <!-- Pages Count -->
-                    <li>
-                      <div class="book-pages"><span>700</span> pages</div>
-                    </li>
-                    <!-- Rating -->
-                    <li>
-                      <div class="book-rating">
-                        <span>4.9</span> / 5 (<span>18</span> reviews)
-                      </div>
-                    </li>
-                    <!-- Description -->
-                    <li>
-                      <div class="book-description">
-                        <span>
-                          This book provides a broad introduction to algorithms
-                          for decision making under uncertainty. The book covers
-                          a wide variety of topics related to decision making,
-                          introducing the underlying mathematical problem
-                          formulations and the algorithms for solving them.
-                        </span>
-                      </div>
-                    </li>
-                  </ul>
+          <!-- Book -->
+          <div class="book-card">
+            <!-- Book details -->
+            <div class="book-card-details">
+              <ul>
+                <!-- Title -->
+                <li class="book-card-title">
+                  <a href=""> Algorithms For Decision Making </a>
+                </li>
+                <!-- Book Image -->
+                <div class="book-card-image-wrapper">
+                  <a href="">
+                    <img
+                      src="public/ai_intro_to_ml/books/1_EsIqvx9aMxx8zNuw9igm5g.jpg"
+                      alt="public/ai_intro_to_ml/books/1_EsIqvx9aMxx8zNuw9igm5g.jpg"
+                    />
+                  </a>
                 </div>
-              </div>
-            </li>
+                <!-- Authors/Publishers -->
+                <li>
+                  <div class="book-authors">
+                    <p><strong>Authors:</strong></p>
+                    <span>Mykel J. Kochenderfer</span>,
+                    <span>Tim A. Wheeler</span>,
+                    <span>Kyle H. Wray</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="book-publishers">
+                    <p><strong>Publishers:</strong></p>
+                    <span>Massachusetts Institute of Technology</span>
+                  </div>
+                </li>
+                <!-- Pages Count -->
+                <li>
+                  <div class="book-pages"><span>700</span> pages</div>
+                </li>
+                <!-- Rating -->
+                <li>
+                  <div class="book-rating">
+                    <span>4.9</span> / 5 (<span>18</span> reviews)
+                  </div>
+                </li>
+                <!-- Description -->
+                <li>
+                  <div class="book-description">
+                    <span>
+                      This book provides a broad introduction to algorithms for
+                      decision making under uncertainty. The book covers a wide
+                      variety of topics related to decision making, introducing
+                      the underlying mathematical problem formulations and the
+                      algorithms for solving them.
+                    </span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
 
-            <!-- Book -->
-            <li>
-              <div class="book-card">
-                <!-- Book details -->
-                <div class="book-card-details">
-                  <ul>
-                    <!-- Title -->
-                    <li class="book-card-title">
-                      <a href="">
-                        Probabilistic Machine Learning: An Introduction
-                      </a>
-                    </li>
-                    <!-- Book Image -->
-                    <div class="book-card-image-wrapper">
-                      <a href="">
-                        <img
-                          src="public/ai_intro_to_ml/books/1_OlAEfjXLa-LzSLScigPdRQ.jpg"
-                          alt="public/ai_intro_to_ml/books/1_OlAEfjXLa-LzSLScigPdRQ.jpg"
-                        />
-                      </a>
-                    </div>
-                    <!-- Authors/Publishers -->
-                    <li>
-                      <div class="book-authors">
-                        <p><strong>Authors:</strong></p>
-                        <span>Kevin P. Murphy</span>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="book-publishers">
-                        <p><strong>Publishers:</strong></p>
-                        <span>Massachusetts Institute of Technology</span>
-                      </div>
-                    </li>
-                    <!-- Pages Count -->
-                    <li>
-                      <div class="book-pages"><span>860</span> pages</div>
-                    </li>
-                    <!-- Rating -->
-                    <li>
-                      <div class="book-rating">
-                        <span>4.3</span> / 5 (<span>203</span> reviews)
-                      </div>
-                    </li>
-                    <!-- Description -->
-                    <li>
-                      <div class="book-description">
-                        <span>
-                          This book is by Kevin Murphy, who is the author of a
-                          previous well-known book. He is also a Senior Staff
-                          Research Scientist at Google. This book covers the
-                          basics of Machine Learning from Linear Algebra to
-                          Optimization.
-                        </span>
-                      </div>
-                    </li>
-                  </ul>
+          <!-- Book -->
+          <div class="book-card">
+            <!-- Book details -->
+            <div class="book-card-details">
+              <ul>
+                <!-- Title -->
+                <li class="book-card-title">
+                  <a href="">
+                    Probabilistic Machine Learning: An Introduction
+                  </a>
+                </li>
+                <!-- Book Image -->
+                <div class="book-card-image-wrapper">
+                  <a href="">
+                    <img
+                      src="public/ai_intro_to_ml/books/1_OlAEfjXLa-LzSLScigPdRQ.jpg"
+                      alt="public/ai_intro_to_ml/books/1_OlAEfjXLa-LzSLScigPdRQ.jpg"
+                    />
+                  </a>
                 </div>
-              </div>
-            </li>
-          </ul>
+                <!-- Authors/Publishers -->
+                <li>
+                  <div class="book-authors">
+                    <p><strong>Authors:</strong></p>
+                    <span>Kevin P. Murphy</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="book-publishers">
+                    <p><strong>Publishers:</strong></p>
+                    <span>Massachusetts Institute of Technology</span>
+                  </div>
+                </li>
+                <!-- Pages Count -->
+                <li>
+                  <div class="book-pages"><span>860</span> pages</div>
+                </li>
+                <!-- Rating -->
+                <li>
+                  <div class="book-rating">
+                    <span>4.3</span> / 5 (<span>203</span> reviews)
+                  </div>
+                </li>
+                <!-- Description -->
+                <li>
+                  <div class="book-description">
+                    <span>
+                      This book is by Kevin Murphy, who is the author of a
+                      previous well-known book. He is also a Senior Staff
+                      Research Scientist at Google. This book covers the basics
+                      of Machine Learning from Linear Algebra to Optimization.
+                    </span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
 
         <!-- Lectures -->
-        <div class="container-lectures">
-          <div class="course-header">
+        <div class="container-lectures" id="ai-intro-ml-lectures">
+          <div class="course-header" id="course-content-lecture-header">
             <h2>Featured Lectures</h2>
           </div>
-          <ul>
-            <!-- Lecture -->
-            <li>
-              <div class="lecture-card">
-                <!-- Lecture details -->
-                <div class="lecture-card-details">
-                  <ul>
-                    <!-- Title -->
-                    <li class="lecture-card-title">
-                      <a href="">
-                        Stanford CS229: Machine Learning Full Course taught by
-                        Andrew Ng | Autumn 2018
-                      </a>
-                    </li>
-                    <!-- Lecture Image -->
-                    <div class="lecture-card-image-wrapper">
-                      <a href="">
-                        <img
-                          src="public/ai_intro_to_ml/lectures/hqdefault.jpg"
-                          alt="public/ai_intro_to_ml/lectures/hqdefault.jpg"
-                        />
-                      </a>
-                    </div>
-                    <!-- Contributors -->
-                    <li>
-                      <div class="lecture-contributors">
-                        <p><strong>Contributors:</strong></p>
-                        <span>Andrew Ng</span>
-                      </div>
-                    </li>
-                    <!-- Duration -->
-                    <li>
-                      <div class="lecture-duration"><span>25</span> hours</div>
-                    </li>
-                    <!-- Rating -->
-                    <li>
-                      <div class="lecture-rating">
-                        <span>5</span> / 5 (<span>13000</span> reviews)
-                      </div>
-                    </li>
-                    <!-- Description -->
-                    <li>
-                      <div class="lecture-description">
-                        <span>
-                          Led by Andrew Ng, this course provides a broad
-                          introduction to machine learning and statistical
-                          pattern recognition. Topics include supervised
-                          learning, unsupervised learning, learning theory,
-                          reinforcement learning, and applications of machine
-                          learning.
-                        </span>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </li>
 
-            <!-- Lecture -->
-            <li>
-              <div class="lecture-card">
-                <!-- Lecture details -->
-                <div class="lecture-card-details">
-                  <ul>
-                    <!-- Title -->
-                    <li class="lecture-card-title">
-                      <a href=""> MIT 6.S191: Introduction to Deep Learning </a>
-                    </li>
-                    <!-- Lecture Image -->
-                    <div class="lecture-card-image-wrapper">
-                      <a href="">
-                        <img
-                          src="public/ai_intro_to_ml/lectures/hqdefault1.jpg"
-                          alt="public/ai_intro_to_ml/lectures/hqdefault1.jpg"
-                        />
-                      </a>
-                    </div>
-                    <!-- Contributors -->
-                    <li>
-                      <div class="lecture-contributors">
-                        <p><strong>Contributors:</strong></p>
-                        <span>Alexander Amini</span>
-                      </div>
-                    </li>
-                    <!-- Duration -->
-                    <li>
-                      <div class="lecture-duration"><span>7</span> hours</div>
-                    </li>
-                    <!-- Rating -->
-                    <li>
-                      <div class="lecture-rating">
-                        <span>5</span> / 5 (<span>14000</span> reviews)
-                      </div>
-                    </li>
-                    <!-- Description -->
-                    <li>
-                      <div class="lecture-description">
-                        <span>
-                          This playlist provides a beginner-friendly
-                          introduction to the core concepts of Deep Learning.
-                          You’ll explore topics such as neural networks,
-                          perceptrons, activation functions, and training models
-                          with techniques like gradient descent and
-                          backpropagation. Through clear explanations and
-                          practical examples, this series lays a strong
-                          foundation for understanding how deep learning works
-                          and prepares you for more advanced topics and
-                          applications in the field.
-                        </span>
-                      </div>
-                    </li>
-                  </ul>
+          <!-- Lecture -->
+          <div class="lecture-card">
+            <!-- Lecture details -->
+            <div class="lecture-card-details">
+              <ul>
+                <!-- Title -->
+                <li class="lecture-card-title">
+                  <a href="">
+                    Stanford CS229: Machine Learning Full Course taught by
+                    Andrew Ng | Autumn 2018
+                  </a>
+                </li>
+                <!-- Lecture Image -->
+                <div class="lecture-card-image-wrapper">
+                  <a href="">
+                    <img
+                      src="public/ai_intro_to_ml/lectures/hqdefault.jpg"
+                      alt="public/ai_intro_to_ml/lectures/hqdefault.jpg"
+                    />
+                  </a>
                 </div>
-              </div>
-            </li>
+                <!-- Contributors -->
+                <li>
+                  <div class="lecture-contributors">
+                    <p><strong>Contributors:</strong></p>
+                    <span>Andrew Ng</span>
+                  </div>
+                </li>
+                <!-- Duration -->
+                <li>
+                  <div class="lecture-duration"><span>25</span> hours</div>
+                </li>
+                <!-- Rating -->
+                <li>
+                  <div class="lecture-rating">
+                    <span>5</span> / 5 (<span>13000</span> reviews)
+                  </div>
+                </li>
+                <!-- Description -->
+                <li>
+                  <div class="lecture-description">
+                    <span>
+                      Led by Andrew Ng, this course provides a broad
+                      introduction to machine learning and statistical pattern
+                      recognition. Topics include supervised learning,
+                      unsupervised learning, learning theory, reinforcement
+                      learning, and applications of machine learning.
+                    </span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
 
-            <!-- Lecture -->
-            <li>
-              <div class="lecture-card">
-                <!-- Lecture details -->
-                <div class="lecture-card-details">
-                  <ul>
-                    <!-- Title -->
-                    <li class="lecture-card-title">
-                      <a href="ai_intro_to_ml_lec3.html">
-                        Introduction to Machine Learning — Dmitry Kobak, 2020/21
-                      </a>
-                    </li>
-                    <!-- Lecture Image -->
-                    <div class="lecture-card-image-wrapper">
-                      <a href="ai_intro_to_ml_lec3.html">
-                        <img
-                          src="public/ai_intro_to_ml/lectures/hqdefault2.jpg"
-                          alt="public/ai_intro_to_ml/lectures/hqdefault2.jpg"
-                        />
-                      </a>
-                    </div>
-                    <!-- Contributors -->
-                    <li>
-                      <div class="lecture-contributors">
-                        <p><strong>Contributors:</strong></p>
-                        <span>Dmitry Kobak</span>
-                      </div>
-                    </li>
-                    <!-- Duration -->
-                    <li>
-                      <div class="lecture-duration"><span>11</span> hours</div>
-                    </li>
-                    <!-- Rating -->
-                    <li>
-                      <div class="lecture-rating">
-                        <span>4.9</span> / 5 (<span>954</span> reviews)
-                      </div>
-                    </li>
-                    <!-- Description -->
-                    <li>
-                      <div class="lecture-description">
-                        <span>
-                          The course serves as a basic introduction to machine
-                          learning and covers key concepts in regression,
-                          classification, optimization, regularization,
-                          clustering, and dimensionality reduction. The course
-                          is aimed at master students in neuroscience and other
-                          sciences. The course assumes basic familiarity with
-                          calculus, probability theory, and linear algebra
-                          (matrices).
-                        </span>
-                      </div>
-                    </li>
-                  </ul>
+          <!-- Lecture -->
+          <div class="lecture-card">
+            <!-- Lecture details -->
+            <div class="lecture-card-details">
+              <ul>
+                <!-- Title -->
+                <li class="lecture-card-title">
+                  <a href=""> MIT 6.S191: Introduction to Deep Learning </a>
+                </li>
+                <!-- Lecture Image -->
+                <div class="lecture-card-image-wrapper">
+                  <a href="">
+                    <img
+                      src="public/ai_intro_to_ml/lectures/hqdefault1.jpg"
+                      alt="public/ai_intro_to_ml/lectures/hqdefault1.jpg"
+                    />
+                  </a>
                 </div>
-              </div>
-            </li>
+                <!-- Contributors -->
+                <li>
+                  <div class="lecture-contributors">
+                    <p><strong>Contributors:</strong></p>
+                    <span>Alexander Amini</span>
+                  </div>
+                </li>
+                <!-- Duration -->
+                <li>
+                  <div class="lecture-duration"><span>7</span> hours</div>
+                </li>
+                <!-- Rating -->
+                <li>
+                  <div class="lecture-rating">
+                    <span>5</span> / 5 (<span>14000</span> reviews)
+                  </div>
+                </li>
+                <!-- Description -->
+                <li>
+                  <div class="lecture-description">
+                    <span>
+                      This playlist provides a beginner-friendly introduction to
+                      the core concepts of Deep Learning. You’ll explore topics
+                      such as neural networks, perceptrons, activation
+                      functions, and training models with techniques like
+                      gradient descent and backpropagation. Through clear
+                      explanations and practical examples, this series lays a
+                      strong foundation for understanding how deep learning
+                      works and prepares you for more advanced topics and
+                      applications in the field.
+                    </span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
 
-            <!-- Repeat similar structure for remaining lectures as well -->
-          </ul>
+          <!-- Lecture -->
+          <div class="lecture-card">
+            <!-- Lecture details -->
+            <div class="lecture-card-details">
+              <ul>
+                <!-- Title -->
+                <li class="lecture-card-title">
+                  <a href="ai_intro_to_ml_lec3.html">
+                    Introduction to Machine Learning — Dmitry Kobak, 2020/21
+                  </a>
+                </li>
+                <!-- Lecture Image -->
+                <div class="lecture-card-image-wrapper">
+                  <a href="ai_intro_to_ml_lec3.html">
+                    <img
+                      src="public/ai_intro_to_ml/lectures/hqdefault2.jpg"
+                      alt="public/ai_intro_to_ml/lectures/hqdefault2.jpg"
+                    />
+                  </a>
+                </div>
+                <!-- Contributors -->
+                <li>
+                  <div class="lecture-contributors">
+                    <p><strong>Contributors:</strong></p>
+                    <span>Dmitry Kobak</span>
+                  </div>
+                </li>
+                <!-- Duration -->
+                <li>
+                  <div class="lecture-duration"><span>11</span> hours</div>
+                </li>
+                <!-- Rating -->
+                <li>
+                  <div class="lecture-rating">
+                    <span>4.9</span> / 5 (<span>954</span> reviews)
+                  </div>
+                </li>
+                <!-- Description -->
+                <li>
+                  <div class="lecture-description">
+                    <span>
+                      The course serves as a basic introduction to machine
+                      learning and covers key concepts in regression,
+                      classification, optimization, regularization, clustering,
+                      and dimensionality reduction. The course is aimed at
+                      master students in neuroscience and other sciences. The
+                      course assumes basic familiarity with calculus,
+                      probability theory, and linear algebra (matrices).
+                    </span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Repeat similar structure for remaining lectures as well -->
         </div>
       </section>
     </main>

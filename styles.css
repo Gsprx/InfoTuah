@@ -291,35 +291,22 @@ strong {
   list-style: none;
 }
 
-.course-content {
-  /* Course Content subgrid inside Main grid */
-  display: grid;
-  grid-column: 2/4;
-  grid-row: 2/18;
-  grid-template-columns: 2fr 1fr;
-  grid-template-rows: repeat(16, 100px);
-}
-
-.course-header {
-  display: grid;
-  grid-column: 1/2;
-  grid-row: 1/3;
+#course-content-main-header {
+  grid-column: 1/3;
+  grid-row: 1/2;
+  justify-self: left;
 }
 
 .course-header h1 {
   /* Placed inside the course content grid */
   font-size: 340%;
   color: rgb(130, 126, 139);
-  grid-column: 1/2;
-  grid-row: 1/3;
 }
 
 .course-header h2 {
   /* Headers styled to achieve an inline look and distinguishable hierarchy with other header ranks */
   font-size: 300%;
-  margin-left: 10%;
-  margin-bottom: 3%;
-  margin-top: 4%;
+  margin-left: 5%;
   color: rgb(93, 90, 100);
 }
 
@@ -355,15 +342,154 @@ strong {
   padding-bottom: 5%;
 }
 
-.container-books {
+.course-link {
+  /* Course Link is extra sized on the font compared to the previous texts so it is visibly a different part of the description */
+  font-size: 190%;
+  margin-left: 20%;
+  margin-bottom: 10%;
+  margin-top: 5%;
+}
+
+/* ------- DB Intro to SQL Page Specifics -------- */
+#db-intro-sql-body {
+  /* Basic Grid */
+  height: 100vh;
+  background-color: var(--dark-blue);
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: repeat(19, 100px);
+}
+
+#db-intro-sql-main {
+  /* Main subgrid relative to Body grid */
+  min-height: 100%;
+  display: grid;
+  grid-column: 1/4;
+  grid-row: 2/18;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: repeat(16, 100px);
+}
+
+#db-intro-sql-content {
+  /* Course Content subgrid inside Main grid */
+  display: grid;
+  grid-column: 2/4;
+  grid-row: 2/16;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: repeat(12, 100px);
+}
+
+#db-intro-sql-books {
   /* Flexbox of books placed inside the course content grid */
   display: flex;
   flex-direction: column;
-  row-gap: 100px;
   grid-column: 1/3;
   grid-row: 3/17;
 }
+
+/* ------- AI Intro to ML Page Specifics -------- */
+
+#ai-intro-ml-body {
+  /* Basic Grid */
+  height: 100vh;
+  background-color: var(--dark-blue);
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: repeat(58, 100px);
+}
+
+#ai-intro-ml-main {
+  /* Main subgrid relative to Body grid */
+  min-height: 100%;
+  display: grid;
+  grid-column: 1/4;
+  grid-row: 2/57;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: repeat(55, 100px);
+}
+
+#ai-intro-ml-content {
+  /* Course Content subgrid inside Main grid */
+  display: grid;
+  grid-column: 2/4;
+  grid-row: 2/56;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: repeat(54, 100px);
+}
+
+#ai-intro-ml-books {
+  /* Flexbox of books placed inside the course content grid */
+  display: flex;
+  flex-direction: column;
+  grid-column: 1/3;
+  grid-row: 3/30;
+  margin-right: 10%;
+}
+
+#ai-intro-ml-lectures {
+  /* Flexbox of lectures placed inside the course content grid */
+  display: flex;
+  flex-direction: column;
+  grid-column: 1/3;
+  grid-row: 31/55;
+  margin-right: 10%;
+}
+
+/* ------- SE Intro to OOP Page Specifics -------- */
+
+#se-intro-oop-body {
+  /* Basic Grid */
+  height: 100vh;
+  background-color: var(--dark-blue);
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: repeat(58, 100px);
+}
+
+#se-intro-oop-main {
+  /* Main subgrid relative to Body grid */
+  min-height: 100%;
+  display: grid;
+  grid-column: 1/4;
+  grid-row: 2/57;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: repeat(55, 100px);
+}
+
+#se-intro-oop-content {
+  /* Course Content subgrid inside Main grid */
+  display: grid;
+  grid-column: 2/4;
+  grid-row: 2/56;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: repeat(54, 100px);
+}
+
+#se-intro-oop-books {
+  /* Flexbox of books placed inside the course content grid */
+  display: flex;
+  flex-direction: column;
+  grid-column: 1/3;
+  grid-row: 3/30;
+  margin-right: 10%;
+}
+
+#se-intro-oop-lectures {
+  /* Flexbox of lectures placed inside the course content grid */
+  display: flex;
+  flex-direction: column;
+  grid-column: 1/3;
+  grid-row: 31/55;
+  margin-right: 10%;
+}
+
 /*-------- Book Card Rules --------*/
+
+.book-card {
+  margin-top: 8%;
+  margin-bottom: 14%;
+}
+
 .book-card-image-wrapper img {
   /* Book Image is floated to the right of the text and wrapped around it */
   width: 25%;
@@ -413,12 +539,16 @@ strong {
 
 .book-description {
   /* Specific rule for the description of the book */
-  /* Extra bottom margin gives it more space from next book elements and the start of the Lectures part */
-  margin-bottom: 15%;
+
   margin-top: 3%;
 }
 
 /*----------- Lecture Card Rules -----------*/
+
+.lecture-card {
+  margin-top: 8%;
+  margin-bottom: 14%;
+}
 
 .lecture-card-image-wrapper img {
   /* Lecture Image is floated to the right of the text and wrapped around it, follows a similar design to book cards */
@@ -434,7 +564,6 @@ strong {
 .lecture-card-details {
   /* General rule for the text inside the description box for the lecture */
   font-size: 180%;
-  margin-left: 15%;
   margin-right: 10%;
 }
 
@@ -454,7 +583,6 @@ strong {
 
 .lecture-description {
   /* Specific rule for the description of the lecture */
-  margin-bottom: 15%;
   margin-top: 3%;
 }
 
@@ -489,7 +617,7 @@ strong {
   /* Content headers are styled so that they DO NOT give off an inline look */
   font-size: 160%;
   color: rgb(93, 90, 100);
-  margin-bottom: 3%;
+  margin-top: 3%;
 }
 
 .content-title {
@@ -744,7 +872,7 @@ header {
 /*----------- Footer -----------*/
 footer {
   grid-column: 1/4;
-  grid-row: 20/21;
+  grid-row: -1/-3;
   background-color: var(--very-dark-blue);
   padding: 80px;
   padding-left: 24px;
