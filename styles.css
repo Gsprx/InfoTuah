@@ -509,36 +509,40 @@ aside {
   min-height: 100%;
   display: grid;
   grid-column: 1/4;
-  grid-row: 2/57;
+  grid-row: 2/56;
   grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: repeat(55, 100px);
+  grid-template-rows: repeat(54, 100px);
 }
 
 #se-intro-oop-content {
   /* Course Content subgrid inside Main grid */
   display: grid;
   grid-column: 2/4;
-  grid-row: 2/56;
+  grid-row: 2/55;
   grid-template-columns: 2fr 1fr;
-  grid-template-rows: repeat(54, 100px);
+  grid-template-rows: repeat(53, 100px);
 }
 
 #se-intro-oop-books {
   /* Flexbox of books placed inside the course content grid */
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
   grid-column: 1/3;
   grid-row: 3/30;
   margin-right: 10%;
+  margin-left: 8%;
 }
 
 #se-intro-oop-lectures {
   /* Flexbox of lectures placed inside the course content grid */
   display: flex;
   flex-direction: column;
+  justify-content: space-evenly;
   grid-column: 1/3;
   grid-row: 31/55;
   margin-right: 10%;
+  margin-left: 8%;
 }
 
 /*-------- Book Card Rules --------*/
