@@ -209,6 +209,7 @@ strong {
 
 .courses-program {
   padding-left: 16px;
+  font-style: italic;
   grid-row: 3/3;
   grid-column: 1/3;
 }
@@ -282,7 +283,7 @@ strong {
 .course-link {
   /* Course Link is extra sized on the font compared to the previous texts so it is visibly a different part of the description */
   padding-top: 24px;
-  font-size: 120%;
+  font-size: 100%;
 }
 
 /* Individual Course Pages*/
@@ -340,14 +341,6 @@ strong {
   font-size: 200%;
   padding-left: 15%;
   padding-bottom: 5%;
-}
-
-.course-link {
-  /* Course Link is extra sized on the font compared to the previous texts so it is visibly a different part of the description */
-  font-size: 190%;
-  margin-left: 20%;
-  margin-bottom: 10%;
-  margin-top: 5%;
 }
 
 /* ------- DB Intro to SQL Page Specifics -------- */
