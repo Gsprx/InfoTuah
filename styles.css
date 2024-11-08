@@ -206,7 +206,7 @@ strong {
 .courses-header {
   padding-left: 16px;
   font-size: 180%;
-  grid-row: 2/2;
+  grid-row: 2/3;
   grid-column: 1/4;
   display: flex;
   align-items: center;
@@ -215,7 +215,7 @@ strong {
 
 .all-courses {
   padding-top: 32px;
-  grid-row: 3/3;
+  grid-row: 3/4;
   grid-column: 1/4;
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
@@ -237,15 +237,15 @@ strong {
 }
 
 #courses li:nth-child(1) {
-  grid-row: 1/1;
+  grid-row: 1/2;
 }
 
 #courses li:nth-child(2) {
-  grid-row: 2/2;
+  grid-row: 2/3;
 }
 
 #courses li:nth-child(3) {
-  grid-row: 3/3;
+  grid-row: 3/4;
 }
 
 .courses-description {
@@ -286,7 +286,12 @@ strong {
   font-size: 100%;
 }
 
-/* Individual Course Pages*/
+/* Individual Course Pages */
+#se_course {
+  display: grid;
+}
+
+/* Subcourse page */
 .course-content ul {
   /* Removes the unwanted styling for each list element */
   list-style: none;
