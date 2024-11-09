@@ -32,12 +32,12 @@ ul {
 body {
   height: 100vh;
   background-color: var(--dark-blue);
-  padding-top: 70px;
 }
 
 main {
   min-height: 100%;
   padding-bottom: 32px;
+  margin-top: 8px;
 }
 
 strong {
@@ -47,7 +47,6 @@ strong {
 /*----------- BODY / MAIN -----------*/
 
 /*-- INDEX/HERO --*/
-
 #index {
   /* Main subgrid relative to Body grid */
   display: grid;
@@ -196,7 +195,6 @@ strong {
 
 /* Courses page */
 #courses {
-  margin-top: 8px;
   /* Main subgrid relative to Body grid */
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
@@ -205,7 +203,7 @@ strong {
 
 .courses-header {
   padding-left: 16px;
-  font-size: 180%;
+  font-size: 1.4em;
   grid-row: 2/3;
   grid-column: 1/4;
   display: flex;
@@ -249,7 +247,7 @@ strong {
 }
 
 .courses-description {
-  font-size: 120%;
+  font-size: 1.1em;
   padding-left: 16px;
   display: flex;
   flex-direction: column;
@@ -283,12 +281,165 @@ strong {
 .course-link {
   /* Course Link is extra sized on the font compared to the previous texts so it is visibly a different part of the description */
   padding-top: 24px;
-  font-size: 100%;
+  font-size: 0.8em;
 }
 
 /* Individual Course Pages */
-#se_course {
+.course-body {
   display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-rows: [header] 70px [main-header] 5em [main] min-content [footer] 250px;
+}
+
+/* Course Sidebar */
+.course-sidebar {
+  grid-column: 1/2;
+  grid-row: 3/4;
+  background-color: #16191c;
+  height: 80vh;
+  max-width: 300px;
+  padding-top: 12px;
+  border: var(--dark-grey) solid 1px;
+  box-shadow: 5px 3px rgba(18, 20, 23, 0.1);
+  z-index: 990;
+  margin-left: 16px;
+  margin-right: 8px;
+  margin-top: 4px;
+}
+
+.course-sidebar h3 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 16px;
+  padding-bottom: 8px;
+  font-size: 1.1em;
+  font-weight: 400;
+  border-bottom: var(--dark-grey) solid 2px;
+}
+
+.course-sidebar ol {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.course-sidebar li {
+  display: block;
+  padding: 12px;
+}
+
+.course-sidebar a {
+  color: white;
+}
+
+.course-sidebar a:hover {
+  text-decoration: underline;
+}
+
+/* Course Aside */
+.course-body aside {
+  grid-column: 3/4;
+  grid-row: 3/4;
+  margin-right: 16px;
+}
+
+.course-aside {
+  background-color: #16191c;
+  max-width: 300px;
+  padding-top: 12px;
+  border: var(--dark-grey) solid 1px;
+  box-shadow: -5px -3px rgba(18, 20, 23, 0.1);
+  z-index: 990;
+  margin-left: 16px;
+  margin-right: 8px;
+  margin-top: 4px;
+  padding: 16px 4px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 4px;
+}
+
+.course-aside-content {
+  max-width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.course-aside-img-wrapper img {
+  max-height: 100px;
+}
+
+.aside-button {
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+.aside-button-left {
+  transform: rotate(180deg);
+}
+
+/* Course Main */
+.course-body main {
+  grid-column: 2/3;
+  grid-row: 3/4;
+}
+
+.course-header {
+  grid-row: 2/3;
+  grid-column: 1/3;
+  font-size: 1.4em;
+}
+
+.course-header h1 {
+  margin-bottom: 24px;
+  margin-left: 16px;
+  margin-top: 8px;
+}
+
+.course-header h2 {
+  font-size: 1.1em;
+  margin-bottom: 24px;
+}
+
+.course-header h3 {
+  font-size: 1.2em;
+  margin-left: 0;
+}
+
+.course-header h3 a {
+  text-decoration: underline;
+}
+
+.course-description-text {
+  font-size: 1.1em;
+  margin-bottom: 1.5%;
+}
+
+.course-description ol {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.course-description ol li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 16px 8px;
+}
+
+.course-description ol li:nth-child(odd) {
+  background-color: #16191c;
+}
+.course-description ol li:nth-child(even) {
+  background-color: #19182c;
 }
 
 /* Subcourse page */
@@ -297,13 +448,13 @@ strong {
   list-style: none;
 }
 
-.course-header {
+.subcourse-header {
   display: grid;
   grid-column: 1/3;
   grid-row: 1/2;
 }
 
-.course-header h1 {
+.subcourse-header h1 {
   /* Placed inside the course content grid */
   font-size: 300%;
   color: rgb(130, 126, 139);
@@ -312,18 +463,11 @@ strong {
   margin-right: 2%;
 }
 
-.course-header h2 {
+.subcourse-header h2 {
   /* Headers styled to achieve an inline look and distinguishable hierarchy with other header ranks */
   font-size: 260%;
   margin-left: 5%;
   color: rgb(93, 90, 100);
-}
-
-.course-header h3 {
-  /* Headers styled to achieve an inline look and distinguishable hierarchy with other header ranks */
-  /* This tag is usually paired with course-description ol */
-  margin-bottom: 3%;
-  margin-left: 2%;
 }
 
 .course-image img {
@@ -334,21 +478,6 @@ strong {
   margin-left: 13%;
   margin-right: 1%;
   float: left;
-}
-
-.course-description-text {
-  /* Appropriately margined so that its always more right-positioned than the headers */
-  margin-left: 12%;
-  margin-right: 14%;
-  font-size: 170%;
-  margin-bottom: 1.5%;
-}
-
-.course-description ol {
-  /* This tag is usually paired with course-header h3 */
-  font-size: 200%;
-  padding-left: 15%;
-  padding-bottom: 5%;
 }
 
 /* ------- DB Intro to SQL Page Specifics -------- */
@@ -947,8 +1076,8 @@ header {
 
 /*----------- Footer -----------*/
 footer {
+  grid-row: -1/-2;
   grid-column: 1/4;
-  grid-row: -1/-4;
   background-color: var(--very-dark-blue);
   padding: 80px;
   padding-left: 24px;

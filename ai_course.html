@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
 
-  <body>
+  <body class="course-body">
     <!-- Navbar -->
     <header>
       <nav class="navbar">
@@ -142,29 +142,43 @@
       </div>
     </header>
 
-    <main>
-      <div class="return-link">
-        <!-- Return Link -->
-        <a href="Courses.html">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            height="24px"
-            viewBox="0 -960 960 960"
-            width="24px"
-            fill="#5f6368"
-          >
-            <path
-              d="M280-200v-80h284q63 0 109.5-40T720-420q0-60-46.5-100T564-560H312l104 104-56 56-200-200 200-200 56 56-104 104h252q97 0 166.5 63T800-420q0 94-69.5 157T564-200H280Z"
-            />
-          </svg>
-          Return To Courses
-        </a>
-      </div>
+    <!-- Sidebar -->
+    <nav class="course-sidebar">
+      <h3>Subcourses</h3>
+      <ol>
+        <li>
+          <a href="#ml">1. Machine Learning</a>
+        </li>
+        <li>
+          <a href="#nn">2. Neural Networks and Deep Learning</a>
+        </li>
+        <li>
+          <a href="#nlp">3. Natural Language Processing</a>
+        </li>
+        <li>
+          <a href="#AI_Ethics_Bias">4. AI Ethics and Bias</a>
+        </li>
+        <li>
+          <a href="#vision">5. Computer Vision</a>
+        </li>
+        <li>
+          <a href="#rl">6. Reinforcement Learning (RL)</a>
+        </li>
+        <li>
+          <a href="#robotics">7. Robotics and Autonomous Systems</a>
+        </li>
+        <li>
+          <a href="#edge">8. Edge AI</a>
+        </li>
+      </ol>
+    </nav>
 
+    <div class="course-header">
+      <h1>Artificial Intelligence Course by InfoTuah</h1>
+    </div>
+
+    <main>
       <section class="course-description">
-        <div class="course-header">
-          <h1>Artificial Intelligence Course by InfoTuah</h1>
-        </div>
         <div class="course-description-text">
           <p>
             Our <strong>Artificial Intelligence course syllabus</strong> is
@@ -205,13 +219,29 @@
         <div class="course-header">
           <h2>Core Lessons:</h2>
         </div>
+
         <ol>
-          <li>
+          <li id="ml">
             <div class="course-header">
               <h3><a href="ai_intro_to_ml.html">Machine Learning</a></h3>
             </div>
+            <div class="subcourse-desc">
+              <p>
+                Machine Learning (ML) is a subset of artificial intelligence
+                focused on enabling computers to learn from data, identify
+                patterns, and make decisions without explicit programming. ML is
+                foundational in AI because it powers many of the technologies we
+                interact with daily, from recommendation engines to fraud
+                detection. By using algorithms to find insights and make
+                predictions, machine learning allows AI systems to adapt to new
+                information, improve over time, and tackle complex tasks that
+                would be impractical to program manually. As the backbone of AI,
+                ML continues to drive advancements in various fields, including
+                healthcare, finance, and robotics.
+              </p>
+            </div>
           </li>
-          <li>
+          <li id="nn">
             <div class="course-header">
               <h3>
                 <a href="NN_And_Deep_Learning.html"
@@ -219,20 +249,196 @@
                 >
               </h3>
             </div>
+            <div class="subcourse-desc">
+              <p>
+                Neural Networks and Deep Learning are advanced branches of
+                machine learning that mimic the human brain's structure to
+                process complex data patterns, enabling capabilities like image
+                recognition, voice synthesis, and autonomous decision-making.
+                Neural networks, especially deep learning models with many
+                hidden layers, are vital for tasks that require high levels of
+                abstraction and feature detection. They are crucial to AI
+                because they allow systems to learn from vast amounts of
+                unstructured data, excel in visual and auditory processing, and
+                perform tasks once thought to be uniquely human. Deep learning
+                is instrumental in fields like self-driving cars, medical
+                diagnostics, and natural language processing.
+              </p>
+            </div>
           </li>
-          <li>
+          <li id="nlp">
             <div class="course-header">
               <h3><a href="NLP.html">Natural Language Processing </a></h3>
             </div>
+            <div class="subcourse-desc">
+              <p>
+                Natural Language Processing (NLP) is a field within AI that
+                focuses on the interaction between computers and human language,
+                enabling machines to understand, interpret, and generate human
+                language. NLP is essential because it powers technologies such
+                as voice assistants, translation apps, and sentiment analysis
+                tools, allowing AI to interact with humans in a natural,
+                intuitive way. By bridging the communication gap between humans
+                and machines, NLP makes AI accessible and usable for
+                non-technical users, enhances customer service automation, and
+                supports critical applications like real-time translation and
+                content moderation.
+              </p>
+            </div>
           </li>
-          <li>
+          <li id="AI_Ethics_Bias">
             <div class="course-header">
               <h3><a href="AI_Ethics_Bias.html">AI Ethics and Bias </a></h3>
+            </div>
+            <div class="subcourse-desc">
+              <p>
+                AI Ethics and Bias are critical areas of study that address the
+                moral implications, fairness, and accountability of AI
+                technologies. As AI systems increasingly influence everyday
+                life—from hiring processes to law enforcement—ensuring they
+                operate ethically and without harmful biases is essential for
+                public trust and social equity. Addressing ethics and bias is
+                crucial because AI systems trained on biased data or deployed
+                without ethical considerations can reinforce social
+                inequalities, make unfair decisions, or harm vulnerable
+                populations. Ensuring that AI is developed responsibly,
+                transparently, and fairly helps protect individual rights,
+                fosters public trust, and paves the way for beneficial and
+                equitable technological advancements.
+              </p>
+            </div>
+          </li>
+          <li id="vision">
+            <div class="course-header">
+              <h3><a href="computer_vision.html">Computer Vision</a></h3>
+            </div>
+            <div class="subcourse-desc">
+              <p>
+                Computer Vision (CV) is a field of AI focused on enabling
+                computers to interpret and make decisions based on visual
+                information, like images or video. CV is important because it
+                enables applications such as facial recognition, medical imaging
+                analysis, and autonomous vehicles. By teaching machines to "see"
+                and understand visual data, computer vision expands AI’s ability
+                to interact with the physical world, transforming industries
+                like healthcare, security, retail, and manufacturing. The
+                field’s ongoing advancements contribute to real-time image
+                processing, object detection, and scene understanding, which are
+                critical for making AI applications more responsive and
+                context-aware.
+              </p>
+            </div>
+          </li>
+          <li id="rl">
+            <div class="course-header">
+              <h3><a href="rl.html">Reinforcement Learning (RL)</a></h3>
+            </div>
+            <div class="subcourse-desc">
+              <p>
+                Reinforcement Learning (RL) is an area of machine learning where
+                an agent learns to make decisions by interacting with an
+                environment to maximize rewards over time. This technique is
+                vital for AI applications that require dynamic decision-making,
+                such as robotics, gaming, and autonomous driving. RL’s
+                trial-and-error learning process mimics human learning in
+                complex scenarios, making it highly applicable for situations
+                where pre-programming is challenging or impossible. RL’s ability
+                to optimize actions through feedback loops has spurred
+                developments in areas such as personalized recommendations,
+                adaptive control systems, and strategic planning.
+              </p>
+            </div>
+          </li>
+          <li id="robotics">
+            <div class="course-header">
+              <h3>
+                <a href="robotics.html">Robotics and Autonomous Systems</a>
+              </h3>
+            </div>
+            <div class="subcourse-desc">
+              <p>
+                Robotics and Autonomous Systems involve integrating AI into
+                machines to enable independent decision-making, navigation, and
+                interaction with their environments. Robotics is important in AI
+                because it extends the reach of AI from digital applications to
+                the physical world, impacting industries such as manufacturing,
+                logistics, and healthcare. By combining perception, planning,
+                and control, robotics enhances AI’s capacity to assist humans,
+                automate complex physical tasks, and create smart environments
+                that can adapt to users’ needs, making it one of the most
+                transformative applications of AI.
+              </p>
+            </div>
+          </li>
+          <li id="edge">
+            <div class="course-header">
+              <h3>
+                <a href="edge.html">Edge AI</a>
+              </h3>
+            </div>
+            <div class="subcourse-desc">
+              <p>
+                Edge AI refers to deploying AI algorithms locally on devices
+                (the "edge") rather than relying solely on centralized cloud
+                computing. Edge AI is increasingly significant as it allows for
+                faster processing, real-time data analysis, and enhanced
+                privacy, especially in IoT applications like smart homes,
+                industrial sensors, and autonomous vehicles. By reducing latency
+                and minimizing data transfer needs, edge AI enables AI to work
+                in real-time and securely, creating efficient, responsive
+                applications crucial for scenarios where split-second decisions
+                are essential.
+              </p>
             </div>
           </li>
         </ol>
       </section>
     </main>
+
+    <!-- Aside -->
+    <aside>
+      <div class="course-aside">
+        <button class="aside-button aside-button-left">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="32px"
+            viewBox="0 -960 960 960"
+            width="32px"
+            fill="#5f6368"
+          >
+            <path
+              d="m480-320 160-160-160-160-56 56 64 64H320v80h168l-64 64 56 56Zm0 240q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"
+            />
+          </svg>
+        </button>
+        <div class="course-aside-content">
+          <h3>Machine Learning...</h3>
+          <p>More like 200 full box no cap!</p>
+          <div class="course-aside-img-wrapper">
+            <a href="se_intro_to_oop.html">
+              <img
+                src="public/ai_intro_to_ml/istockphoto-496956852-612x612.jpg"
+                alt="ml-aside"
+              />
+            </a>
+          </div>
+          <p>Intro to Machine Learning</p>
+        </div>
+        <button class="aside-button aside-button-right">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="32px"
+            viewBox="0 -960 960 960"
+            width="32px"
+            fill="#5f6368"
+          >
+            <path
+              d="m480-320 160-160-160-160-56 56 64 64H320v80h168l-64 64 56 56Zm0 240q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"
+            />
+          </svg>
+        </button>
+      </div>
+    </aside>
 
     <!-- Footer -->
     <footer>

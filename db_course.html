@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
 
-  <body>
+  <body class="course-body">
     <!-- Navbar -->
     <header>
       <nav class="navbar">
@@ -139,29 +139,33 @@
       </div>
     </header>
 
-    <main>
-      <div class="return-link">
-        <!-- Return Link -->
-        <a href="Courses.html">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            height="24px"
-            viewBox="0 -960 960 960"
-            width="24px"
-            fill="#5f6368"
-          >
-            <path
-              d="M280-200v-80h284q63 0 109.5-40T720-420q0-60-46.5-100T564-560H312l104 104-56 56-200-200 200-200 56 56-104 104h252q97 0 166.5 63T800-420q0 94-69.5 157T564-200H280Z"
-            />
-          </svg>
-          Return To Courses
-        </a>
-      </div>
+    <!-- Sidebar -->
+    <nav class="course-sidebar">
+      <h3>Subcourses</h3>
+      <ol>
+        <li>
+          <a href="#sql">1. SQL (Structured Query Language)</a>
+        </li>
+        <li>
+          <a href="#db_design">2. Database Design Principles</a>
+        </li>
+        <li>
+          <a href="#db_norma">3. Data Normalization</a>
+        </li>
+        <li>
+          <a href="#db_transactions_acid">
+            4. Transactions and ACID Properties
+          </a>
+        </li>
+      </ol>
+    </nav>
 
+    <div class="course-header">
+      <h1>Databases Course by InfoTuah</h1>
+    </div>
+
+    <main>
       <section class="course-description">
-        <div class="course-header">
-          <h1>Databases Course by InfoTuah</h1>
-        </div>
         <div class="course-description-text">
           <p>
             In this comprehensive <strong>Databases Course</strong>, learners
@@ -220,8 +224,9 @@
         <div class="course-header">
           <h2>Core Lessons:</h2>
         </div>
+
         <ol>
-          <li>
+          <li id="sql">
             <div class="course-header">
               <h3>
                 <a href="db_intro_to_sql.html"
@@ -229,18 +234,62 @@
                 >
               </h3>
             </div>
+            <div class="subcourse-desc">
+              <p>
+                SQL is the standard language for managing and querying
+                relational databases. It allows users to retrieve, manipulate,
+                and manage data stored in a structured format. SQL is essential
+                because it provides a powerful and flexible interface to
+                interact with large datasets, making it the backbone of database
+                management systems (DBMS) in industries ranging from finance to
+                healthcare. Its versatility enables users to perform complex
+                queries, update records, and define data relationships, all
+                while ensuring data integrity and consistency. Mastery of SQL is
+                crucial for any database professional, as it is a foundational
+                skill for working with relational databases.
+              </p>
+            </div>
           </li>
-          <li>
+          <li id="db_design">
             <div class="course-header">
               <h3><a href="db_design.html">Database Design Principles</a></h3>
             </div>
+            <div class="subcourse-desc">
+              <p>
+                Database design principles are guidelines that ensure databases
+                are structured effectively to meet application requirements,
+                support efficient data retrieval, and maintain data integrity.
+                Good design principles—such as defining clear relationships,
+                establishing constraints, and choosing appropriate data
+                types—are important because they prevent redundancy, enhance
+                data integrity, and ensure scalability as the database grows.
+                Well-designed databases minimize errors, optimize performance,
+                and simplify maintenance, making it easier for developers and
+                analysts to work with the data without extensive restructuring
+                or reorganization.
+              </p>
+            </div>
           </li>
-          <li>
+          <li id="db_norma">
             <div class="course-header">
               <h3><a href="db_normalization.html">Data Normalization </a></h3>
             </div>
+            <div class="subcourse-desc">
+              <p>
+                Data normalization is the process of organizing data into
+                structured tables by reducing redundancy and dependencies. This
+                is done through a series of steps (known as normal forms) that
+                break down data into smaller tables while maintaining
+                relationships between them. Normalization is crucial because it
+                reduces data duplication, conserves storage space, and enhances
+                data consistency. By eliminating unnecessary redundancy,
+                normalized databases are easier to manage, update, and scale,
+                and they ensure that data integrity is maintained across the
+                system, reducing the likelihood of errors in large databases.
+              </p>
+            </div>
           </li>
-          <li>
+          <li id="db_transactions_acid">
             <div class="course-header">
               <h3>
                 <a href="db_transactions_acid.html"
@@ -248,10 +297,71 @@
                 </a>
               </h3>
             </div>
+            <div class="subcourse-desc">
+              <p>
+                Transactions in databases are sequences of operations that are
+                treated as a single unit of work, ensuring that either all
+                changes are committed, or none are. ACID properties—Atomicity,
+                Consistency, Isolation, and Durability—are essential
+                characteristics of transactions that guarantee reliable
+                processing even in cases of errors or system failures. These
+                properties are important because they ensure that databases
+                remain accurate, consistent, and recoverable, especially in
+                multi-user environments where concurrent access can lead to
+                conflicts. By adhering to ACID principles, databases provide a
+                secure and reliable way to handle data, making them suitable for
+                mission-critical applications where data integrity is paramount.
+              </p>
+            </div>
           </li>
         </ol>
       </section>
     </main>
+
+    <!-- Aside -->
+    <aside>
+      <div class="course-aside">
+        <button class="aside-button aside-button-left">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="32px"
+            viewBox="0 -960 960 960"
+            width="32px"
+            fill="#5f6368"
+          >
+            <path
+              d="m480-320 160-160-160-160-56 56 64 64H320v80h168l-64 64 56 56Zm0 240q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"
+            />
+          </svg>
+        </button>
+        <div class="course-aside-content">
+          <h3>Learn Databases</h3>
+          <p>Like a Databased...</p>
+          <div class="course-aside-img-wrapper">
+            <a href="se_intro_to_oop.html">
+              <img
+                src="public/db_intro_to_sql/c387e-17217186925863-1920.png"
+                alt="db-aside"
+              />
+            </a>
+          </div>
+          <p>Intro to SQL</p>
+        </div>
+        <button class="aside-button aside-button-right">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="32px"
+            viewBox="0 -960 960 960"
+            width="32px"
+            fill="#5f6368"
+          >
+            <path
+              d="m480-320 160-160-160-160-56 56 64 64H320v80h168l-64 64 56 56Zm0 240q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"
+            />
+          </svg>
+        </button>
+      </div>
+    </aside>
 
     <!-- Footer -->
     <footer>

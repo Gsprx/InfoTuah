@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
 
-  <body>
+  <body class="course-body">
     <!-- Navbar -->
     <header>
       <nav class="navbar">
@@ -139,30 +139,53 @@
       </div>
     </header>
 
-    <main id="se_course">
-      <div class="return-link">
-        <!-- Return Link -->
-        <a href="Courses.html">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            height="24px"
-            viewBox="0 -960 960 960"
-            width="24px"
-            fill="#5f6368"
+    <!-- Sidebar -->
+    <nav class="course-sidebar">
+      <h3>Subcourses</h3>
+      <ol>
+        <li>
+          <a href="#software_requirements">1. Software Requirements</a>
+        </li>
+        <li>
+          <a href="#arch_design">2. Architectural Design</a>
+        </li>
+        <li>
+          <a href="#oop">3. Object Oriented Programming</a>
+        </li>
+        <li>
+          <a href="#software_quality_maintenance"
+            >4. Software Quality and Maintenance</a
           >
-            <path
-              d="M280-200v-80h284q63 0 109.5-40T720-420q0-60-46.5-100T564-560H312l104 104-56 56-200-200 200-200 56 56-104 104h252q97 0 166.5 63T800-420q0 94-69.5 157T564-200H280Z"
-            />
-          </svg>
-          Return To Courses
-        </a>
-      </div>
+        </li>
+        <li>
+          <a href="#vcs">5. Version Control Systems (VCS)</a>
+        </li>
+        <li>
+          <a href="#agile_methodology">6. Agile Methodology</a>
+        </li>
+        <li>
+          <a href="#qa">7. Testing and Quality Assurance (QA)</a>
+        </li>
+        <li>
+          <a href="#project_management">8. Project Management</a>
+        </li>
+        <li>
+          <a href="#ci_cd">
+            9. Continuous Integration and Continuous Deployment (CI/CD)
+          </a>
+        </li>
+        <li>
+          <a href="#ux">10. User Experience (UX) Design</a>
+        </li>
+      </ol>
+    </nav>
 
+    <div class="course-header">
+      <h1>Software Engineering Course by InfoTuah</h1>
+    </div>
+
+    <main id="se_course">
       <section class="course-description">
-        <div class="course-header">
-          <h1>Software Engineering Course by InfoTuah</h1>
-        </div>
-
         <div class="course-description-text">
           <p>
             This <strong>software engineering course syllabus</strong> provides
@@ -214,40 +237,267 @@
         <div class="course-header">
           <h2>Core Lessons:</h2>
         </div>
+
         <ol>
-          <li>
+          <li id="software_requirements">
             <div class="course-header">
               <h3>
                 <a href="software_requirements.html">Software Requirements</a>
               </h3>
             </div>
+            <div class="subcourse-desc">
+              <p>
+                Software requirements outline the specific needs and
+                expectations a system must fulfill to meet business goals and
+                user needs. Defining clear, accurate requirements is essential
+                as it sets the foundation for the entire project, guiding
+                design, development, and testing. Well-defined requirements help
+                prevent costly changes later in development by aligning the
+                team's work with stakeholders' expectations from the start. By
+                understanding and documenting requirements thoroughly, software
+                engineers create a clear roadmap for building functional,
+                reliable, and user-centered systems.
+              </p>
+            </div>
           </li>
-          <li>
+          <li id="arch_design">
             <div class="course-header">
               <h3>
                 <a href="architectural_design.html">Architectural Design</a>
               </h3>
             </div>
+            <div class="subcourse-desc">
+              <p>
+                Architectural design involves defining the high-level structure
+                of a software system, including its modules, components, and
+                data flow. A well-thought-out architecture ensures that a system
+                is scalable, maintainable, and capable of evolving over time as
+                new requirements arise. This design phase considers how
+                different elements will interact and how the system can be
+                efficiently organized, making it vital for long-term stability
+                and flexibility. A solid architecture supports future growth,
+                reduces technical debt, and provides a blueprint that engineers
+                can rely on as they build complex applications.
+              </p>
+            </div>
           </li>
-          <li>
+          <li id="oop">
             <div class="course-header">
               <h3>
                 <a href="se_intro_to_oop.html">Object Oriented Programming</a>
               </h3>
             </div>
+            <div class="subcourse-desc">
+              <p>
+                Object-Oriented Programming (OOP) is a programming paradigm
+                centered on concepts of objects, encapsulation, inheritance, and
+                polymorphism. OOP is crucial in software engineering because it
+                allows developers to model real-world entities and relationships
+                within their code, creating systems that are modular and
+                reusable. By structuring code around objects, OOP enhances
+                readability, maintainability, and scalability, enabling teams to
+                work more collaboratively and adapt applications over time
+                without excessive rewrites. This paradigm underpins many modern
+                languages and frameworks, making it essential for building
+                robust software systems.
+              </p>
+            </div>
           </li>
-          <li>
+          <li id="software_quality_maintenance">
             <div class="course-header">
               <h3>
-                <a href="software_quality_maintenance.html"
-                  >Software Quality and Maintenance</a
+                <a href="software_quality_maintenance.html">
+                  Software Quality and Maintenance
+                </a>
+              </h3>
+            </div>
+            <div class="subcourse-desc">
+              <p>
+                Software quality and maintenance ensure that software remains
+                functional, efficient, and secure over time. Quality assurance
+                practices, such as code reviews, testing, and debugging, help
+                catch and fix issues early, while maintenance ensures the
+                software can adapt to new requirements or technological
+                advancements. High-quality, well-maintained software reduces
+                operational risks, improves user satisfaction, and extends the
+                system’s lifecycle, maximizing the return on investment.
+                Prioritizing quality and maintenance allows software engineers
+                to deliver reliable products that can continuously meet users’
+                needs.
+              </p>
+            </div>
+          </li>
+          <li id="vcs">
+            <div class="course-header">
+              <h3>
+                <a href="vcs.html">Version Control Systems (VCS)</a>
+              </h3>
+            </div>
+            <div class="subcourse-desc">
+              <p>
+                Version Control Systems, such as Git, allow teams to track
+                changes to codebases, collaborate effectively, and maintain a
+                history of code revisions. VCS is crucial because it enables
+                developers to work concurrently on different features, branches,
+                or bug fixes without overwriting each other's work. It also
+                allows for safe experimentation, as changes can be easily
+                reverted if issues arise. By providing a clear history of
+                changes, VCS aids in debugging, auditing, and understanding the
+                evolution of the software, making it an indispensable tool in
+                modern software engineering.
+              </p>
+            </div>
+          </li>
+          <li id="agile_methodology">
+            <div class="course-header">
+              <h3>
+                <a href="agile_methodology.html">Agile Methodology</a>
+              </h3>
+            </div>
+            <div class="subcourse-desc">
+              <p>
+                Agile methodology is an iterative and collaborative approach to
+                software development, emphasizing adaptability, feedback, and
+                continuous improvement. Agile is essential because it allows
+                teams to respond quickly to changing requirements, incorporate
+                user feedback early, and release incremental improvements
+                frequently. By breaking down projects into manageable sprints
+                and focusing on delivering value in each iteration, Agile
+                improves productivity, enhances communication, and keeps
+                development aligned with stakeholder expectations, which is
+                especially beneficial in dynamic project environments.
+              </p>
+            </div>
+          </li>
+          <li id="qa">
+            <div class="course-header">
+              <h3>
+                <a href="qa.html">Testing and Quality Assurance (QA)</a>
+              </h3>
+            </div>
+            <div class="subcourse-desc">
+              <p>
+                Testing and Quality Assurance ensure that software performs as
+                expected, is reliable, and meets quality standards before
+                release. Testing—whether unit, integration, or system
+                testing—helps identify defects, improve performance, and
+                validate functionalities. QA practices are critical as they
+                reduce the risk of costly errors, enhance user satisfaction, and
+                build trust in the product. By implementing rigorous testing and
+                QA, software engineers minimize the chances of failures
+                post-deployment, safeguarding both user experience and brand
+                reputation.
+              </p>
+            </div>
+          </li>
+          <li id="project_management">
+            <div class="course-header">
+              <h3>
+                <a href="project_management.html">Project Management</a>
+              </h3>
+            </div>
+            <div class="subcourse-desc">
+              <p>
+                Project management involves planning, organizing, and managing
+                resources to complete software projects efficiently and on time.
+                Effective project management ensures that software development
+                stays on track, within budget, and meets requirements. It
+                includes setting timelines, defining roles, and managing risks,
+                which is essential for aligning technical goals with business
+                objectives. Good project management practices keep development
+                organized, prevent scope creep, and ensure that team members are
+                clear on their responsibilities, ultimately improving project
+                outcomes.
+              </p>
+            </div>
+          </li>
+          <li id="ci_cd">
+            <div class="course-header">
+              <h3>
+                <a href="ci_cd.html"
+                  >Continuous Integration and Continuous Deployment (CI/CD)</a
                 >
               </h3>
+            </div>
+            <div class="subcourse-desc">
+              <p>
+                CI/CD is the practice of automating the integration, testing,
+                and deployment of code changes to accelerate the software
+                release cycle. CI/CD pipelines are important as they allow
+                developers to detect issues early, ensure code compatibility,
+                and deploy updates quickly and safely. By automating repetitive
+                tasks and enabling frequent releases, CI/CD improves software
+                quality, reduces the time to market, and allows teams to respond
+                swiftly to bugs or changing user needs, fostering a culture of
+                efficiency and reliability in software engineering.
+              </p>
+            </div>
+          </li>
+          <li id="ux">
+            <div class="course-header">
+              <h3>
+                <a href="ux.html">User Experience (UX) Design</a>
+              </h3>
+            </div>
+            <div class="subcourse-desc">
+              <p>
+                User Experience (UX) design focuses on creating software that is
+                intuitive, accessible, and enjoyable for users. Good UX is
+                essential because it directly impacts user satisfaction,
+                engagement, and loyalty. In software engineering, UX design
+                ensures that applications are not only functional but also align
+                with user expectations and are easy to navigate. By prioritizing
+                UX, engineers create products that meet user needs effectively,
+                increasing product success and reducing the likelihood of
+                frustration or abandonment.
+              </p>
             </div>
           </li>
         </ol>
       </section>
     </main>
+
+    <!-- Aside -->
+    <aside>
+      <div class="course-aside">
+        <button class="aside-button aside-button-left">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="32px"
+            viewBox="0 -960 960 960"
+            width="32px"
+            fill="#5f6368"
+          >
+            <path
+              d="m480-320 160-160-160-160-56 56 64 64H320v80h168l-64 64 56 56Zm0 240q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"
+            />
+          </svg>
+        </button>
+        <div class="course-aside-content">
+          <h3>New to Programming?</h3>
+          <p>Check this course out!</p>
+          <div class="course-aside-img-wrapper">
+            <a href="se_intro_to_oop.html">
+              <img src="public/se_intro_to_oop/oop-aside.png" alt="oop-aside" />
+            </a>
+          </div>
+          <p>Intro to Object Oriented Programming</p>
+        </div>
+        <button class="aside-button aside-button-right">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="32px"
+            viewBox="0 -960 960 960"
+            width="32px"
+            fill="#5f6368"
+          >
+            <path
+              d="m480-320 160-160-160-160-56 56 64 64H320v80h168l-64 64 56 56Zm0 240q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"
+            />
+          </svg>
+        </button>
+      </div>
+    </aside>
 
     <!-- Footer -->
     <footer>
