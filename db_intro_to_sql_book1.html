@@ -13,7 +13,7 @@
     <title>InfoTuah | Intro to SQL | SQL In 10 Minutes</title>
   </head>
 
-  <body>
+  <body id="db-intro-sql-book1-body">
     <!-- Navbar -->
     <header>
       <nav class="navbar">
@@ -142,29 +142,74 @@
       </div>
     </header>
 
-    <main>
-      <div class="return-link">
-        <!-- Return Link -->
-        <a href="db_intro_to_sql.html">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            height="24px"
-            viewBox="0 -960 960 960"
-            width="24px"
-            fill="#5f6368"
-          >
-            <path
-              d="M280-200v-80h284q63 0 109.5-40T720-420q0-60-46.5-100T564-560H312l104 104-56 56-200-200 200-200 56 56-104 104h252q97 0 166.5 63T800-420q0 94-69.5 157T564-200H280Z"
-            />
-          </svg>
-          Return To Subcourse
-        </a>
-      </div>
-      <section class="content">
+    <main id="db-intro-sql-book1-main">
+      <aside>
+        <div class="return-link">
+          <!-- Return Link -->
+          <a href="db_intro_to_sql.html">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="#5f6368"
+            >
+              <path
+                d="M280-200v-80h284q63 0 109.5-40T720-420q0-60-46.5-100T564-560H312l104 104-56 56-200-200 200-200 56 56-104 104h252q97 0 166.5 63T800-420q0 94-69.5 157T564-200H280Z"
+              />
+            </svg>
+            Return To Subcourse
+          </a>
+        </div>
+        <!--  Subcourse Sidebar that shows all the available content -->
+        <div class="subcourse-sidebar">
+          <h3><strong>Table of Content:</strong></h3>
+          <ol class="colorful-list">
+            <li>
+              <a href="#sql-book1-ch1">Understanding SQL</a>
+            </li>
+            <li>
+              <a href="#sql-book1-ch2">Retrieving Data</a>
+            </li>
+            <li>
+              <a href="#sql-book1-ch3">Filtering Data</a>
+            </li>
+            <li>
+              <a href="#sql-book1-ch4">Using Wildcards</a>
+            </li>
+            <li>
+              <a href="#sql-book1-ch5">Working with Multiple Tables</a>
+            </li>
+            <li>
+              <a href="#sql-book1-ch6">Sorting and Grouping</a>
+            </li>
+            <li>
+              <a href="#sql-book1-ch7">Using Subqueries</a>
+            </li>
+            <li>
+              <a href="#sql-book1-ch8">Inserting Data</a>
+            </li>
+            <li>
+              <a href="#sql-book1-ch9">Updating and Deleting Data</a>
+            </li>
+            <li>
+              <a href="#sql-book1-ch10">Creating and Modifying Tables</a>
+            </li>
+            <li>
+              <a href="#sql-book1-ch11">Views</a>
+            </li>
+            <li>
+              <a href="#sql-book1-ch12">Stored Procedures and Triggers</a>
+            </li>
+          </ol>
+        </div>
+      </aside>
+
+      <section class="content" id="db-intro-sql-book1-content">
         <div class="content-header">
           <h1>SQL In 10 Minutes by Ben Forta.</h1>
         </div>
-        <ul>
+        <ul id="db-intro-sql-book1-content-details">
           <li>
             <div class="content-title">
               <p><strong>Title:</strong> SQL in 10 Minutes, 5th Edition.</p>
@@ -203,53 +248,12 @@
             </div>
           </li>
         </ul>
-        <div class="content-header">
-          <h2>Table of Content:</h2>
-        </div>
-        <ol class="table-of-content">
-          <li>
-            <a href="#sql-book1-ch1">Understanding SQL</a>
-          </li>
-          <li>
-            <a href="#sql-book1-ch2">Retrieving Data</a>
-          </li>
-          <li>
-            <a href="#sql-book1-ch3">Filtering Data</a>
-          </li>
-          <li>
-            <a href="#sql-book1-ch4">Using Wildcards</a>
-          </li>
-          <li>
-            <a href="#sql-book1-ch5">Working with Multiple Tables</a>
-          </li>
-          <li>
-            <a href="#sql-book1-ch6">Sorting and Grouping</a>
-          </li>
-          <li>
-            <a href="#sql-book1-ch7">Using Subqueries</a>
-          </li>
-          <li>
-            <a href="#sql-book1-ch8">Inserting Data</a>
-          </li>
-          <li>
-            <a href="#sql-book1-ch9">Updating and Deleting Data</a>
-          </li>
-          <li>
-            <a href="#sql-book1-ch10">Creating and Modifying Tables</a>
-          </li>
-          <li>
-            <a href="#sql-book1-ch11">Views</a>
-          </li>
-          <li>
-            <a href="#sql-book1-ch12">Stored Procedures and Triggers</a>
-          </li>
-        </ol>
 
-        <div class="content-header">
+        <div class="content-header" id="db-intro-sql-book1-content-header-2">
           <h2>Book Chapter Summary:</h2>
         </div>
 
-        <ol class="content-list">
+        <ol class="colorful-list" id="db-intro-sql-book1-content-list">
           <li>
             <h3 id="sql-book1-ch1">Understanding SQL</h3>
             <p>
