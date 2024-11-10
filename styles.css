@@ -74,73 +74,72 @@ strong {
 /*-- INDEX/HERO --*/
 #index-body {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: repeat(22, 100px);
+  grid-template-columns: 100vw;
+  grid-template-rows: [nav] 70px [main] min-content [footer] 250px;
 }
 
 #index-main {
   /* Main subgrid relative to Body grid */
   display: grid;
-  grid-column: 1/4;
-  grid-row: 2/19;
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: repeat(19, 100px);
+  grid-column: 1/2;
+  grid-row: 2/3;
+  grid-template-columns: 100vw;
+  grid-template-rows: [hero] min-content [about] min-content;
 }
 
 .hero-section {
   /* Hero subgrid relative to Main grid */
   font-size: 200%;
   display: grid;
-  grid-row: 1/7;
-  grid-column: 1/4;
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: repeat(5, 100px);
+  grid-row: 1/2;
+  grid-column: 1/1;
+  grid-template-columns: repeat(10, 10vw);
+  grid-template-rows: repeat(3, 10vw);
 }
 
 #hero-title1 {
   /* H1 Hero Title positioned in the hero subgrid */
   font-size: 200%;
-  grid-column: 2/4;
+  grid-column: 4/9;
   grid-row: 1/2;
   justify-self: center;
+  align-self: center;
 }
 
 #hero-title2 {
   /* H2 Hero Title positioned in the hero subgrid */
   font-size: 150%;
-  grid-column: 2/4;
+  grid-column: 5/10;
   grid-row: 2/3;
   justify-self: center;
 }
 
 .hero-image-wrapper {
   /* Hero image positioning on the hero grid */
-  grid-column: 1/2;
+  grid-column: 2/4;
   grid-row: 1/3;
   justify-self: center;
 }
 
 .hero-image-wrapper img {
   /* Hero Image Scaling */
-  width: 300px;
-  height: 300px;
+  width: 25rem;
+  height: 25rem;
 }
 .hero-buttons {
   /* Specific rule for the hero button (> Our Courses)*/
   font-size: 150%;
-  grid-column: 2/4;
-  grid-row: 4/5;
+  grid-column: 6/8;
+  grid-row: 3/4;
   justify-self: center;
 }
 
 .about-section {
   /* About section subgrid relative to Main grid */
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: repeat(10, 100px);
+  grid-template-columns: repeat(10, 10vw);
+  grid-template-rows: repeat(10, 6rem);
   display: grid;
-  grid-column: 1/4;
-  grid-row: 6/16;
-  row-gap: 30px;
+  grid-row: 2/3;
 }
 
 .about-details {
@@ -150,8 +149,8 @@ strong {
 
 .about-image-wrapper img {
   /* Image scaling for about text in index */
-  height: 300px;
-  width: 500px;
+  height: 15rem;
+  width: 25rem;
 }
 
 #about-info-box1 {
@@ -161,7 +160,7 @@ strong {
   justify-items: center;
   align-items: center;
   flex-direction: row;
-  grid-column: 1/4;
+  grid-column: 1/11;
   grid-row: 1/4;
   margin-left: 50px;
   margin-right: 50px;
@@ -174,7 +173,7 @@ strong {
   justify-items: center;
   align-items: center;
   flex-direction: row-reverse;
-  grid-column: 1/4;
+  grid-column: 1/11;
   grid-row: 5/7;
   margin-left: 50px;
   margin-right: 50px;
@@ -187,7 +186,7 @@ strong {
   justify-items: center;
   align-items: center;
   flex-direction: row;
-  grid-column: 1/4;
+  grid-column: 1/11;
   grid-row: 8/11;
   margin-left: 50px;
   margin-right: 50px;
