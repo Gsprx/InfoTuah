@@ -51,13 +51,19 @@ strong {
 /*----------- BODY / MAIN -----------*/
 
 /*-- INDEX/HERO --*/
-#index {
+#index-body {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: repeat(22, 100px);
+}
+
+#index-main {
   /* Main subgrid relative to Body grid */
   display: grid;
   grid-column: 1/4;
-  grid-row: 2/18;
+  grid-row: 2/19;
   grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: repeat(18, 100px);
+  grid-template-rows: repeat(19, 100px);
 }
 
 .hero-section {
