@@ -198,34 +198,34 @@ strong {
 }
 
 /* Courses page */
-#courses {
-  /* Main subgrid relative to Body grid */
+#courses-body {
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: [return] 24px [header] 75px [courses] calc(3 * 400px);
+  grid-template-columns: 1fr;
+  grid-template-rows: [nav] 70px [header] 5em [main] min-content [footer] 250px;
 }
 
 .courses-header {
   padding-left: 16px;
   font-size: 1.4em;
   grid-row: 2/3;
-  grid-column: 1/4;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+#courses-body main {
+  grid-row: 3/4;
+}
+
 .all-courses {
   padding-top: 32px;
-  grid-row: 3/4;
-  grid-column: 1/4;
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: repeat(3, 400px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .course-container {
-  grid-column: 1/4;
+  padding: 16px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -238,21 +238,8 @@ strong {
   background-color: #19182c;
 }
 
-#courses li:nth-child(1) {
-  grid-row: 1/2;
-}
-
-#courses li:nth-child(2) {
-  grid-row: 2/3;
-}
-
-#courses li:nth-child(3) {
-  grid-row: 3/4;
-}
-
 .courses-description {
   font-size: 1.1em;
-  padding-left: 16px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -271,15 +258,38 @@ strong {
 }
 
 .courses-description ul {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  gap: 24px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  column-gap: 1em;
 }
 
 .courses-description li {
   max-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+}
+.courses-description li:nth-child(1) {
+  grid-column: 1/2;
+}
+.courses-description li:nth-child(2) {
+  grid-column: 2/3;
+}
+.courses-description li:nth-child(3) {
+  grid-column: 3/4;
+}
+.courses-description li:nth-child(4) {
+  grid-column: 4/5;
+}
+.courses-description li:nth-child(5) {
+  grid-column: 5/6;
+}
+
+.courses-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .course-link {
@@ -1073,7 +1083,7 @@ header {
 
 /* Navbar Links Dropdown*/
 .courses-dropdown {
-  display: block;
+  display: none;
   width: 14em;
   background-color: var(--very-dark-blue);
   position: fixed;
