@@ -506,11 +506,6 @@ strong {
   list-style: none;
 }
 
-.subcourse-header {
-  grid-column: 2/3;
-  grid-row: 1/2;
-}
-
 .subcourse-header h1 {
   /* Placed inside the course content grid */
   font-size: 300%;
@@ -540,27 +535,19 @@ strong {
 /* ---------------- Subcourse Page Specific Layout ---------------- */
 .subcourse-body {
   /* Basic Grid */
-  height: 100vh;
-  background-color: var(--dark-blue);
   display: grid;
-  grid-template-columns: 100vw;
-  grid-template-rows: [nav] 70px [main] min-content [footer] 250px;
-}
-
-.subcourse-main {
-  /* Main subgrid relative to Body grid */
-  min-height: 100%;
-  display: grid;
-  grid-row: 2/3;
   grid-template-columns: 1fr 4fr 1fr;
-  grid-template-rows: [header] min-content [page-content] min-content;
+  grid-template-rows: [nav] 70px [header] min-content [page-content] min-content [footer] 250px;
 }
-
+.subcourse-body main {
+  grid-column: 2/3;
+  grid-row: 3/4;
+}
 .subcourse-content {
   /* Course Content subgrid inside Main grid */
   display: flex;
   grid-column: 2/3;
-  grid-row: 2/3;
+  grid-row: 3/4;
   flex-direction: column;
 }
 
@@ -581,6 +568,11 @@ strong {
   margin-left: 8%;
   margin-top: 15%;
 }
+
+.subcourse-header {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
 /* ------------- Content Page Specific Layout --------------- */
 .content-body {
   /* Basic Grid */
@@ -591,12 +583,9 @@ strong {
   grid-template-rows: [nav] 70px [main] min-content [footer] 250px;
 }
 
-.content-main {
-  /* Main subgrid relative to Body grid */
-  display: grid;
-  grid-row: 2/3;
-  grid-template-columns: 1fr 4fr 1fr;
-  grid-template-rows: [header] min-content [content-info] min-content;
+.content-body main {
+  grid-column: 2/3;
+  grid-row: 3/4;
 }
 
 .content-content {
