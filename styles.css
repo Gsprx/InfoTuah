@@ -201,7 +201,7 @@ strong {
   margin-bottom: 4px;
   margin-left: 16px;
   padding: 6px;
-  padding-right: 8px;
+  margin-right: 8px;
   width: fit-content;
   height: fit-content;
   z-index: 2;
@@ -385,6 +385,10 @@ strong {
 
 .course-sidebar a:hover {
   text-decoration: underline;
+}
+
+.content-body .course-sidebar ol {
+  list-style-type: decimal;
 }
 
 /* Course Aside */
@@ -592,21 +596,17 @@ strong {
   /* Content subgrid inside Main grid */
   display: flex;
   flex-direction: column;
-  grid-column: 2/3;
-  grid-row: 2/3;
+  margin-left: 3%;
 }
 
 .content-details {
   display: flex;
   flex-direction: column;
-  margin-left: 8%;
-  margin-right: 10%;
-  margin-bottom: 5%;
+  margin-right: 3%;
 }
 
 .content-list {
-  margin-left: 8%;
-  margin-right: 10%;
+  margin-right: 3%;
   margin-top: 5%;
   display: flex;
   flex-direction: column;
@@ -614,6 +614,7 @@ strong {
 }
 
 .content-header {
+  margin-top: 1%;
   grid-column: 2/3;
   grid-row: 2/3;
 }
@@ -810,12 +811,13 @@ strong {
 .colorful-list li {
   /* Specific rule for table of content list items to have a small gap*/
   list-style: decimal;
-  margin-left: 6.5%;
+  margin-left: 2%;
 }
 
 .colorful-list {
   display: flex;
   flex-direction: column;
+  row-gap: 3rem;
 }
 
 code {
