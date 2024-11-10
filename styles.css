@@ -494,7 +494,7 @@ strong {
 
 .subcourse-header {
   display: grid;
-  grid-column: 1/3;
+  grid-column: 2/3;
   grid-row: 1/2;
 }
 
@@ -502,9 +502,9 @@ strong {
   /* Placed inside the course content grid */
   font-size: 300%;
   color: rgb(130, 126, 139);
-  justify-self: center;
-  margin-left: 1%;
-  margin-right: 2%;
+  margin-left: 3%;
+  margin-right: 5%;
+  margin-bottom: 5%;
 }
 
 .subcourse-header h2 {
@@ -530,8 +530,8 @@ strong {
   height: 100vh;
   background-color: var(--dark-blue);
   display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: repeat(19, 100px);
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-rows: [nav] 70px [main] min-content [footer] 250px;
 }
 
 #db-intro-sql-main {
@@ -539,18 +539,17 @@ strong {
   min-height: 100%;
   display: grid;
   grid-column: 1/4;
-  grid-row: 2/17;
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: repeat(15, 100px);
+  grid-row: 2/3;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-rows: [header] min-content [page-content] min-content;
 }
 
 #db-intro-sql-content {
   /* Course Content subgrid inside Main grid */
-  display: grid;
-  grid-column: 2/4;
-  grid-row: 2/16;
-  grid-template-columns: 2fr 1fr;
-  grid-template-rows: repeat(12, 100px);
+  display: flex;
+  grid-column: 2/3;
+  grid-row: 2/3;
+  flex-direction: column;
 }
 
 #db-intro-sql-books {
@@ -618,10 +617,11 @@ strong {
 /*--------- Sidebar for pages ----------*/
 aside {
   grid-column: 1/2;
-  grid-row: 1/-2;
+  grid-row: 2/-2;
   position: relative;
   display: flex;
   flex-direction: column;
+  visibility: hidden;
 }
 
 .subcourse-sidebar {
