@@ -39,6 +39,7 @@ html {
   /* Used for <a> linking to items inside the page so the target isnt hidden by the navbar */
   scroll-padding-top: 80px;
 }
+
 /* Prevent Default */
 a {
   text-decoration: none;
@@ -63,6 +64,7 @@ main {
   min-height: 100%;
   padding-bottom: 32px;
   margin-top: 8px;
+  z-index: 1;
 }
 
 strong {
@@ -198,13 +200,14 @@ strong {
   /* Styling for the return link found in all pages except index */
   margin-bottom: 4px;
   margin-left: 16px;
-  padding: 2%;
+  padding: 6px;
+  padding-right: 8px;
   width: fit-content;
   height: fit-content;
-  background-color: #0d0f10;
   z-index: 2;
-  border: 0.1rem solid black;
-  border-radius: 1%;
+  background-color: #16191c;
+  border: var(--dark-grey) solid 1px;
+  border-radius: 4px;
   top: 10vh;
 }
 
@@ -220,10 +223,17 @@ strong {
   color: rgb(81, 112, 156);
 }
 
+.return-link a svg {
+  transition: transform 0.2s ease 0s; /*Transition settings*/
+}
+
+.return-link a:hover svg {
+  transform: translateX(-2px);
+}
+
 /* Courses page */
 #courses-body {
   display: grid;
-
   grid-template-columns: 1fr;
   grid-template-rows: [nav] 70px [header] 5em [main] min-content [footer] 250px;
 }
@@ -239,7 +249,6 @@ strong {
 
 #courses-body main {
   grid-row: 3/4;
-  position: relative;
 }
 
 .all-courses {
@@ -340,7 +349,7 @@ strong {
   padding-top: 12px;
   border: var(--dark-grey) solid 1px;
   box-shadow: 5px 3px rgba(18, 20, 23, 0.1);
-  z-index: 990;
+  z-index: 3;
   margin-left: 16px;
   margin-right: 8px;
   margin-top: 4px;
@@ -391,7 +400,7 @@ strong {
   padding-top: 12px;
   border: var(--dark-grey) solid 1px;
   box-shadow: -5px -3px rgba(18, 20, 23, 0.1);
-  z-index: 990;
+  z-index: 3;
   margin-left: 16px;
   margin-right: 8px;
   margin-top: 4px;
@@ -625,7 +634,7 @@ aside {
 }
 
 .subcourse-sidebar {
-  z-index: 2;
+  z-index: 3;
   grid-column: 1/2;
   grid-row: 1/7;
   border: 0.2em solid black;
@@ -1285,7 +1294,8 @@ footer {
   font-size: small;
 }
 
-.se-sidebar-area {
+/* Sidebars area */
+.sidebar-area {
   position: relative;
   grid-row: 2/4;
   grid-column: 1/2;
@@ -1293,5 +1303,12 @@ footer {
 
 .sidebar-container {
   position: sticky;
-  top: 10vh;
+  top: 5em;
+}
+
+/* For pages with only return button and not a whole sidebar*/
+.button-area {
+  position: fixed;
+  top: 5em;
+  z-index: 2;
 }
