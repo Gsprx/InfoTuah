@@ -579,8 +579,8 @@ strong {
   height: 100vh;
   background-color: var(--dark-blue);
   display: grid;
-  grid-template-columns: 100vw;
-  grid-template-rows: [nav] 70px [main] min-content [footer] 250px;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-rows: [nav] 70px [header] min-content [main] min-content [footer] 250px;
 }
 
 .content-body main {
@@ -611,6 +611,11 @@ strong {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.content-header {
+  grid-column: 2/3;
+  grid-row: 2/3;
 }
 
 /*-------- Book Card Rules --------*/
@@ -742,10 +747,7 @@ strong {
   /* General rule for the text of a specific content (full book or full lecture showcase) page */
   font-size: 180%;
 }
-.content-header {
-  grid-column: 2/3;
-  grid-row: 1/2;
-}
+
 .content-header h1 {
   /* Content headers are styled so that they DO NOT give off an inline look */
   font-size: 170%;
