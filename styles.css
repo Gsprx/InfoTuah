@@ -72,6 +72,19 @@ strong {
   color: rgb(113, 128, 144);
 }
 
+/* Stars (Rating) */
+.fa-star {
+  color: #555;
+}
+
+.star-checked {
+  color: orange;
+}
+
+.stars {
+  width: fit-content;
+}
+
 /*----------- BODY / MAIN -----------*/
 
 /*-- INDEX/HERO --*/
