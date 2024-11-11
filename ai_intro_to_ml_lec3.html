@@ -12,7 +12,7 @@
       2020/21
     </title>
   </head>
-  <body>
+  <body class="content-body">
     <!-- Navbar -->
     <header>
       <nav class="navbar">
@@ -141,8 +141,10 @@
       </div>
     </header>
 
-    <main>
-      <div class="main-container">
+    <!-- Sidebar area -->
+    <section class="sidebar-area">
+      <div class="sidebar-container">
+        <!-- Return Link -->
         <div class="return-link">
           <!-- Return Link -->
           <a href="ai_intro_to_ml.html">
@@ -157,600 +159,461 @@
                 d="M280-200v-80h284q63 0 109.5-40T720-420q0-60-46.5-100T564-560H312l104 104-56 56-200-200 200-200 56 56-104 104h252q97 0 166.5 63T800-420q0 94-69.5 157T564-200H280Z"
               />
             </svg>
-            Return To Subcourse
+            Return To Intro to Machine Learning
           </a>
         </div>
-        <section class="content">
-          <!-- Lecture Title -->
-          <div class="content-header">
-            <h1>Introduction to Machine Learning — Dmitry Kobak, 2020/21</h1>
-          </div>
-          <!-- Lecture Description, Contributors, Likes-->
-          <div class="content-description">
-            <span>
-              The course serves as a basic introduction to machine learning and
-              covers key concepts in regression, classification, optimization,
-              regularization, clustering, and dimensionality reduction. The
-              course is aimed at master students in neuroscience and other
-              sciences. The course assumes basic familiarity with calculus,
-              probability theory, and linear algebra (matrices).
-            </span>
-          </div>
-          <div class="content-creator">
-            <p><strong>Contributors:</strong></p>
-            <span>Dmitry Kobak</span>
-          </div>
-          <div class="content-rating">
-            <span>954</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              height="24px"
-              viewBox="0 -960 960 960"
-              width="24px"
-              fill="#5f6368"
-            >
-              <path
-                d="M720-120H280v-520l280-280 50 50q7 7 11.5 19t4.5 23v14l-44 174h258q32 0 56 24t24 56v80q0 7-2 15t-4 15L794-168q-9 20-30 34t-44 14Zm-360-80h360l120-280v-80H480l54-220-174 174v406Zm0-406v406-406Zm-80-34v80H160v360h120v80H80v-520h200Z"
-              />
-            </svg>
-          </div>
 
-          <!-- Lecture Unit Table-->
-          <div id="ai_intro_to_ml_lec3_lecture_unit_table">
-            <div class="content-header">
-              <h2>Unit table for this Lecture</h2>
-            </div>
-            <ol class="table-of-content">
-              <li>
-                <a href="#ai_intro_to_ml_lec3_vid1"
-                  >Baby steps towards linear regression</a
-                >
-              </li>
-              <li>
-                <a href="#ai_intro_to_ml_lec3_vid2"
-                  >Multiple linear regression and SVD</a
-                >
-              </li>
-              <li>
-                <a href="#ai_intro_to_ml_lec3_vid3"
-                  >Likelihood, bias, and variance</a
-                >
-              </li>
-              <li>
-                <a href="#ai_intro_to_ml_lec3_vid4"
-                  >Regularization and cross-validation</a
-                >
-              </li>
-              <li>
-                <a href="#ai_intro_to_ml_lec3_vid5">05 - Logistic regression</a>
-              </li>
-              <li>
-                <a href="#ai_intro_to_ml_lec3_vid6"
-                  >Linear discriminant analysis</a
-                >
-              </li>
-              <li>
-                <a href="#ai_intro_to_ml_lec3_vid7"
-                  >Neural networks and deep learning</a
-                >
-              </li>
-              <li>
-                <a href="#ai_intro_to_ml_lec3_vid8"
-                  >Boosting, bagging, and random forests</a
-                >
-              </li>
-              <li>
-                <a href="#ai_intro_to_ml_lec3_vid9"
-                  >Clustering and expectation-maximization</a
-                >
-              </li>
-              <li>
-                <a href="#ai_intro_to_ml_lec3_vid10"
-                  >Principal component analysis</a
-                >
-              </li>
-              <li>
-                <a href="#ai_intro_to_ml_lec3_vid11"
-                  >Manifold learning and t-SNE</a
-                >
-              </li>
-            </ol>
-          </div>
-
-          <!-- Lecture Videos -->
-          <section class="lecture-videos">
-            <div class="content-header">
-              <h2>Lectures</h2>
-            </div>
-            <ol class="content-list">
-              <li id="ai_intro_to_ml_lec3_vid1">
-                <div class="lecture-video-wrapper">
-                  <iframe
-                    width="640"
-                    height="360"
-                    src="https://www.youtube.com/embed/lWGdFeMsjzg?list=PL05umP7R6ij35ShKLDqccJSDntugY4FQT"
-                    title="Introduction to Machine Learning - 01 - Baby steps towards linear regression"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin"
-                    allowfullscreen
-                  ></iframe>
-                </div>
-                <div class="lecture-video-info">
-                  <span>01 - Baby steps towards linear regression</span>
-                  <span>
-                    In this video, we provide an Introduction to Machine
-                    Learning, covering foundational concepts such as the
-                    definition of machine learning and how it differs from
-                    traditional problem-solving. You'll learn about the Types of
-                    Machine Learning Problems—supervised, unsupervised, and
-                    reinforcement learning—before diving into Linear Regression
-                    as a starting point. We also discuss Optimization techniques
-                    like Gradient Descent and extend these ideas to Simple
-                    Linear Regression, explaining how to use partial derivatives
-                    for multi-dimensional optimization.
-                  </span>
-                  <div class="lecture-video-return-to-ut">
-                    <a href="#ai_intro_to_ml_lec3_lecture_unit_table">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        height="24px"
-                        viewBox="0 -960 960 960"
-                        width="24px"
-                        fill="#5f6368"
-                      >
-                        <path
-                          d="M440-160v-487L216-423l-56-57 320-320 320 320-56 57-224-224v487h-80Z"
-                        />
-                      </svg>
-                    </a>
-                  </div>
-                </div>
-              </li>
-              <li id="ai_intro_to_ml_lec3_vid2">
-                <div class="lecture-video-wrapper">
-                  <iframe
-                    width="640"
-                    height="360"
-                    src="https://www.youtube.com/embed/FaGjn9eZIVE"
-                    title="Introduction to Machine Learning - 02 - Multiple linear regression and SVD"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin"
-                    allowfullscreen
-                  ></iframe>
-                </div>
-                <div class="lecture-video-info">
-                  <span>02 - Multiple linear regression and SVD</span>
-                  <span>
-                    In this video, we explore advanced concepts in Multiple
-                    Regression, starting with how regression can include
-                    multiple predictors and the visualization of relationships
-                    as a regression plane in higher dimensions. We introduce the
-                    matrix formulation to simplify calculations and discuss the
-                    loss function (mean squared error) that guides optimization.
-                    Key techniques like Gradient Descent and Singular Value
-                    Decomposition (SVD) are explained for efficient optimization
-                    and ensuring numerical stability in regression models with
-                    correlated predictors.
-                  </span>
-                  <div class="lecture-video-return-to-ut">
-                    <a href="#ai_intro_to_ml_lec3_lecture_unit_table">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        height="24px"
-                        viewBox="0 -960 960 960"
-                        width="24px"
-                        fill="#5f6368"
-                      >
-                        <path
-                          d="M440-160v-487L216-423l-56-57 320-320 320 320-56 57-224-224v487h-80Z"
-                        />
-                      </svg>
-                    </a>
-                  </div>
-                </div>
-              </li>
-              <li id="ai_intro_to_ml_lec3_vid3">
-                <div class="lecture-video-wrapper">
-                  <iframe
-                    width="640"
-                    height="360"
-                    src="https://www.youtube.com/embed/brkS6rAKTl4"
-                    title="Introduction to Machine Learning - 03 - Likelihood, bias, and variance"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin"
-                    allowfullscreen
-                  ></iframe>
-                </div>
-                <div class="lecture-video-info">
-                  <span>03 - Likelihood, bias, and variance</span>
-                  <span>
-                    In this video, we introduce probabilistic models in linear
-                    regression and explore the importance of likelihood in
-                    estimating parameters. Key concepts such as the
-                    bias-variance trade-off and the effects of overfitting and
-                    underfitting on model performance are discussed. We also
-                    highlight the role of sample size in model flexibility, the
-                    significance of the Gaussian distribution, and explain how
-                    Maximum Likelihood Estimation is used for parameter fitting.
-                  </span>
-                  <div class="lecture-video-return-to-ut">
-                    <a href="#ai_intro_to_ml_lec3_lecture_unit_table">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        height="24px"
-                        viewBox="0 -960 960 960"
-                        width="24px"
-                        fill="#5f6368"
-                      >
-                        <path
-                          d="M440-160v-487L216-423l-56-57 320-320 320 320-56 57-224-224v487h-80Z"
-                        />
-                      </svg>
-                    </a>
-                  </div>
-                </div>
-              </li>
-              <li id="ai_intro_to_ml_lec3_vid4">
-                <div class="lecture-video-wrapper">
-                  <iframe
-                    width="640"
-                    height="360"
-                    src="https://www.youtube.com/embed/9ku_jgTyC4Y"
-                    title="Introduction to Machine Learning - 04 - Regularization and cross-validation"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin"
-                    allowfullscreen
-                  ></iframe>
-                </div>
-                <div class="lecture-video-info">
-                  <span>04 - Regularization and cross-validation</span>
-                  <span>
-                    In this video, we explore techniques to improve model
-                    performance, starting with regularization to prevent
-                    overfitting by penalizing large coefficients. We cover the
-                    importance of cross-validation in evaluating models and
-                    discuss the bias-variance trade-off for model selection.
-                    You’ll learn about Ridge and Lasso regularization, their
-                    properties, and how Elastic Net combines both techniques.
-                    Additionally, we explain the role of hyperparameter tuning
-                    for optimal performance and the use of nested
-                    cross-validation for robust model validation.
-                  </span>
-                  <div class="lecture-video-return-to-ut">
-                    <a href="#ai_intro_to_ml_lec3_lecture_unit_table">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        height="24px"
-                        viewBox="0 -960 960 960"
-                        width="24px"
-                        fill="#5f6368"
-                      >
-                        <path
-                          d="M440-160v-487L216-423l-56-57 320-320 320 320-56 57-224-224v487h-80Z"
-                        />
-                      </svg>
-                    </a>
-                  </div>
-                </div>
-              </li>
-              <li id="ai_intro_to_ml_lec3_vid5">
-                <div class="lecture-video-wrapper">
-                  <iframe
-                    width="640"
-                    height="360"
-                    src="https://www.youtube.com/embed/cGUjiHyQWPk"
-                    title="Introduction to Machine Learning - 05 - Logistic regression"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin"
-                    allowfullscreen
-                  ></iframe>
-                </div>
-                <div class="lecture-video-info">
-                  <span>05 - Logistic regression</span>
-                  <span>
-                    In this video, we transition from regression to
-                    classification with an introduction to logistic regression.
-                    You'll learn how logistic regression handles binary and
-                    multi-class classification and why linear regression is
-                    unsuitable for classification tasks. We explain how logistic
-                    regression predicts probabilities and the difference in its
-                    loss function, focusing on maximizing likelihood. The video
-                    also covers the convexity of the loss function for efficient
-                    optimization and discusses the bias-variance trade-off,
-                    addressing overfitting and regularization challenges.
-                  </span>
-                  <div class="lecture-video-return-to-ut">
-                    <a href="#ai_intro_to_ml_lec3_lecture_unit_table">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        height="24px"
-                        viewBox="0 -960 960 960"
-                        width="24px"
-                        fill="#5f6368"
-                      >
-                        <path
-                          d="M440-160v-487L216-423l-56-57 320-320 320 320-56 57-224-224v487h-80Z"
-                        />
-                      </svg>
-                    </a>
-                  </div>
-                </div>
-              </li>
-              <li id="ai_intro_to_ml_lec3_vid6">
-                <div class="lecture-video-wrapper">
-                  <iframe
-                    width="640"
-                    height="360"
-                    src="https://www.youtube.com/embed/C0u_v7vEDBY"
-                    title="Introduction to Machine Learning - 06 - Linear discriminant analysis"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin"
-                    allowfullscreen
-                  ></iframe>
-                </div>
-                <div class="lecture-video-info">
-                  <span>06 - Linear discriminant analysis</span>
-                  <span>
-                    Discover how LDA, a linear classification method, models
-                    data distribution given a class, unlike logistic regression
-                    which models class probability. Learn about its assumption
-                    of Gaussian distributions for each class, leading to linear
-                    decision boundaries when class covariances are equal.
-                    Explore how regularization helps mitigate overfitting, and
-                    compare LDA with alternatives like the nearest centroid
-                    classifier and non-parametric methods such as K-Nearest
-                    Neighbors.
-                  </span>
-                  <div class="lecture-video-return-to-ut">
-                    <a href="#ai_intro_to_ml_lec3_lecture_unit_table">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        height="24px"
-                        viewBox="0 -960 960 960"
-                        width="24px"
-                        fill="#5f6368"
-                      >
-                        <path
-                          d="M440-160v-487L216-423l-56-57 320-320 320 320-56 57-224-224v487h-80Z"
-                        />
-                      </svg>
-                    </a>
-                  </div>
-                </div>
-              </li>
-              <li id="ai_intro_to_ml_lec3_vid7">
-                <div class="lecture-video-wrapper">
-                  <iframe
-                    width="640"
-                    height="360"
-                    src="https://www.youtube.com/embed/Uf9xJDJt1KA"
-                    title="Introduction to Machine Learning - 07 - Neural networks and deep learning"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin"
-                    allowfullscreen
-                  ></iframe>
-                </div>
-                <div class="lecture-video-info">
-                  <span>07 - Neural networks and deep learning</span>
-                  <span>
-                    Dive into deep learning, where computers learn complex
-                    concepts from simpler ones. Discover the significant
-                    successes of neural networks in tasks like image
-                    classification, thanks to their hierarchical organization
-                    for efficient pattern recognition. Understand how
-                    backpropagation efficiently computes gradients for training,
-                    and how Convolutional Neural Networks (CNNs) use weight
-                    sharing to detect image features. Learn about the balance
-                    between overfitting and generalization in neural networks,
-                    and explore ongoing research into understanding their deeper
-                    layers.
-                  </span>
-                  <div class="lecture-video-return-to-ut">
-                    <a href="#ai_intro_to_ml_lec3_lecture_unit_table">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        height="24px"
-                        viewBox="0 -960 960 960"
-                        width="24px"
-                        fill="#5f6368"
-                      >
-                        <path
-                          d="M440-160v-487L216-423l-56-57 320-320 320 320-56 57-224-224v487h-80Z"
-                        />
-                      </svg>
-                    </a>
-                  </div>
-                </div>
-              </li>
-              <li id="ai_intro_to_ml_lec3_vid8">
-                <div class="lecture-video-wrapper">
-                  <iframe
-                    width="640"
-                    height="360"
-                    src="https://www.youtube.com/embed/thR9ncsyMBE"
-                    title="Introduction to Machine Learning - 08 - Boosting, bagging, and random forests"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin"
-                    allowfullscreen
-                  ></iframe>
-                </div>
-                <div class="lecture-video-info">
-                  <span>08 - Boosting, bagging, and random forests</span>
-                  <span>
-                    Explore how boosting reduces bias by building complex models
-                    from simple ones, while bagging combines multiple models to
-                    reduce variance and improve performance. Understand the role
-                    of classification trees as the foundation for both
-                    techniques and the importance of managing the bias-variance
-                    trade-off. Learn about Adaboost, a popular boosting
-                    algorithm, and how random forests enhance model diversity
-                    through random feature selection. Discover how both methods
-                    achieve high training accuracy while maintaining good test
-                    performance.
-                  </span>
-                  <div class="lecture-video-return-to-ut">
-                    <a href="#ai_intro_to_ml_lec3_lecture_unit_table">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        height="24px"
-                        viewBox="0 -960 960 960"
-                        width="24px"
-                        fill="#5f6368"
-                      >
-                        <path
-                          d="M440-160v-487L216-423l-56-57 320-320 320 320-56 57-224-224v487h-80Z"
-                        />
-                      </svg>
-                    </a>
-                  </div>
-                </div>
-              </li>
-              <li id="ai_intro_to_ml_lec3_vid9">
-                <div class="lecture-video-wrapper">
-                  <iframe
-                    width="640"
-                    height="360"
-                    src="https://www.youtube.com/embed/mU3GZaOoVDA"
-                    title="Introduction to Machine Learning - 09 - Clustering and expectation-maximization"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin"
-                    allowfullscreen
-                  ></iframe>
-                </div>
-                <div class="lecture-video-info">
-                  <span>09 - Clustering and expectation-maximization</span>
-                  <span>
-                    Transition from supervised to unsupervised learning
-                    concepts, focusing on clustering problems to identify groups
-                    in unlabeled datasets. Understand the k-means algorithm and
-                    its iterative optimization process, and learn about the
-                    Expectation-Maximization (EM) algorithm for Gaussian mixture
-                    models. Differentiate between hard cluster assignment in
-                    k-means and soft assignment in Gaussian mixtures. Discuss
-                    challenges like local minima and initialization in
-                    clustering algorithms, and recognize the limitations of
-                    k-means and Gaussian mixtures in clustering complex shapes.
-                  </span>
-                  <div class="lecture-video-return-to-ut">
-                    <a href="#ai_intro_to_ml_lec3_lecture_unit_table">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        height="24px"
-                        viewBox="0 -960 960 960"
-                        width="24px"
-                        fill="#5f6368"
-                      >
-                        <path
-                          d="M440-160v-487L216-423l-56-57 320-320 320 320-56 57-224-224v487h-80Z"
-                        />
-                      </svg>
-                    </a>
-                  </div>
-                </div>
-              </li>
-              <li id="ai_intro_to_ml_lec3_vid10">
-                <div class="lecture-video-wrapper">
-                  <iframe
-                    width="640"
-                    height="360"
-                    src="https://www.youtube.com/embed/xBf_LZ5ZgY4"
-                    title="Introduction to Machine Learning - 10 - Principal component analysis"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin"
-                    allowfullscreen
-                  ></iframe>
-                </div>
-                <div class="lecture-video-info">
-                  <span>10 - Principal component analysis</span>
-                  <span>
-                    Learn how PCA reduces dimensionality by transforming
-                    features into a smaller set of uncorrelated variables,
-                    aiding in data visualization and exploratory analysis.
-                    Discover how PCA minimizes reconstruction error and
-                    maximizes variance, with the first principal component
-                    capturing the largest variance direction. Understand its use
-                    in preprocessing to improve supervised learning model
-                    performance, and explore Probabilistic PCA for a latent
-                    variable model perspective. Grasp key concepts like
-                    eigenvectors and eigenvalues essential for understanding
-                    PCA’s functionality.
-                  </span>
-                  <div class="lecture-video-return-to-ut">
-                    <a href="#ai_intro_to_ml_lec3_lecture_unit_table">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        height="24px"
-                        viewBox="0 -960 960 960"
-                        width="24px"
-                        fill="#5f6368"
-                      >
-                        <path
-                          d="M440-160v-487L216-423l-56-57 320-320 320 320-56 57-224-224v487h-80Z"
-                        />
-                      </svg>
-                    </a>
-                  </div>
-                </div>
-              </li>
-              <li id="ai_intro_to_ml_lec3_vid11">
-                <div class="lecture-video-wrapper">
-                  <iframe
-                    width="640"
-                    height="360"
-                    src="https://www.youtube.com/embed/MnRskV3NY1k"
-                    title="Introduction to Machine Learning - 11 - Manifold learning and t-SNE"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin"
-                    allowfullscreen
-                  ></iframe>
-                </div>
-                <div class="lecture-video-info">
-                  <span>11 - Manifold learning and t-SNE</span>
-                  <span>
-                    Discover t-SNE and its crucial role in visualizing
-                    high-dimensional data through dimensionality reduction
-                    techniques. Learn about its applications in biology,
-                    including single-cell transcriptomics and population
-                    genetics, and the importance of maintaining data structure
-                    in visualizations. Understand the attraction and repulsion
-                    forces in t-SNE optimization, and gain insights on parameter
-                    tuning, such as perplexity and early exaggeration. Explore
-                    the future potential of combining continuous and discrete
-                    data structures in embeddings.
-                  </span>
-                  <div class="lecture-video-return-to-ut">
-                    <a href="#ai_intro_to_ml_lec3_lecture_unit_table">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        height="24px"
-                        viewBox="0 -960 960 960"
-                        width="24px"
-                        fill="#5f6368"
-                      >
-                        <path
-                          d="M440-160v-487L216-423l-56-57 320-320 320 320-56 57-224-224v487h-80Z"
-                        />
-                      </svg>
-                    </a>
-                  </div>
-                </div>
-              </li>
-            </ol>
-          </section>
-        </section>
+        <!-- Sidebar -->
+        <nav class="course-sidebar">
+          <h3>Book Chapters:</h3>
+          <ol>
+            <li>
+              <a href="#ai_intro_to_ml_lec3_vid1"
+                >1. Baby steps towards linear regression</a
+              >
+            </li>
+            <li>
+              <a href="#ai_intro_to_ml_lec3_vid2"
+                >2. Multiple linear regression and SVD</a
+              >
+            </li>
+            <li>
+              <a href="#ai_intro_to_ml_lec3_vid3"
+                >3. Likelihood, bias, and variance</a
+              >
+            </li>
+            <li>
+              <a href="#ai_intro_to_ml_lec3_vid4"
+                >4. Regularization and cross-validation</a
+              >
+            </li>
+            <li>
+              <a href="#ai_intro_to_ml_lec3_vid5">5. Logistic regression</a>
+            </li>
+            <li>
+              <a href="#ai_intro_to_ml_lec3_vid6"
+                >6. Linear discriminant analysis</a
+              >
+            </li>
+            <li>
+              <a href="#ai_intro_to_ml_lec3_vid7"
+                >7. Neural networks and deep learning</a
+              >
+            </li>
+            <li>
+              <a href="#ai_intro_to_ml_lec3_vid8"
+                >8. Boosting, bagging, and random forests</a
+              >
+            </li>
+            <li>
+              <a href="#ai_intro_to_ml_lec3_vid9"
+                >9. Clustering and expectation-maximization</a
+              >
+            </li>
+            <li>
+              <a href="#ai_intro_to_ml_lec3_vid10"
+                >10. Principal component analysis</a
+              >
+            </li>
+            <li>
+              <a href="#ai_intro_to_ml_lec3_vid11"
+                >11. Manifold learning and t-SNE</a
+              >
+            </li>
+          </ol>
+        </nav>
       </div>
+    </section>
+
+    <!-- Lecture Title -->
+    <div class="content-header" id="ml_lec3_top">
+      <h1>Introduction to Machine Learning — Dmitry Kobak, 2020/21</h1>
+    </div>
+
+    <main>
+      <section class="content-content">
+        <!-- Lecture Description, Contributors, Likes-->
+        <ul class="content-details">
+          <li>
+            <div class="content-description">
+              <span>
+                The course serves as a basic introduction to machine learning
+                and covers key concepts in regression, classification,
+                optimization, regularization, clustering, and dimensionality
+                reduction. The course is aimed at master students in
+                neuroscience and other sciences. The course assumes basic
+                familiarity with calculus, probability theory, and linear
+                algebra (matrices).
+              </span>
+            </div>
+          </li>
+          <li>
+            <div class="content-creator">
+              <p><strong>Contributors:</strong></p>
+              <span>Dmitry Kobak</span>
+            </div>
+          </li>
+          <li>
+            <div class="content-rating">
+              <span>954</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="24px"
+                fill="#5f6368"
+              >
+                <path
+                  d="M720-120H280v-520l280-280 50 50q7 7 11.5 19t4.5 23v14l-44 174h258q32 0 56 24t24 56v80q0 7-2 15t-4 15L794-168q-9 20-30 34t-44 14Zm-360-80h360l120-280v-80H480l54-220-174 174v406Zm0-406v406-406Zm-80-34v80H160v360h120v80H80v-520h200Z"
+                />
+              </svg>
+            </div>
+          </li>
+        </ul>
+
+        <!-- Lecture Videos -->
+        <section class="lecture-videos">
+          <div class="content-header">
+            <h2>Lectures</h2>
+          </div>
+          <ol class="content-list">
+            <li class="lecture-container" id="ai_intro_to_ml_lec3_vid1">
+              <div class="lecture-video-info">
+                <h3>01 - Baby steps towards linear regression</h3>
+                <p>
+                  In this video, we provide an Introduction to Machine Learning,
+                  covering foundational concepts such as the definition of
+                  machine learning and how it differs from traditional
+                  problem-solving. You'll learn about the Types of Machine
+                  Learning Problems—supervised, unsupervised, and reinforcement
+                  learning—before diving into Linear Regression as a starting
+                  point. We also discuss Optimization techniques like Gradient
+                  Descent and extend these ideas to Simple Linear Regression,
+                  explaining how to use partial derivatives for
+                  multi-dimensional optimization.
+                </p>
+              </div>
+              <div class="lecture-video-wrapper">
+                <iframe
+                  width="480px"
+                  height="270px"
+                  src="https://www.youtube.com/embed/lWGdFeMsjzg?list=PL05umP7R6ij35ShKLDqccJSDntugY4FQT"
+                  title="Introduction to Machine Learning - 01 - Baby steps towards linear regression"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </li>
+            <li class="lecture-container" id="ai_intro_to_ml_lec3_vid2">
+              <div class="lecture-video-info">
+                <h3>02 - Multiple linear regression and SVD</h3>
+                <p>
+                  In this video, we explore advanced concepts in Multiple
+                  Regression, starting with how regression can include multiple
+                  predictors and the visualization of relationships as a
+                  regression plane in higher dimensions. We introduce the matrix
+                  formulation to simplify calculations and discuss the loss
+                  function (mean squared error) that guides optimization. Key
+                  techniques like Gradient Descent and Singular Value
+                  Decomposition (SVD) are explained for efficient optimization
+                  and ensuring numerical stability in regression models with
+                  correlated predictors.
+                </p>
+              </div>
+              <div class="lecture-video-wrapper">
+                <iframe
+                  width="480px"
+                  height="270px"
+                  src="https://www.youtube.com/embed/FaGjn9eZIVE"
+                  title="Introduction to Machine Learning - 02 - Multiple linear regression and SVD"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </li>
+            <li class="lecture-container" id="ai_intro_to_ml_lec3_vid3">
+              <div class="lecture-video-info">
+                <h3>03 - Likelihood, bias, and variance</h3>
+                <p>
+                  In this video, we introduce probabilistic models in linear
+                  regression and explore the importance of likelihood in
+                  estimating parameters. Key concepts such as the bias-variance
+                  trade-off and the effects of overfitting and underfitting on
+                  model performance are discussed. We also highlight the role of
+                  sample size in model flexibility, the significance of the
+                  Gaussian distribution, and explain how Maximum Likelihood
+                  Estimation is used for parameter fitting.
+                </p>
+              </div>
+              <div class="lecture-video-wrapper">
+                <iframe
+                  width="480px"
+                  height="270px"
+                  src="https://www.youtube.com/embed/brkS6rAKTl4"
+                  title="Introduction to Machine Learning - 03 - Likelihood, bias, and variance"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </li>
+            <li class="lecture-container" id="ai_intro_to_ml_lec3_vid4">
+              <div class="lecture-video-info">
+                <h3>04 - Regularization and cross-validation</h3>
+                <p>
+                  In this video, we explore techniques to improve model
+                  performance, starting with regularization to prevent
+                  overfitting by penalizing large coefficients. We cover the
+                  importance of cross-validation in evaluating models and
+                  discuss the bias-variance trade-off for model selection.
+                  You’ll learn about Ridge and Lasso regularization, their
+                  properties, and how Elastic Net combines both techniques.
+                  Additionally, we explain the role of hyperparameter tuning for
+                  optimal performance and the use of nested cross-validation for
+                  robust model validation.
+                </p>
+              </div>
+              <div class="lecture-video-wrapper">
+                <iframe
+                  width="480px"
+                  height="270px"
+                  src="https://www.youtube.com/embed/9ku_jgTyC4Y"
+                  title="Introduction to Machine Learning - 04 - Regularization and cross-validation"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </li>
+            <li class="lecture-container" id="ai_intro_to_ml_lec3_vid5">
+              <div class="lecture-video-info">
+                <h3>05 - Logistic regression</h3>
+                <p>
+                  In this video, we transition from regression to classification
+                  with an introduction to logistic regression. You'll learn how
+                  logistic regression handles binary and multi-class
+                  classification and why linear regression is unsuitable for
+                  classification tasks. We explain how logistic regression
+                  predicts probabilities and the difference in its loss
+                  function, focusing on maximizing likelihood. The video also
+                  covers the convexity of the loss function for efficient
+                  optimization and discusses the bias-variance trade-off,
+                  addressing overfitting and regularization challenges.
+                </p>
+              </div>
+              <div class="lecture-video-wrapper">
+                <iframe
+                  width="480px"
+                  height="270px"
+                  src="https://www.youtube.com/embed/cGUjiHyQWPk"
+                  title="Introduction to Machine Learning - 05 - Logistic regression"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </li>
+            <li class="lecture-container" id="ai_intro_to_ml_lec3_vid6">
+              <div class="lecture-video-info">
+                <h3>06 - Linear discriminant analysis</h3>
+                <p>
+                  Discover how LDA, a linear classification method, models data
+                  distribution given a class, unlike logistic regression which
+                  models class probability. Learn about its assumption of
+                  Gaussian distributions for each class, leading to linear
+                  decision boundaries when class covariances are equal. Explore
+                  how regularization helps mitigate overfitting, and compare LDA
+                  with alternatives like the nearest centroid classifier and
+                  non-parametric methods such as K-Nearest Neighbors.
+                </p>
+              </div>
+              <div class="lecture-video-wrapper">
+                <iframe
+                  width="480px"
+                  height="270px"
+                  src="https://www.youtube.com/embed/C0u_v7vEDBY"
+                  title="Introduction to Machine Learning - 06 - Linear discriminant analysis"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </li>
+            <li class="lecture-container" id="ai_intro_to_ml_lec3_vid7">
+              <div class="lecture-video-info">
+                <h3>07 - Neural networks and deep learning</h3>
+                <p>
+                  Dive into deep learning, where computers learn complex
+                  concepts from simpler ones. Discover the significant successes
+                  of neural networks in tasks like image classification, thanks
+                  to their hierarchical organization for efficient pattern
+                  recognition. Understand how backpropagation efficiently
+                  computes gradients for training, and how Convolutional Neural
+                  Networks (CNNs) use weight sharing to detect image features.
+                  Learn about the balance between overfitting and generalization
+                  in neural networks, and explore ongoing research into
+                  understanding their deeper layers.
+                </p>
+              </div>
+              <div class="lecture-video-wrapper">
+                <iframe
+                  width="480px"
+                  height="270px"
+                  src="https://www.youtube.com/embed/Uf9xJDJt1KA"
+                  title="Introduction to Machine Learning - 07 - Neural networks and deep learning"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </li>
+            <li class="lecture-container" id="ai_intro_to_ml_lec3_vid8">
+              <div class="lecture-video-info">
+                <h3>08 - Boosting, bagging, and random forests</h3>
+                <p>
+                  Explore how boosting reduces bias by building complex models
+                  from simple ones, while bagging combines multiple models to
+                  reduce variance and improve performance. Understand the role
+                  of classification trees as the foundation for both techniques
+                  and the importance of managing the bias-variance trade-off.
+                  Learn about Adaboost, a popular boosting algorithm, and how
+                  random forests enhance model diversity through random feature
+                  selection. Discover how both methods achieve high training
+                  accuracy while maintaining good test performance.
+                </p>
+              </div>
+              <div class="lecture-video-wrapper">
+                <iframe
+                  width="480px"
+                  height="270px"
+                  src="https://www.youtube.com/embed/thR9ncsyMBE"
+                  title="Introduction to Machine Learning - 08 - Boosting, bagging, and random forests"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </li>
+            <li class="lecture-container" id="ai_intro_to_ml_lec3_vid9">
+              <div class="lecture-video-info">
+                <h3>09 - Clustering and expectation-maximization</h3>
+                <p>
+                  Transition from supervised to unsupervised learning concepts,
+                  focusing on clustering problems to identify groups in
+                  unlabeled datasets. Understand the k-means algorithm and its
+                  iterative optimization process, and learn about the
+                  Expectation-Maximization (EM) algorithm for Gaussian mixture
+                  models. Differentiate between hard cluster assignment in
+                  k-means and soft assignment in Gaussian mixtures. Discuss
+                  challenges like local minima and initialization in clustering
+                  algorithms, and recognize the limitations of k-means and
+                  Gaussian mixtures in clustering complex shapes.
+                </p>
+              </div>
+              <div class="lecture-video-wrapper">
+                <iframe
+                  width="480px"
+                  height="270px"
+                  src="https://www.youtube.com/embed/mU3GZaOoVDA"
+                  title="Introduction to Machine Learning - 09 - Clustering and expectation-maximization"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </li>
+            <li class="lecture-container" id="ai_intro_to_ml_lec3_vid10">
+              <div class="lecture-video-info">
+                <h3>10 - Principal component analysis</h3>
+                <p>
+                  Learn how PCA reduces dimensionality by transforming features
+                  into a smaller set of uncorrelated variables, aiding in data
+                  visualization and exploratory analysis. Discover how PCA
+                  minimizes reconstruction error and maximizes variance, with
+                  the first principal component capturing the largest variance
+                  direction. Understand its use in preprocessing to improve
+                  supervised learning model performance, and explore
+                  Probabilistic PCA for a latent variable model perspective.
+                  Grasp key concepts like eigenvectors and eigenvalues essential
+                  for understanding PCA’s functionality.
+                </p>
+              </div>
+              <div class="lecture-video-wrapper">
+                <iframe
+                  width="480px"
+                  height="270px"
+                  src="https://www.youtube.com/embed/xBf_LZ5ZgY4"
+                  title="Introduction to Machine Learning - 10 - Principal component analysis"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </li>
+            <li class="lecture-container" id="ai_intro_to_ml_lec3_vid11">
+              <div class="lecture-video-info">
+                <h3>11 - Manifold learning and t-SNE</h3>
+                <p>
+                  Discover t-SNE and its crucial role in visualizing
+                  high-dimensional data through dimensionality reduction
+                  techniques. Learn about its applications in biology, including
+                  single-cell transcriptomics and population genetics, and the
+                  importance of maintaining data structure in visualizations.
+                  Understand the attraction and repulsion forces in t-SNE
+                  optimization, and gain insights on parameter tuning, such as
+                  perplexity and early exaggeration. Explore the future
+                  potential of combining continuous and discrete data structures
+                  in embeddings.
+                </p>
+              </div>
+              <div class="lecture-video-wrapper">
+                <iframe
+                  width="480px"
+                  height="270px"
+                  src="https://www.youtube.com/embed/MnRskV3NY1k"
+                  title="Introduction to Machine Learning - 11 - Manifold learning and t-SNE"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+              </div>
+            </li>
+          </ol>
+        </section>
+      </section>
     </main>
+
+    <!-- Return to top button -->
+    <div class="return-to-top-btn-container">
+      <button class="return-to-top-btn">
+        <a href="#ml_lec3_top">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="32px"
+            viewBox="0 -960 960 960"
+            width="32px"
+            fill="#5f6368"
+          >
+            <path
+              d="M440-160v-487L216-423l-56-57 320-320 320 320-56 57-224-224v487h-80Z"
+            />
+          </svg>
+        </a>
+      </button>
+    </div>
 
     <!-- Footer -->
     <footer>

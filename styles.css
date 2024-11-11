@@ -541,7 +541,7 @@ strong {
   /* Basic Grid */
   display: grid;
   grid-template-columns: 1fr 4fr 1fr;
-  grid-template-rows: [nav] 70px [header] min-content [page-content] min-content [footer] 250px;
+  grid-template-rows: [nav] 70px [header] 5em [page-content] min-content [footer] 250px;
 }
 .subcourse-body main {
   grid-column: 2/3;
@@ -584,7 +584,7 @@ strong {
   background-color: var(--dark-blue);
   display: grid;
   grid-template-columns: 1fr 4fr 1fr;
-  grid-template-rows: [nav] 70px [header] min-content [main] min-content [footer] 250px;
+  grid-template-rows: [nav] 70px [header] 5em [main] min-content [footer] 250px;
 }
 
 .content-body main {
@@ -603,14 +603,6 @@ strong {
   display: flex;
   flex-direction: column;
   margin-right: 3%;
-}
-
-.content-list {
-  margin-right: 3%;
-  margin-top: 5%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 .content-header {
@@ -788,7 +780,7 @@ strong {
 
 .content-rating {
   /* Specific rule for the rating of content */
-  margin-bottom: 8%;
+  margin-bottom: 2%;
 }
 
 .content ul {
@@ -796,33 +788,87 @@ strong {
   list-style-type: square;
 }
 
-.colorful-list li:nth-child(odd) {
+.book-chapters,
+.lecture-videos {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 24px;
+}
+
+.lecture-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 6px;
+  padding: 16px;
+}
+
+.lecture-video-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 8px;
+}
+
+.chapter-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 8px;
+  padding: 16px;
+}
+
+.content-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.content-list li {
+  /* Specific rule for table of content list items to have a small gap*/
+  list-style: none;
+}
+
+.content-list li:nth-child(odd) {
   /* Rule used to differentiate list items in large lists (used for Table Of Contents and chapter-lecture lists) 
      makes it easier for the eyes to see each list item seperately. */
   background-color: var(--very-dark-blue);
 }
 
-.colorful-list li:nth-child(even) {
+.content-list li:nth-child(even) {
   /* Rule used to differentiate list items in large lists (used for Table Of Contents and chapter-lecture lists) 
      makes it easier for the eyes to see each list item seperately. */
   background-color: #19182c;
 }
 
-.colorful-list li {
-  /* Specific rule for table of content list items to have a small gap*/
-  list-style: decimal;
-  margin-left: 2%;
-}
-
-.colorful-list {
-  display: flex;
-  flex-direction: column;
-  row-gap: 3rem;
-}
-
 code {
   /* Specific rule for the code snippets inside content lists*/
   background-color: rgb(0, 0, 0);
+}
+
+.return-to-top-btn-container {
+  grid-row: 3/4;
+  grid-column: 3/4;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.return-to-top-btn {
+  width: 56px;
+  height: 56px;
+  border-radius: 100%;
+  border: none;
+  position: sticky;
+}
+
+.return-to-top-btn a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
 /*-------- About Us Page --------*/
