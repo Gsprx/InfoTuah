@@ -781,6 +781,10 @@ strong {
 .content-rating {
   /* Specific rule for the rating of content */
   margin-bottom: 2%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 4px;
 }
 
 .content ul {
