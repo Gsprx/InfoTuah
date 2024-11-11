@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Introduction to SQL, Book: Introduction to SQL"
+    />
+    <meta name="keywords" content="Databases, Introduction to SQL" />
+    <meta name="author" content="Gasparis Rigos" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>InfoTuah | Intro to SQL | Introduction to SQL</title>
+  </head>
+
+  <body class="content-body">
+    <!-- Navbar -->
+    <header>
+      <nav class="navbar">
+        <div class="nav-image-wrapper">
+          <a href="index.html">
+            <img src="public/Info_Tuah_Logo_Final.png" alt="InfoTuahLogo" />
+          </a>
+        </div>
+        <ul>
+          <li>
+            <a href="Courses.html">Courses </a>
+          </li>
+          <li>
+            <a href="about_us.html">About Us</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- Courses link dropdown -->
+      <div class="courses-dropdown">
+        <ul>
+          <li>
+            <a href="se_course.html">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="24px"
+                fill="#5f6368"
+              >
+                <path d="M480-360 280-560h400L480-360Z" />
+              </svg>
+              Software Engineering</a
+            >
+            <div
+              class="subcourses-dropdown"
+              id="subcourses-dropdown-se"
+              style="top: calc(4.5em)"
+            >
+              <ul>
+                <li>
+                  <a href=""> Software Requirements</a>
+                </li>
+                <li>
+                  <a href="">Architectural Design</a>
+                </li>
+                <li>
+                  <a href="se_intro_to_oop.html">Object Oriented Programming</a>
+                </li>
+                <li>
+                  <a href="">Software Quality and Maintenance</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="ai_course.html">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="24px"
+                fill="#5f6368"
+              >
+                <path d="M480-360 280-560h400L480-360Z" />
+              </svg>
+              Artificial Intelligence</a
+            >
+            <div
+              class="subcourses-dropdown"
+              id="subcourses-dropdown-ai"
+              style="top: calc(4.5em + 2.5em)"
+            >
+              <ul>
+                <li>
+                  <a href="ai_intro_to_ml.html">Machine Learning</a>
+                </li>
+                <li>
+                  <a href="">Neural Networks and Deep Learning</a>
+                </li>
+                <li>
+                  <a href="">Natural Language Processing</a>
+                </li>
+                <li>
+                  <a href="">AI Ethics and Bias</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li>
+            <a href="db_course.html">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height="24px"
+                viewBox="0 -960 960 960"
+                width="24px"
+                fill="#5f6368"
+              >
+                <path d="M480-360 280-560h400L480-360Z" />
+              </svg>
+              Databases</a
+            >
+            <div
+              class="subcourses-dropdown"
+              id="subcourses-dropdown-db"
+              style="top: calc(4.5em + 5em)"
+            >
+              <ul>
+                <li>
+                  <a href="db_intro_to_sql.html"
+                    >SQL (Structured Query Language)</a
+                  >
+                </li>
+                <li>
+                  <a href="">Database Design Principles</a>
+                </li>
+                <li>
+                  <a href="">Data Normalization</a>
+                </li>
+                <li>
+                  <a href="">Transactions and ACID Properties</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- Sidebar area -->
+    <section class="sidebar-area">
+      <div class="sidebar-container">
+        <!-- Return Link -->
+        <div class="return-link">
+          <a href="db_intro_to_sql.html">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="24px"
+              viewBox="0 -960 960 960"
+              width="24px"
+              fill="#5f6368"
+            >
+              <path
+                d="M280-200v-80h284q63 0 109.5-40T720-420q0-60-46.5-100T564-560H312l104 104-56 56-200-200 200-200 56 56-104 104h252q97 0 166.5 63T800-420q0 94-69.5 157T564-200H280Z"
+              />
+            </svg>
+            Return To Introduction to SQL
+          </a>
+        </div>
+
+        <!-- Sidebar -->
+        <nav class="course-sidebar">
+          <h3>Book Chapters:</h3>
+          <ol>
+            <li>
+              <a href="#sql-book2-ch1">1. Getting Started with SQL</a>
+            </li>
+            <li>
+              <a href="#sql-book2-ch2">2. Basic SQL Commands</a>
+            </li>
+            <li>
+              <a href="#sql-book2-ch3">3. SQL Functions and Filtering</a>
+            </li>
+            <li>
+              <a href="#sql-book2-ch4">4. Joins and Relationships</a>
+            </li>
+            <li>
+              <a href="#sql-book2-ch5">5. Subqueries</a>
+            </li>
+            <li>
+              <a href="#sql-book2-ch6">6. Database Design Principles</a>
+            </li>
+            <li>
+              <a href="#sql-book2-ch7">7. Advanced SQL Functions</a>
+            </li>
+            <li>
+              <a href="#sql-book2-ch8">8. Managing User Permissions</a>
+            </li>
+            <li>
+              <a href="#sql-book2-ch9">9.Transactions and ACID Principles</a>
+            </li>
+            <li>
+              <a href="#sql-book2-ch10">10. Indexes and Optimization</a>
+            </li>
+            <li>
+              <a href="#sql-book2-ch11">11. Stored Procedures and Functions</a>
+            </li>
+            <li>
+              <a href="#sql-book2-ch12">12. Views</a>
+            </li>
+            <li>
+              <a href="#sql-book2-ch13"
+                >13. Advanced Subqueries and Common Table Expressions (CTEs)
+              </a>
+            </li>
+            <li>
+              <a href="#sql-book2-ch14">14. Triggers </a>
+            </li>
+            <li>
+              <a href="#sql-book2-ch15">15. Data Backup and Restoration </a>
+            </li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+
+    <!-- Main Header-->
+    <div class="content-header">
+      <h1>Introduction to SQL by Bobby Iliev.</h1>
+    </div>
+
+    <main>
+      <!-- Content of page -->
+      <section class="content-content">
+        <ul class="content-details">
+          <li>
+            <div class="content-title">
+              <p><strong>Title:</strong> Introduction to SQL.</p>
+            </div>
+          </li>
+          <li>
+            <div class="content-creator">
+              <p><strong>Author:</strong> Bobby Iliev</p>
+            </div>
+          </li>
+          <li>
+            <div class="content-date">
+              <p><strong>Publication Date:</strong> October 13, 2021</p>
+            </div>
+          </li>
+          <li>
+            <div class="content-description">
+              <p>
+                <strong>Description:</strong>
+                "Introduction to SQL" by Bobby Iliev is a comprehensive guide
+                designed for beginners who want to learn the fundamentals of SQL
+                (Structured Query Language). The book covers essential concepts
+                such as database structure, querying techniques, and how to
+                manipulate and manage data using SQL commands. It takes a
+                hands-on approach with practical examples and exercises that
+                demonstrate real-world applications of SQL in various database
+                management systems. Whether you are new to programming or
+                looking to expand your skills in database management, this book
+                provides a clear and accessible introduction to SQL. It is an
+                ideal resource for those who want to build a strong foundation
+                in database queries and data analysis.
+              </p>
+            </div>
+          </li>
+          <li>
+            <div class="content-rating">
+              <p><strong>Rating:</strong> 4.8 out of 5 stars (312 reviews)</p>
+            </div>
+          </li>
+        </ul>
+        <section class="book-chapters">
+          <div class="content-header">
+            <h2>Book Chapter Summary:</h2>
+          </div>
+
+          <ol class="content-list">
+            <li id="sql-book2-ch1" class="chapter-container">
+              <h3>Chapter 1: Getting Started with SQL</h3>
+              <p>
+                This chapter introduces the basics of SQL, explaining its role
+                in relational databases and how to set up an SQL environment. It
+                covers the history, significance, and fundamental concepts
+                behind SQL.
+              </p>
+              <p>
+                <strong>History and Purpose of SQL:</strong> SQL was created in
+                the 1970s by IBM to interact with relational databases. It has
+                since become the industry standard for managing and querying
+                relational data. Understanding SQL's evolution helps
+                contextualize its power and ubiquity in modern data management.
+              </p>
+              <p>
+                <strong>Example:</strong> SQL was initially developed for
+                querying large amounts of data stored in relational databases.
+                Today, it is used for everything from simple queries to complex
+                business analytics.
+              </p>
+              <p>
+                <strong>Installing MySQL:</strong> Learn how to install MySQL, a
+                popular open-source RDBMS, on your local machine or server.
+              </p>
+              <pre><code>sudo apt-get install mysql-server  # For Linux
+              brew install mysql  # For macOS</code></pre>
+              <p>
+                <strong>Setting Up MySQL:</strong> After installation, set up
+                the MySQL server and configure initial security settings (e.g.,
+                root password).
+              </p>
+              <p>
+                <strong>Example:</strong>
+                <code>sudo mysql_secure_installation</code> - This command helps
+                secure your MySQL installation by configuring user access,
+                removing insecure default settings, and setting up a root
+                password.
+              </p>
+            </li>
+
+            <li id="sql-book2-ch2" class="chapter-container">
+              <h3>Chapter 2: Basic SQL Commands</h3>
+              <p>
+                This chapter covers the foundational SQL commands that enable
+                you to interact with relational databases. You'll learn how to
+                retrieve, insert, update, and delete data.
+              </p>
+              <p>
+                <strong>SELECT: Retrieving Data from a Table</strong> - The most
+                commonly used SQL command to retrieve records from a table.
+              </p>
+              <p><strong>Example:</strong></p>
+              <pre><code>SELECT * FROM employees WHERE department = 'Sales';</code></pre>
+              <p>
+                This query retrieves all columns of the 'employees' table where
+                the department is 'Sales'.
+              </p>
+
+              <p>
+                <strong>INSERT: Inserting Data into a Table</strong> - The
+                <code>INSERT</code> command adds new rows to a table.
+              </p>
+              <p><strong>Example:</strong></p>
+              <pre><code>INSERT INTO employees (name, department, salary) 
+              VALUES ('John Doe', 'Marketing', 60000);</code></pre>
+              <p>
+                This query adds a new employee to the 'employees' table with the
+                specified name, department, and salary.
+              </p>
+
+              <p>
+                <strong>UPDATE: Modifying Existing Data</strong> - Use the
+                <code>UPDATE</code> command to modify records already in the
+                database.
+              </p>
+              <p><strong>Example:</strong></p>
+              <pre><code>UPDATE employees SET salary = 65000 WHERE name = 'John Doe';</code></pre>
+              <p>This updates John Doe's salary to 65,000.</p>
+
+              <p>
+                <strong>DELETE: Deleting Data from a Table</strong> - The
+                <code>DELETE</code> command removes data from a table.
+              </p>
+              <p><strong>Example:</strong></p>
+              <pre><code>DELETE FROM employees WHERE department = 'Marketing';</code></pre>
+              <p>
+                This deletes all employees from the 'employees' table who work
+                in the 'Marketing' department.
+              </p>
+            </li>
+
+            <li id="sql-book2-ch3" class="chapter-container">
+              <h3>Chapter 3: SQL Functions and Filtering</h3>
+              <p>
+                This chapter covers the use of SQL functions for data analysis,
+                as well as filtering data with the
+                <strong>WHERE</strong> clause.
+              </p>
+              <p>
+                <strong>Filtering Data Using WHERE:</strong> The
+                <code>WHERE</code> clause allows you to filter records based on
+                specific criteria.
+              </p>
+              <p><strong>Example:</strong></p>
+              <pre><code>SELECT name, age FROM employees WHERE age > 30;</code></pre>
+              <p>
+                This query retrieves the names and ages of employees who are
+                older than 30.
+              </p>
+
+              <p>
+                <strong>Using Aggregate Functions:</strong> SQL includes several
+                functions for performing calculations on data.
+              </p>
+              <p>
+                <strong>COUNT:</strong> Counts the number of rows that match a
+                condition.
+              </p>
+              <p><strong>Example:</strong></p>
+              <pre><code>SELECT COUNT(*) FROM employees WHERE salary > 50000;</code></pre>
+              <p>
+                This counts the number of employees who earn more than 50,000.
+              </p>
+
+              <p><strong>SUM:</strong> Adds up values in a column.</p>
+              <p><strong>Example:</strong></p>
+              <pre><code>SELECT SUM(salary) FROM employees;</code></pre>
+              <p>
+                This returns the total salary of all employees in the company.
+              </p>
+
+              <p>
+                <strong>AVG, MIN, MAX:</strong> These functions return the
+                average, minimum, and maximum values of a column.
+              </p>
+              <p><strong>Example:</strong></p>
+              <pre><code>SELECT AVG(age), MIN(salary), MAX(salary) FROM employees;</code></pre>
+              <p>
+                This returns the average age, minimum salary, and maximum salary
+                of employees.
+              </p>
+
+              <p>
+                <strong>Grouping and Sorting Data:</strong> Use
+                <code>GROUP BY</code> and <code>ORDER BY</code> to organize and
+                sort data based on specific criteria.
+              </p>
+              <p><strong>Example:</strong></p>
+              <pre><code>SELECT department, COUNT(*) AS num_employees FROM employees GROUP BY department ORDER BY num_employees DESC;</code></pre>
+              <p>
+                This groups employees by department and orders the results by
+                the number of employees in each department, from highest to
+                lowest.
+              </p>
+            </li>
+
+            <li id="sql-book2-ch4" class="chapter-container">
+              <h3>Chapter 4: Joins and Relationships</h3>
+              <p>
+                Explains how to use joins to combine data from multiple tables
+                based on related columns. Joins are critical for working with
+                normalized databases.
+              </p>
+              <p>
+                <strong>INNER JOIN:</strong> Returns only rows where there is a
+                match in both tables.
+              </p>
+              <p><strong>Example:</strong></p>
+              <pre><code>SELECT employees.name, departments.name FROM employees 
+              INNER JOIN departments ON employees.department_id = departments.id;</code></pre>
+              <p>
+                This retrieves the names of employees and their corresponding
+                department names from two separate tables, based on a common
+                <code>department_id</code>.
+              </p>
+
+              <p>
+                <strong>LEFT JOIN:</strong> Returns all rows from the left table
+                and matched rows from the right table.
+              </p>
+              <p><strong>Example:</strong></p>
+              <pre><code>SELECT employees.name, departments.name FROM employees 
+              LEFT JOIN departments ON employees.department_id = departments.id;</code></pre>
+              <p>
+                This query retrieves all employees, including those without a
+                department, and the department names for those who have one.
+              </p>
+
+              <p>
+                <strong>RIGHT JOIN:</strong> Returns all rows from the right
+                table and matched rows from the left table.
+              </p>
+              <p><strong>Example:</strong></p>
+              <pre><code>SELECT employees.name, departments.name FROM employees 
+              RIGHT JOIN departments ON employees.department_id = departments.id;</code></pre>
+              <p>
+                This returns all departments and the employees who belong to
+                them, including departments with no employees.
+              </p>
+            </li>
+
+            <li id="sql-book2-ch5" class="chapter-container">
+              <h3>Chapter 5: Subqueries</h3>
+              <p>
+                This chapter teaches how to use subqueries to perform more
+                complex queries where the result of one query is used as a
+                condition for another.
+              </p>
+              <p>
+                <strong>Subqueries in the WHERE Clause:</strong> Subqueries can
+                be used in the <code>WHERE</code> clause to filter results.
+              </p>
+              <p><strong>Example:</strong></p>
+              <pre><code>SELECT name FROM employees WHERE department_id = 
+              (SELECT id FROM departments WHERE name = 'Sales');</code></pre>
+              <p>
+                This retrieves the names of employees who belong to the 'Sales'
+                department by using a subquery to find the department's ID.
+              </p>
+
+              <p>
+                <strong>Subqueries in the FROM Clause:</strong> Subqueries can
+                be used to create derived tables in the
+                <code>FROM</code> clause.
+              </p>
+              <p><strong>Example:</strong></p>
+              <pre><code>SELECT * FROM 
+              (SELECT name, salary FROM employees WHERE salary > 50000) AS high_salary;</code></pre>
+              <p>
+                This subquery retrieves employees with a salary over 50,000 by
+                first selecting the necessary data in a subquery, which is
+                treated as a derived table.
+              </p>
+            </li>
+
+            <li id="sql-book2-ch6" class="chapter-container">
+              <h3>Chapter 6: Database Design Principles</h3>
+              <p>
+                This chapter discusses best practices for designing databases
+                that are efficient, maintainable, and scalable.
+              </p>
+              <p>
+                <strong>Normalization:</strong> Database normalization is the
+                process of organizing data to reduce redundancy and improve data
+                integrity.
+              </p>
+              <p>
+                <strong>Example:</strong> The third normal form (3NF) requires
+                that every non-key column is fully dependent on the primary key
+                and not on other non-key columns.
+              </p>
+
+              <p>
+                <strong>Relationships Between Tables:</strong> In relational
+                databases, tables are related by foreign keys. Learn how to
+                establish these relationships and enforce referential integrity.
+              </p>
+              <p>
+                <strong>Example:</strong> A 'orders' table has a foreign key
+                pointing to the 'customers' table to link each order to a
+                specific customer.
+              </p>
+            </li>
+            <li id="sql-book2-ch7" class="chapter-container">
+              <h3>Chapter 7: Advanced SQL Functions</h3>
+              <p>
+                This chapter explores advanced SQL functions, including string
+                functions, date functions, and conditional expressions. These
+                functions are useful for complex data manipulations and
+                analysis.
+              </p>
+              <p>
+                <strong>String Functions:</strong> SQL provides several string
+                manipulation functions like <code>CONCAT</code>,
+                <code>SUBSTRING</code>, and <code>LENGTH</code>.
+              </p>
+              <p><strong>Example:</strong></p>
+              <pre><code>SELECT CONCAT(first_name, ' ', last_name) AS full_name FROM employees;</code></pre>
+              <p>
+                This query concatenates the <code>first_name</code> and
+                <code>last_name</code> fields to return the full name of each
+                employee.
+              </p>
+
+              <p>
+                <strong>Date Functions:</strong> SQL includes functions for
+                working with dates, such as <code>NOW()</code>,
+                <code>DATE_FORMAT()</code>, and <code>DATEDIFF()</code>.
+              </p>
+              <p><strong>Example:</strong></p>
+              <pre><code>SELECT * FROM employees WHERE DATE_FORMAT(hire_date, '%Y') = '2023';</code></pre>
+              <p>
+                This query retrieves employees who were hired in the year 2023
+                by formatting the <code>hire_date</code> field.
+              </p>
+
+              <p>
+                <strong>Conditional Expressions:</strong> SQL allows conditional
+                logic using the <code>CASE</code> expression, which functions
+                like an IF statement in programming languages.
+              </p>
+              <p><strong>Example:</strong></p>
+              <pre><code>SELECT name, 
+                           CASE 
+                             WHEN salary > 50000 THEN 'High'
+                             ELSE 'Low'
+                           END AS salary_level
+                FROM employees;</code></pre>
+              <p>
+                This query classifies employees into 'High' or 'Low' salary
+                levels based on their salary.
+              </p>
+            </li>
+
+            <li id="sql-book2-ch8" class="chapter-container">
+              <h3>Chapter 8: Managing User Permissions</h3>
+              <p>
+                This chapter teaches how to create and manage users and assign
+                permissions to secure access to the database. Managing user
+                roles is essential for maintaining security in a multi-user
+                environment.
+              </p>
+              <p>
+                <strong>Creating Users:</strong> SQL allows you to create new
+                database users with specific privileges.
+              </p>
+              <p><strong>Example:</strong></p>
+              <pre><code>CREATE USER 'newuser'@'localhost' IDENTIFIED BY 'password';</code></pre>
+              <p>
+                This creates a new user named <code>newuser</code> who can only
+                connect from <code>localhost</code> with the specified password.
+              </p>
+
+              <p>
+                <strong>Granting Permissions:</strong> Use the
+                <code>GRANT</code> command to give users permissions to perform
+                actions like <code>SELECT</code>, <code>INSERT</code>, or
+                <code>UPDATE</code> on specific tables.
+              </p>
+              <p><strong>Example:</strong></p>
+              <pre><code>GRANT SELECT, INSERT ON database_name.* TO 'newuser'@'localhost';</code></pre>
+              <p>
+                This grants the user <code>newuser</code> the ability to
+                <code>SELECT</code> and <code>INSERT</code> data into any table
+                within <code>database_name</code>.
+              </p>
+
+              <p>
+                <strong>Revoking Permissions:</strong> You can also revoke
+                permissions using the <code>REVOKE</code> command to restrict a
+                user's access.
+              </p>
+              <p><strong>Example:</strong></p>
+              <pre><code>REVOKE UPDATE ON database_name.* FROM 'newuser'@'localhost';</code></pre>
+              <p>
+                This removes the <code>UPDATE</code> permission for the user
+                <code>newuser</code> on all tables in
+                <code>database_name</code>.
+              </p>
+            </li>
+
+            <li id="sql-book2-ch9" class="chapter-container">
+              <h3>Chapter 9: Transactions and ACID Principles</h3>
+              <p>
+                This chapter introduces transactions, which allow you to group
+                multiple SQL operations into a single unit of work. The ACID
+                principles (Atomicity, Consistency, Isolation, Durability) are
+                crucial to ensuring database integrity and reliability.
+              </p>
+              <p>
+                <strong>Atomicity:</strong> Ensures that a transaction is either
+                fully completed or not executed at all, preventing partial
+                updates to the database.
+              </p>
+              <p><strong>Example:</strong></p>
+              <pre><code>START TRANSACTION;
+              UPDATE accounts SET balance = balance - 100 WHERE user_id = 1;
+              UPDATE accounts SET balance = balance + 100 WHERE user_id = 2;
+              COMMIT;</code></pre>
+              <p>
+                This example demonstrates a transaction where money is
+                transferred between two accounts. If any step fails, the changes
+                will not be committed, ensuring the transaction's atomicity.
+              </p>
+
+              <p>
+                <strong>Consistency:</strong> The database remains in a valid
+                state before and after the transaction, preserving the integrity
+                of the data.
+              </p>
+
+              <p>
+                <strong>Isolation:</strong> Each transaction is isolated from
+                others, preventing concurrent transactions from interfering with
+                each other.
+              </p>
+
+              <p>
+                <strong>Durability:</strong> Once a transaction is committed,
+                the changes are permanent and will not be lost, even in the case
+                of a system failure.
+              </p>
+            </li>
+
+            <li id="sql-book2-ch10" class="chapter-container">
+              <h3>Chapter 10: Indexes and Optimization</h3>
+              <p>
+                This chapter discusses the use of indexes to improve query
+                performance and the trade-offs involved in using them.
+              </p>
+              <p>
+                <strong>What Are Indexes?</strong> An index is a data structure
+                that improves the speed of data retrieval operations on a
+                database table.
+              </p>
+              <p><strong>Example:</strong></p>
+              <pre><code>CREATE INDEX idx_user_name ON users(name);</code></pre>
+              <p>
+                This creates an index on the <code>name</code> column of the
+                <code>users</code> table, improving search performance for
+                queries that filter or sort by name.
+              </p>
+
+              <p>
+                <strong>Types of Indexes:</strong> SQL supports various index
+                types, such as single-column, multi-column, and unique indexes.
+              </p>
+              <p><strong>Example:</strong></p>
+              <pre><code>CREATE UNIQUE INDEX idx_user_email ON users(email);</code></pre>
+              <p>
+                This creates a unique index on the <code>email</code> column,
+                ensuring no two users can have the same email address.
+              </p>
+
+              <p>
+                <strong>Analyzing Query Performance:</strong> Use the
+                <code>EXPLAIN</code> command to analyze the query execution plan
+                and identify performance bottlenecks.
+              </p>
+              <p><strong>Example:</strong></p>
+              <pre><code>EXPLAIN SELECT * FROM users WHERE name = 'Alice';</code></pre>
+              <p>
+                This command shows how MySQL will execute the query, which can
+                help you optimize the database design and queries for better
+                performance.
+              </p>
+            </li>
+
+            <li id="sql-book2-ch11" class="chapter-container">
+              <h3>Chapter 11: Stored Procedures and Functions</h3>
+              <p>
+                Stored procedures and functions allow you to encapsulate SQL
+                code into reusable blocks. This chapter shows how to create and
+                use them to streamline complex operations.
+              </p>
+              <p>
+                <strong>Stored Procedures:</strong> A stored procedure is a set
+                of SQL statements that can be executed as a single unit. It can
+                accept parameters and return values.
+              </p>
+              <p><strong>Example:</strong></p>
+              <pre><code>CREATE PROCEDURE AddEmployee(IN emp_name VARCHAR(100), IN emp_salary DECIMAL)
+              BEGIN
+                  INSERT INTO employees (name, salary) VALUES (emp_name, emp_salary);
+              END;</code></pre>
+              <p>
+                This stored procedure adds an employee's name and salary to the
+                <code>employees</code> table when called.
+              </p>
+
+              <p>
+                <strong>Functions:</strong> Functions are similar to procedures
+                but return a value. They are often used in queries for
+                calculations.
+              </p>
+              <p><strong>Example:</strong></p>
+              <pre><code>CREATE FUNCTION GetEmployeeSalary(emp_id INT) RETURNS DECIMAL
+              BEGIN
+                  DECLARE salary DECIMAL;
+                  SELECT salary INTO salary FROM employees WHERE id = emp_id;
+                  RETURN salary;
+              END;</code></pre>
+              <p>
+                This function returns the salary of an employee based on their
+                ID.
+              </p>
+            </li>
+
+            <li id="sql-book2-ch12" class="chapter-container">
+              <h3>Chapter 12: Views</h3>
+              <p>
+                Views are virtual tables based on the result of a SELECT query.
+                This chapter explains how to use views to simplify complex
+                queries and enhance data security.
+              </p>
+              <p>
+                <strong>Creating Views:</strong> A view encapsulates a query and
+                presents it as a virtual table, which can simplify complex
+                queries by abstracting the underlying structure.
+              </p>
+              <p><strong>Example:</strong></p>
+              <pre><code>CREATE VIEW high_salary AS SELECT name, salary FROM employees WHERE salary > 50000;</code></pre>
+              <p>
+                This view returns a list of employees with salaries greater than
+                50,000.
+              </p>
+
+              <p>
+                <strong>Using Views for Security:</strong> Views can be used to
+                restrict access to sensitive data, allowing users to query only
+                the necessary columns.
+              </p>
+
+              <p><strong>Example:</strong></p>
+              <pre><code>CREATE VIEW employee_names AS SELECT name FROM employees;</code></pre>
+              <p>
+                This view restricts access to only the names of employees,
+                hiding other sensitive columns like salary or address.
+              </p>
+            </li>
+
+            <li id="sql-book2-ch13" class="chapter-container">
+              <h3>
+                Chapter 13: Advanced Subqueries and Common Table Expressions
+                (CTEs)
+              </h3>
+              <p>
+                This chapter delves into advanced subqueries and introduces
+                Common Table Expressions (CTEs) to improve query readability and
+                organization.
+              </p>
+              <p>
+                <strong>Subqueries:</strong> A subquery is a query nested inside
+                another query. It can be used to perform operations like
+                filtering or calculating aggregate values based on the results
+                of another query.
+              </p>
+              <p><strong>Example:</strong></p>
+              <pre><code>SELECT name FROM employees WHERE department_id = (SELECT id FROM departments WHERE name = 'Sales');</code></pre>
+              <p>
+                This query finds all employees who belong to the 'Sales'
+                department by using a subquery to fetch the department ID.
+              </p>
+
+              <p>
+                <strong>Common Table Expressions (CTEs):</strong> CTEs provide a
+                way to break complex queries into more manageable, reusable
+                parts.
+              </p>
+              <p><strong>Example:</strong></p>
+              <pre><code>WITH HighEarners AS (
+                  SELECT name, salary FROM employees WHERE salary > 60000
+                )
+                SELECT * FROM HighEarners;</code></pre>
+              <p>
+                This query defines a CTE named <code>HighEarners</code> and uses
+                it to retrieve all employees with salaries greater than 60,000.
+              </p>
+            </li>
+
+            <li id="sql-book2-ch14" class="chapter-container">
+              <h3>Chapter 14: Triggers</h3>
+              <p>
+                Triggers are automatic actions that are performed in response to
+                certain events in the database, such as inserts, updates, or
+                deletes. This chapter explains how to use triggers for tasks
+                like auditing, logging, and cascading changes.
+              </p>
+              <p>
+                <strong>Creating Triggers:</strong> A trigger is defined to
+                execute before or after a specific event on a table.
+              </p>
+              <p><strong>Example:</strong></p>
+              <pre><code>CREATE TRIGGER before_insert_user
+                BEFORE INSERT ON users
+                FOR EACH ROW
+                SET NEW.created_at = NOW();</code></pre>
+              <p>
+                This trigger automatically sets the
+                <code>created_at</code> column to the current timestamp whenever
+                a new user is inserted into the <code>users</code> table.
+              </p>
+
+              <p>
+                <strong>Best Practices:</strong> It's essential to avoid complex
+                logic in triggers to prevent performance issues, and to ensure
+                that triggers do not cause unintended side effects.
+              </p>
+            </li>
+
+            <li id="sql-book2-ch15" class="chapter-container">
+              <h3>Chapter 15: Data Backup and Restoration</h3>
+              <p>
+                Data backup and restoration are vital for disaster recovery and
+                ensuring that database data is safe. This chapter covers the
+                methods for creating backups and restoring databases in SQL.
+              </p>
+              <p>
+                <strong>Backing Up Databases:</strong> SQL provides tools like
+                <code>mysqldump</code> for creating backups of entire databases
+                or specific tables.
+              </p>
+              <p><strong>Example:</strong></p>
+              <pre><code>mysqldump -u root -p database_name > backup.sql;</code></pre>
+              <p>
+                This command backs up the <code>database_name</code> database to
+                a file named <code>backup.sql</code>.
+              </p>
+
+              <p>
+                <strong>Restoring Databases:</strong> Use the
+                <code>mysql</code> command to restore a database from a backup
+                file.
+              </p>
+              <p><strong>Example:</strong></p>
+              <pre><code>mysql -u root -p database_name < backup.sql;</code></pre>
+              <p>
+                This command restores the <code>database_name</code> database
+                from the <code>backup.sql</code> backup file.
+              </p>
+
+              <p>
+                <strong>Backup Strategies:</strong> Regular backups should be
+                scheduled to avoid data loss. Incremental backups and offsite
+                backups are common practices for robust disaster recovery plans.
+              </p>
+            </li>
+          </ol>
+        </section>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-contents">
+        <div class="footer-left">
+          <div class="footer-links">
+            <div class="footer-contact-us">
+              <!-- Github Icon -->
+              <a href="https://github.com/Gsprx/InfoTuah" target="_blank"
+                ><?xml version="1.0"?><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 50 50"
+                  width="28px"
+                  height="28px"
+                >
+                  <path
+                    d="M17.791,46.836C18.502,46.53,19,45.823,19,45v-5.4c0-0.197,0.016-0.402,0.041-0.61C19.027,38.994,19.014,38.997,19,39 c0,0-3,0-3.6,0c-1.5,0-2.8-0.6-3.4-1.8c-0.7-1.3-1-3.5-2.8-4.7C8.9,32.3,9.1,32,9.7,32c0.6,0.1,1.9,0.9,2.7,2c0.9,1.1,1.8,2,3.4,2 c2.487,0,3.82-0.125,4.622-0.555C21.356,34.056,22.649,33,24,33v-0.025c-5.668-0.182-9.289-2.066-10.975-4.975 c-3.665,0.042-6.856,0.405-8.677,0.707c-0.058-0.327-0.108-0.656-0.151-0.987c1.797-0.296,4.843-0.647,8.345-0.714 c-0.112-0.276-0.209-0.559-0.291-0.849c-3.511-0.178-6.541-0.039-8.187,0.097c-0.02-0.332-0.047-0.663-0.051-0.999 c1.649-0.135,4.597-0.27,8.018-0.111c-0.079-0.5-0.13-1.011-0.13-1.543c0-1.7,0.6-3.5,1.7-5c-0.5-1.7-1.2-5.3,0.2-6.6 c2.7,0,4.6,1.3,5.5,2.1C21,13.4,22.9,13,25,13s4,0.4,5.6,1.1c0.9-0.8,2.8-2.1,5.5-2.1c1.5,1.4,0.7,5,0.2,6.6c1.1,1.5,1.7,3.2,1.6,5 c0,0.484-0.045,0.951-0.11,1.409c3.499-0.172,6.527-0.034,8.204,0.102c-0.002,0.337-0.033,0.666-0.051,0.999 c-1.671-0.138-4.775-0.28-8.359-0.089c-0.089,0.336-0.197,0.663-0.325,0.98c3.546,0.046,6.665,0.389,8.548,0.689 c-0.043,0.332-0.093,0.661-0.151,0.987c-1.912-0.306-5.171-0.664-8.879-0.682C35.112,30.873,31.557,32.75,26,32.969V33 c2.6,0,5,3.9,5,6.6V45c0,0.823,0.498,1.53,1.209,1.836C41.37,43.804,48,35.164,48,25C48,12.318,37.683,2,25,2S2,12.318,2,25 C2,35.164,8.63,43.804,17.791,46.836z"
+                  />
+                </svg>
+              </a>
+              <!-- Instagram Icon -->
+              <a href="https://www.instagram.com/" target="_blank">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 50 50"
+                  width="28px"
+                  height="28px"
+                >
+                  <path
+                    d="M 16 3 C 8.8324839 3 3 8.8324839 3 16 L 3 34 C 3 41.167516 8.8324839 47 16 47 L 34 47 C 41.167516 47 47 41.167516 47 34 L 47 16 C 47 8.8324839 41.167516 3 34 3 L 16 3 z M 16 5 L 34 5 C 40.086484 5 45 9.9135161 45 16 L 45 34 C 45 40.086484 40.086484 45 34 45 L 16 45 C 9.9135161 45 5 40.086484 5 34 L 5 16 C 5 9.9135161 9.9135161 5 16 5 z M 37 11 A 2 2 0 0 0 35 13 A 2 2 0 0 0 37 15 A 2 2 0 0 0 39 13 A 2 2 0 0 0 37 11 z M 25 14 C 18.936712 14 14 18.936712 14 25 C 14 31.063288 18.936712 36 25 36 C 31.063288 36 36 31.063288 36 25 C 36 18.936712 31.063288 14 25 14 z M 25 16 C 29.982407 16 34 20.017593 34 25 C 34 29.982407 29.982407 34 25 34 C 20.017593 34 16 29.982407 16 25 C 16 20.017593 20.017593 16 25 16 z"
+                  />
+                </svg>
+              </a>
+              <!-- LinkedIn Icon -->
+              <a href="https://www.linkedin.com" target="_blank"
+                ><?xml version="1.0"?><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 50 50"
+                  width="28px"
+                  height="28px"
+                >
+                  <path
+                    d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M17,20v19h-6V20H17z M11,14.47c0-1.4,1.2-2.47,3-2.47s2.93,1.07,3,2.47c0,1.4-1.12,2.53-3,2.53C12.2,17,11,15.87,11,14.47z M39,39h-6c0,0,0-9.26,0-10 c0-2-1-4-3.5-4.04h-0.08C27,24.96,26,27.02,26,29c0,0.91,0,10,0,10h-6V20h6v2.56c0,0,1.93-2.56,5.81-2.56 c3.97,0,7.19,2.73,7.19,8.26V39z"
+                  />
+                </svg>
+              </a>
+              <!-- Twiter Icon -->
+              <a href="https://x.com" target="_blank">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 50 50"
+                  width="28px"
+                  height="28px"
+                >
+                  <path
+                    d="M 5.9199219 6 L 20.582031 27.375 L 6.2304688 44 L 9.4101562 44 L 21.986328 29.421875 L 31.986328 44 L 44 44 L 28.681641 21.669922 L 42.199219 6 L 39.029297 6 L 27.275391 19.617188 L 17.933594 6 L 5.9199219 6 z M 9.7167969 8 L 16.880859 8 L 40.203125 42 L 33.039062 42 L 9.7167969 8 z"
+                  />
+                </svg>
+              </a>
+            </div>
+            <div class="footer-privacy-terms">
+              <a href="privacy_policy.html">Privacy Policy</a>
+              <a href="terms_of_service.html">Terms of Service</a>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            Copyright ©2024-2025 InfoTuah. All rights reserved.
+          </div>
+        </div>
+        <div class="footer-right">
+          <div class="footer-text">
+            <p>
+              Empowering learners with cutting-edge computer science education.
+            </p>
+            <p>
+              InfoTuah is designed to enhance learning and skill-building, with
+              simplified examples to support better readability and
+              understanding. Tutorials, references, and examples are regularly
+              reviewed for accuracy, though we cannot guarantee that all content
+              is error-free. By using InfoTuah, you acknowledge that you have
+              read and agreed to our terms of use and privacy policy.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<

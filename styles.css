@@ -517,7 +517,6 @@ strong {
   color: rgb(130, 126, 139);
   margin-left: 3%;
   margin-right: 5%;
-  margin-bottom: 5%;
 }
 
 .subcourse-header h2 {
@@ -525,6 +524,7 @@ strong {
   font-size: 260%;
   margin-left: 5%;
   color: rgb(93, 90, 100);
+  margin-top: 3%;
 }
 
 .course-image img {
@@ -542,7 +542,7 @@ strong {
   /* Basic Grid */
   display: grid;
   grid-template-columns: 1fr 4fr 1fr;
-  grid-template-rows: [nav] 70px [header] 5em [page-content] min-content [footer] 250px;
+  grid-template-rows: [nav] 70px [header] min-content [page-content] min-content [footer] 250px;
 }
 .subcourse-body main {
   grid-column: 2/3;
@@ -554,6 +554,7 @@ strong {
   grid-column: 2/3;
   grid-row: 3/4;
   flex-direction: column;
+  justify-content: space-between;
 }
 
 .subcourse-books {
