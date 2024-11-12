@@ -835,7 +835,10 @@ strong {
   flex-direction: column;
   justify-content: flex-start;
   gap: 8px;
-  padding: 16px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
 }
 
 .content-list {
