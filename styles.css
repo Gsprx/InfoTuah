@@ -416,6 +416,7 @@ aside {
   margin-left: 2%;
 }
 
+/* This aside bar is used on all pages, not just courses. */
 .course-aside {
   /* flexbox container with aside content */
   background-color: #16191c;
