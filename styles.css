@@ -430,6 +430,7 @@ aside {
   justify-content: space-between;
   align-items: center;
   position: sticky;
+  max-height: 25rem;
   top: 12rem;
 }
 
@@ -437,7 +438,7 @@ aside {
   width: 10rem;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: flex;
   justify-content: center;
   gap: 0.5rem;
 }
@@ -451,10 +452,11 @@ aside {
 .course-aside-img-wrapper-reverse {
   display: flex;
   justify-content: center;
+  margin-bottom: 5%;
 }
 
 .course-aside-img-wrapper img {
-  height: 7rem;
+  height: 6rem;
   width: 10rem;
 }
 .course-aside-img-wrapper-reverse img {
