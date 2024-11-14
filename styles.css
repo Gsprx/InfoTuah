@@ -1080,6 +1080,10 @@ header {
   background-color: white;
 }
 
+.navbar .courses-dropdown-trigger:hover .courses-dropdown {
+  display: block;
+}
+
 .nav-image-wrapper {
   width: fit-content;
   height: fit-content;
@@ -1100,9 +1104,10 @@ header {
   display: none;
   width: 14em;
   background-color: var(--very-dark-blue);
-  position: fixed;
+  position: absolute;
   top: 4.4em;
   right: 1em;
+  z-index: 5;
 }
 
 .courses-dropdown ul {
@@ -1139,6 +1144,10 @@ header {
 .courses-dropdown li a:hover svg {
   fill: var(--very-dark-blue);
   transform: rotate(0);
+}
+
+.subcourses-dropdown-trigger:hover .subcourses-dropdown {
+  display: block;
 }
 
 .subcourses-dropdown {
