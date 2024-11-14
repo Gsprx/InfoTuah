@@ -391,7 +391,7 @@ strong {
 .course-link {
   /* Course Link is extra sized on the font compared to the previous texts so it is visibly a different part of the description */
   padding-top: 24px;
-  font-size: 0.8em;
+  font-size: 1.2em;
 }
 
 /* Individual Course Pages */
