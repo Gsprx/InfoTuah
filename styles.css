@@ -467,7 +467,7 @@ aside {
 .course-aside {
   /* flexbox container with aside content */
   background-color: #16191c;
-  width: 15rem;
+  width: 14rem;
   border: var(--dark-grey) solid 1px;
   box-shadow: -5px -3px rgba(18, 20, 23, 0.1);
   z-index: 3;
