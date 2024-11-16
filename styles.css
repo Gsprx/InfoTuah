@@ -480,7 +480,7 @@ aside {
   position: sticky;
   max-height: 25rem;
   top: 18vh;
-  margin-bottom: 10vh;
+  margin-bottom: 15vh;
 }
 
 .course-aside-content {
@@ -1110,7 +1110,7 @@ header {
   width: 14em;
   background-color: var(--very-dark-blue);
   position: absolute;
-  top: 4.4em;
+  top: 8vh;
   right: 1em;
   z-index: 5;
 }
