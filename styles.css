@@ -1306,7 +1306,7 @@ footer {
   .courses-body {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: [nav] 70px [main-header] min-content [main] min-content [footer] 250px;
+    grid-template-rows: [nav] 70px [main-header] min-content [main] min-content [footer] min-content;
   }
 
   .all-courses {
