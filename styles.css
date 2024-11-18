@@ -112,7 +112,7 @@ strong {
 #index-body {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: [nav] 70px [main] min-content [footer] 250px;
+  grid-template-rows: [nav] 70px [main] min-content [footer] min-content;
 }
 
 #index-main {
@@ -137,7 +137,6 @@ strong {
   flex-direction: column;
   justify-content: flex-start;
   gap: 128px;
-  min-width: 768px;
 }
 
 .hero-headers {
@@ -1083,10 +1082,12 @@ header {
   background-color: white;
 }
 
-.navbar .courses-dropdown-trigger:hover .courses-dropdown {
-  display: block;
+/* Active dropdown menu on hover only when mouse-like devices are present */
+@media (pointer: fine) {
+  .navbar .courses-dropdown-trigger:hover .courses-dropdown {
+    display: block;
+  }
 }
-
 .nav-image-wrapper {
   width: fit-content;
   height: fit-content;
@@ -1272,6 +1273,62 @@ footer {
 }
 /* Phone Media Query*/
 @media screen and (min-width: 300px) and (max-width: 750px) {
+  /* Global Rule Attributes */
+
+  main {
+    /* Make all main tag text smaller */
+    font-size: 71%;
+  }
+
+  .hero-section {
+    margin-left: 3vw;
+    margin-right: 3vw;
+  }
+
+  /* Index Page */
+  .hero-image-wrapper {
+    /*remove hero image*/
+    display: none;
+  }
+
+  .hero-details {
+    justify-content: center;
+    align-items: center;
+    /*shorten the gap between headers and button in hero-section*/
+    gap: 48px;
+  }
+
+  .about-info-box {
+    /*change flex direction in about-section info boxes*/
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    height: fit-content;
+  }
+  #about-info-box2 {
+    flex-direction: column-reverse;
+  }
+
+  .about-image-wrapper {
+    width: 75vw;
+  }
+
+  /* Footer */
+  footer {
+    padding: 32px;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer-contents {
+    width: fit-content;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 24px;
+  }
 }
 
 /* Tablet Media Query */
