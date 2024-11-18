@@ -356,23 +356,6 @@ strong {
   align-items: center;
   text-align: center;
 }
-/*
-.courses-description li:nth-child(1) {
-  grid-column: 1/2;
-}
-.courses-description li:nth-child(2) {
-  grid-column: 2/3;
-}
-.courses-description li:nth-child(3) {
-  grid-column: 3/4;
-}
-.courses-description li:nth-child(4) {
-  grid-column: 4/5;
-}
-.courses-description li:nth-child(5) {
-  grid-column: 5/6;
-}
-*/
 
 .courses-image {
   /*center the image in the container*/
@@ -1271,21 +1254,25 @@ footer {
   top: 5em;
   z-index: 2;
 }
-/* Phone Media Query*/
+/*------------------------------- Phone Media Query -------------------------------------------*/
 @media screen and (min-width: 300px) and (max-width: 750px) {
   /* Global Rule Attributes */
 
   main {
     /* Make all main tag text smaller */
-    font-size: 71%;
+    font-size: 70%;
   }
 
+  .return-link {
+    /* make text invisible and only show the return symbol */
+    font-size: 0%;
+  }
+  /*-------- INDEX/HERO --------*/
   .hero-section {
     margin-left: 3vw;
     margin-right: 3vw;
   }
 
-  /* Index Page */
   .hero-image-wrapper {
     /*remove hero image*/
     display: none;
@@ -1314,7 +1301,122 @@ footer {
     width: 75vw;
   }
 
-  /* Footer */
+  /*------ Courses ------*/
+
+  .course-body {
+    max-width: 1fr;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: [nav] 70px [main-header] min-content [main] min-content [footer] 250px;
+  }
+
+  .all-courses {
+    padding-top: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .courses-header {
+    margin-top: 10vh;
+    font-size: 70%;
+    grid-row: 2/3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .course-container {
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 24px;
+  }
+
+  .courses-description {
+    font-size: 1.2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .courses-subheader h2 {
+    font-size: 1.5em;
+  }
+
+  .courses-description ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, min-content);
+    row-gap: 1em;
+  }
+
+  /* Specific positioning on one column for courses page */
+
+  /* first desc paragraph */
+  .courses-description li:nth-child(1) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    grid-row: 1/2;
+  }
+  /* second desc paragraph */
+  .courses-description li:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    grid-row: 2/3;
+  }
+  /* image of desc */
+  .courses-description li:nth-child(3) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    grid-row: 5/6;
+  }
+  /* third desc paragraph */
+  .courses-description li:nth-child(4) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    grid-row: 3/4;
+  }
+  /* fourth desc paragraph */
+  .courses-description li:nth-child(5) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    grid-row: 4/5;
+  }
+
+  .courses-image {
+    /*center the image in the container*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+  }
+
+  .courses-image img {
+    width: 85%;
+  }
+
+  .course-link {
+    /* Course Link is extra sized on the font compared to the previous texts so it is visibly a different part of the description */
+    padding: 0px;
+    font-size: 1.2em;
+  }
+
+  /*------ Footer ------*/
   footer {
     padding: 32px;
     height: fit-content;
@@ -1331,7 +1433,7 @@ footer {
   }
 }
 
-/* Tablet Media Query */
+/* ----------------------------------- Tablet Media Query -------------------------------------- */
 @media screen and (min-width: 751px) and (max-width: 1160px) {
   /* Index Page */
   .hero-image-wrapper {
