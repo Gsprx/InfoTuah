@@ -1303,8 +1303,7 @@ footer {
 
   /*------ Courses ------*/
 
-  .course-body {
-    max-width: 1fr;
+  .courses-body {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: [nav] 70px [main-header] min-content [main] min-content [footer] 250px;
@@ -1318,12 +1317,15 @@ footer {
   }
 
   .courses-header {
-    margin-top: 10vh;
+    margin-top: 8vh;
+    margin-left: 1vw;
+    margin-right: 1vw;
     font-size: 70%;
     grid-row: 2/3;
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 0px;
   }
 
   .course-container {
@@ -1415,6 +1417,8 @@ footer {
     padding: 0px;
     font-size: 1.2em;
   }
+
+  /*--------- Specific Course Pages ----------*/
 
   /*------ Footer ------*/
   footer {
