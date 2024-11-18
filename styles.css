@@ -1005,6 +1005,9 @@ code {
 
 .member-description {
   font-style: italic;
+  text-align: center;
+  margin-left: 12px;
+  margin-right: 12px;
 }
 
 .member-image-wrapper img {
@@ -1308,4 +1311,6 @@ footer {
     align-items: flex-start;
     gap: 24px;
   }
+
+  /* Courses Page */
 }
