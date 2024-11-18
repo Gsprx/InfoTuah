@@ -1270,9 +1270,12 @@ footer {
   top: 5em;
   z-index: 2;
 }
+/* Phone Media Query*/
+@media screen and (min-width: 300px) and (max-width: 750px) {
+}
 
-/* Tablet Media Querry */
-@media (max-width: 1160px) {
+/* Tablet Media Query */
+@media screen and (min-width: 751px) and (max-width: 1160px) {
   /* Index Page */
   .hero-image-wrapper {
     /*remove hero image*/
