@@ -1650,6 +1650,56 @@ footer {
     height: 3.5rem;
     width: 3.5rem;
   }
+
+  /*------------------ About Us Page --------------------*/
+  #about_us-body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: [nav] 70px [header] min-content [main] min-content [footer] min-content;
+  }
+
+  .about-us-header {
+    grid-row: 2/3;
+    font-size: 1em;
+    margin-top: 16px;
+    margin-bottom: 32px;
+    text-align: center;
+    padding-left: 0px;
+    display: block;
+  }
+
+  .about-members ul {
+    flex-direction: column;
+    row-gap: 48px;
+  }
+
+  .about-members {
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+    margin-top: 0px;
+  }
+
+  .about-members h2 {
+    font-size: 2.2em;
+    padding-left: 0px;
+  }
+
+  .about-contact-us h2 {
+    font-size: 2.2em;
+    padding-left: 0px;
+    text-align: center;
+  }
+
+  .about-contact-us ul {
+    font-size: 1.5em;
+    padding-left: 32px;
+    margin-right: 3vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 32px;
+  }
   /*------------------- Footer ---------------------*/
   footer {
     padding: 32px;
