@@ -1640,7 +1640,7 @@ footer {
     font-size: 1.2em;
   }
   .content-header h2 {
-    font-size: 2.4em;
+    font-size: 2.8em;
   }
 
   .return-to-top-btn {
@@ -1649,6 +1649,15 @@ footer {
     margin: 0px;
     height: 3.5rem;
     width: 3.5rem;
+  }
+
+  .lecture-container {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 6px;
+    padding: 16px;
   }
 
   /*------------------ About Us Page --------------------*/
