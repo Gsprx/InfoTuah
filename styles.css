@@ -286,7 +286,7 @@ strong {
 #courses-body {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: [nav] 70px [header] min-content [main] min-content [footer] 250px;
+  grid-template-rows: [nav] 70px [header] min-content [main] min-content [footer] min-content;
 }
 
 .courses-header {
@@ -374,7 +374,7 @@ strong {
 .course-body {
   display: grid;
   grid-template-columns: 1fr 4fr 1fr;
-  grid-template-rows: [nav] 70px [main-header] min-content [main] min-content [footer] 250px;
+  grid-template-rows: [nav] 70px [main-header] min-content [main] min-content [footer] min-content;
 }
 
 /* Course Sidebar */
@@ -569,7 +569,6 @@ aside {
 .subcourse-header h1 {
   /* Placed inside the course content grid */
   font-size: 300%;
-  color: rgb(130, 126, 139);
   margin-left: 3%;
   margin-right: 5%;
 }
@@ -578,7 +577,6 @@ aside {
   /* Headers styled to achieve an inline look and distinguishable hierarchy with other header ranks */
   font-size: 260%;
   margin-left: 5%;
-  color: rgb(93, 90, 100);
   margin-top: 3%;
 }
 
@@ -597,7 +595,7 @@ aside {
   /* Basic Grid */
   display: grid;
   grid-template-columns: 1fr 4fr 1fr;
-  grid-template-rows: [nav] 70px [header] min-content [page-content] min-content [footer] 250px;
+  grid-template-rows: [nav] 70px [header] min-content [page-content] min-content [footer] min-content;
 }
 .subcourse-body main {
   grid-column: 2/3;
@@ -641,7 +639,7 @@ aside {
   background-color: var(--dark-blue);
   display: grid;
   grid-template-columns: 1fr 4fr 1fr;
-  grid-template-rows: [nav] 70px [header] 5em [main] min-content [footer] 250px;
+  grid-template-rows: [nav] 70px [header] 5em [main] min-content [footer] min-content;
 }
 
 .content-body main {
@@ -671,13 +669,14 @@ aside {
 /*-------- Book Card Rules --------*/
 
 .book-card {
-  margin-top: 8%;
-  border: 0.3rem solid black;
+  margin-top: 2%;
+  border: 1px solid var(--dark-grey);
+  box-shadow: 5px 3px rgba(18, 20, 23, 0.1);
   padding-left: 4%;
   padding-top: 2%;
   padding-bottom: 2%;
-  border-radius: 3%;
-  background-color: #0d0f10;
+  border-radius: 6px;
+  background-color: #16191c;
 }
 
 .book-card-image-wrapper img {
@@ -692,7 +691,7 @@ aside {
 
 .book-card-details {
   /* General rule for the text inside the description box for the book */
-  font-size: 180%;
+  font-size: 1.4em;
   margin-right: 5%;
 }
 .book-card-title {
@@ -717,7 +716,8 @@ aside {
 
 .book-pages {
   /* Specific rule for the pages of the book */
-  margin-bottom: 2%;
+  margin-top: 2%;
+  margin-bottom: 1%;
   font-style: italic;
 }
 
@@ -735,13 +735,14 @@ aside {
 /*----------- Lecture Card Rules -----------*/
 
 .lecture-card {
-  margin-top: 8%;
-  border: 0.3rem solid black;
+  margin-top: 2%;
+  border: 1px solid var(--dark-grey);
+  box-shadow: 5px 3px rgba(18, 20, 23, 0.1);
   padding-left: 4%;
   padding-top: 2%;
   padding-bottom: 2%;
-  border-radius: 3%;
-  background-color: #0d0f10;
+  border-radius: 6px;
+  background-color: #16191c;
 }
 
 .lecture-card-image-wrapper img {
@@ -757,7 +758,7 @@ aside {
 
 .lecture-card-details {
   /* General rule for the text inside the description box for the lecture */
-  font-size: 180%;
+  font-size: 1.4em;
   margin-right: 10%;
 }
 
@@ -782,7 +783,8 @@ aside {
 
 .lecture-duration {
   /* Specific rule for the duration of the lecture */
-  margin-bottom: 2%;
+  margin-top: 2%;
+  margin-bottom: 1%;
   font-style: italic;
 }
 
@@ -939,7 +941,7 @@ code {
 #about_us-body {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: [nav] 70px [header] 5em [main] min-content [footer] 250px;
+  grid-template-rows: [nav] 70px [header] 5em [main] min-content [footer] min-content;
 }
 
 .about-us-header {
@@ -1254,7 +1256,7 @@ footer {
   z-index: 2;
 }
 /*------------------------------- Phone Media Query -------------------------------------------*/
-@media screen and (min-width: 300px) and (max-width: 750px) {
+@media screen and (max-width: 750px) {
   /* Global Rule Attributes */
 
   main {
@@ -1430,7 +1432,7 @@ footer {
     font-size: 100%;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: [nav] 70px [content-table]min-content [main-header] min-content [main] min-content [footer] 250px;
+    grid-template-rows: [nav] 70px [content-table]min-content [main-header] min-content [main] min-content [footer] min-content;
   }
 
   /* Course Main */
@@ -1534,6 +1536,12 @@ footer {
     align-items: flex-start;
     gap: 24px;
   }
+
+  .footer-privacy-terms {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
 }
 
 /* ----------------------------------- Tablet Media Query -------------------------------------- */
@@ -1634,5 +1642,17 @@ footer {
   aside {
     /*stop displaying aside*/
     display: none;
+  }
+
+  /* Subcourse Pages */
+  .subcourse-body {
+    /*change columns from 3 to 2*/
+    grid-template-columns: 1fr 4fr;
+  }
+
+  /* Book - Lecture Pages */
+  .content-body {
+    /*change columns from 3 to 2*/
+    grid-template-columns: 1fr 4fr;
   }
 }
