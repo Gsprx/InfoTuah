@@ -435,8 +435,7 @@ aside {
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  margin-left: 2%;
+  align-items: center;
 }
 
 /* This aside bar is used on all pages, not just courses. */
@@ -447,8 +446,6 @@ aside {
   border: var(--dark-grey) solid 1px;
   box-shadow: -5px -3px rgba(18, 20, 23, 0.1);
   z-index: 3;
-  margin-left: 5%;
-  margin-right: 4%;
   padding: 0.5rem;
   display: flex;
   justify-content: space-between;
@@ -457,6 +454,7 @@ aside {
   max-height: 25rem;
   top: 18vh;
   margin-bottom: 15vh;
+  margin-right: 16px;
 }
 
 .course-aside-content {
@@ -502,6 +500,7 @@ aside {
 .course-body main {
   grid-column: 2/3;
   grid-row: 3/4;
+  margin-right: 16px;
 }
 
 .course-header {
@@ -1428,7 +1427,7 @@ footer {
   }
 
   .course-body {
-    font-size: 120%;
+    font-size: 100%;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: [nav] 70px [content-table]min-content [main-header] min-content [main] min-content [footer] 250px;
@@ -1539,6 +1538,11 @@ footer {
 
 /* ----------------------------------- Tablet Media Query -------------------------------------- */
 @media screen and (min-width: 751px) and (max-width: 1160px) {
+  main {
+    /* Make all main tag text smaller */
+    font-size: 80%;
+  }
+
   /* Index Page */
   .hero-image-wrapper {
     /*remove hero image*/
@@ -1565,7 +1569,7 @@ footer {
   }
 
   .about-image-wrapper {
-    width: 50%;
+    width: 70%;
   }
 
   /* Footer */
@@ -1619,5 +1623,16 @@ footer {
   .courses-description ul li:nth-child(5) {
     grid-row: 2/3;
     grid-column: 2/3;
+  }
+
+  /* Individual Course Pages */
+  .course-body {
+    /*change columns from 3 to 2*/
+    grid-template-columns: 1fr 4fr;
+  }
+
+  aside {
+    /*stop displaying aside*/
+    display: none;
   }
 }
