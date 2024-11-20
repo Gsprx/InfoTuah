@@ -1503,6 +1503,7 @@ footer {
 
   .course-sidebar li {
     padding-top: 0;
+    padding-bottom: 0;
     padding-left: 2px;
     padding-right: 2px;
   }
@@ -1524,6 +1525,7 @@ footer {
     height: 100%;
     white-space: nowrap;
     font-size: 120%;
+    margin-top: 8px;
   }
 
   .course-description {
