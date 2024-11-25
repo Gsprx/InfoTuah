@@ -7,6 +7,8 @@ const burgerMenuButton = document.querySelector(".burger-menu-button");
 burgerMenuButton.addEventListener("click", function () {
   // show the navbar dropdown
   navbarDropdown.style.display = "block";
+  // hide burger menu icon
+  burgerMenuButton.style.display = "none";
 });
 
 // get close button
@@ -15,4 +17,6 @@ const closeMenuButton = document.querySelector(".close-menu-button");
 closeMenuButton.addEventListener("click", function () {
   // hide the navbar dropdown
   navbarDropdown.style.display = "none";
+  // show burger menu icon
+  burgerMenuButton.style.display = "block";
 });
