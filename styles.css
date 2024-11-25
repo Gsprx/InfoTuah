@@ -1093,7 +1093,7 @@ header {
   width: 14em;
   background-color: var(--very-dark-blue);
   position: absolute;
-  top: 8vh;
+  top: 70px;
   right: 1em;
   z-index: 5;
 }
@@ -1108,6 +1108,7 @@ header {
 .courses-dropdown li {
   height: 2.5em;
   width: 100%;
+  margin: 0;
 }
 
 .courses-dropdown li a {
@@ -1131,7 +1132,6 @@ header {
 
 .courses-dropdown li a:hover svg {
   fill: var(--very-dark-blue);
-  transform: rotate(0);
 }
 
 .subcourses-dropdown-trigger:hover .subcourses-dropdown {
