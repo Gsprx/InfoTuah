@@ -1044,26 +1044,33 @@ header {
 
 .navbar ul {
   height: inherit;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2px;
 }
 
-.navbar li {
-  display: inline-block;
+.navbar-link {
   margin: 0 2px;
   height: 100%;
 }
 
-.navbar li a {
+.navbar-link a {
   display: flex;
   align-items: center;
+  gap: 1px;
   height: 100%;
   padding: 0 4px;
   color: white;
 }
 
 /* Change color and background color on link hover*/
-.navbar li a:hover {
+.navbar-link a:hover {
   color: var(--very-dark-blue);
   background-color: white;
+}
+.navbar-link a:hover svg {
+  fill: var(--very-dark-blue);
 }
 
 /* Active dropdown menu on hover only when mouse-like devices are present */
@@ -1094,7 +1101,7 @@ header {
   background-color: var(--very-dark-blue);
   position: absolute;
   top: 70px;
-  right: 1em;
+  right: 4em;
   z-index: 5;
 }
 
@@ -1143,11 +1150,84 @@ header {
   width: 14em;
   background-color: var(--very-dark-blue);
   position: fixed;
-  right: 15em;
+  right: 18em;
 }
 
 .subcourses-dropdown li {
   height: 3em;
+}
+
+/*Burger menu*/
+.burger-menu {
+  display: none;
+}
+
+.menu-button {
+  background-color: var(--very-dark-blue);
+  border: none;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.menu-button svg {
+  transition: transform ease 0.5s;
+}
+
+.menu-button:hover svg {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+/*Navbar Dropdown*/
+.navbar-dropdown {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(18, 20, 23, 0.9);
+}
+
+.navbar-dropdown-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4px;
+  padding-right: 24px;
+  height: 70px;
+  border-bottom: solid 1px rgba(255, 255, 255, 0.7);
+}
+
+.navbar-dropdown-logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+}
+
+.navbar-dropdown ul {
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  margin-top: 32px;
+}
+
+.navbar-dropdown-link {
+  width: 100%;
+}
+
+.navbar-dropdown-link a {
+  font-size: 1.2em;
+  height: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /*----------- Footer -----------*/
@@ -1262,6 +1342,15 @@ footer {
   main {
     /* Make all main tag text smaller */
     font-size: 70%;
+  }
+
+  /* Change navbar links to burger menu */
+  .navbar-link {
+    display: none;
+  }
+
+  .burger-menu {
+    display: block;
   }
 
   .return-link {
@@ -1498,6 +1587,7 @@ footer {
     flex-direction: row;
     justify-content: flex-start;
     overflow-x: scroll;
+    overflow-y: hidden;
     padding: 8px;
   }
 
