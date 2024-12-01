@@ -93,15 +93,14 @@ strong {
 .button-primary {
   border: #262b2e 1px solid;
   background-color: #121417;
-  font-size: 0.9em;
   color: white;
   box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.2);
 
-  transition: transform ease 0.5s, box-shadow ease 0.5s;
+  transition: transform ease 0.3s, box-shadow ease 0.3s;
 }
 
 .button-primary:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
   box-shadow: 6px 5px 5px rgba(0, 0, 0, 0.3);
   color: white;
 }
