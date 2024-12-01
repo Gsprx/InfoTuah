@@ -234,7 +234,81 @@
       <div class="signup-container">
         <h1>Sign Up</h1>
         <form class="signup-form" method="POST" action="">
-          <fieldset class="signup-user-details"></fieldset>
+          <!--User Details-->
+          <fieldset class="fieldset signup-user-details">
+            <h2>Details</h2>
+            <!--Surname-->
+            <div class="field signup-username">
+              <label for="s_surname">Surname</label>
+              <input type="text" id="s_surname" name="s_surname" />
+            </div>
+            <!--Last name-->
+            <div class="field signup-lastname">
+              <label for="s_lastname">Last name</label>
+              <input type="text" id="s_lastname" name="s_lastname" />
+            </div>
+            <!--Email-->
+            <div class="field signup-email">
+              <label for="s_email">E-mail</label>
+              <input type="email" id="s_email" name="s_email" />
+            </div>
+            <!--Address-->
+            <div class="field signup-address">
+              <label for="s_address">Address</label>
+              <input type="text" id="s_address" name="s_address" />
+            </div>
+            <div class="field signup-birthday">
+              <label for="s_birthday">Address</label>
+              <input
+                type="date"
+                max="2024-12-01"
+                id="s_birthday"
+                name="s_birthday"
+              />
+            </div>
+            <!--Phone numbers-->
+            <div class="phone-numbers-fields">
+              <div class="field signup-phonenumbers">
+                <label for="s_phonenumber-one">Phone 1</label>
+                <input
+                  type="text"
+                  id="s_phonenumber-one"
+                  name="s_phonenumber-one"
+                />
+              </div>
+              <div class="field signup-phonenumbers">
+                <label for="s_phonenumber-two">Phone 2</label>
+                <input
+                  type="text"
+                  id="s_phonenumber-two"
+                  name="s_phonenumber-two"
+                />
+              </div>
+            </div>
+          </fieldset>
+          <!--User Info-->
+          <fieldset class="fieldset signup-user-info">
+            <h2>Info</h2>
+            <!--Username-->
+            <div class="field signup-username">
+              <label for="s_username">Username</label>
+              <input type="text" id="s_username" name="s_username" />
+            </div>
+            <!--Password-->
+            <div class="field signup-password">
+              <label for="s_password">Password</label>
+              <input type="password" id="s_password" name="s_password" />
+            </div>
+            <!--Varify Password-->
+            <div class="field signup-varify-password">
+              <label for="s_varify-password">Varify Password</label>
+              <input
+                type="password"
+                id="s_varify-password"
+                name="s_varify-password"
+              />
+            </div>
+          </fieldset>
         </form>
       </div>
     </main>

@@ -1261,7 +1261,7 @@ header {
   min-width: 170px;
 }
 
-.login-fields {
+.fieldset {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -1269,14 +1269,14 @@ header {
   border: none;
 }
 
-.login-field {
+.field {
   display: flex;
   flex-direction: column;
   font-size: 1.2em;
   width: 100%;
 }
 
-.login-field input {
+.field input {
   border: white 1px solid;
   border-radius: 2px;
   background-color: transparent;
@@ -1284,7 +1284,7 @@ header {
   padding-left: 2px;
 }
 
-.login-field input:focus {
+.field input:focus {
   outline: none;
 }
 
@@ -1328,6 +1328,47 @@ header {
 .signup-image-wrapper img {
   max-width: 50%;
   min-width: 200px;
+}
+
+/*----------- SignUp Page -----------*/
+#signup-body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: [nav] 70px [main] min-content [footer] min-content;
+}
+
+#signup-main {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  display: flex;
+  justify-content: center;
+}
+
+.signup-container {
+  margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.signup-form {
+  width: 75%;
+  max-width: 420px;
+  min-width: 220px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.phone-numbers-fields {
+  width: 100%;
+  min-width: 220px;
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
 }
 
 /*----------- Footer -----------*/
@@ -1905,7 +1946,7 @@ footer {
     gap: 32px;
   }
 
-  /*------------------- LogIn page ---------------------*/
+  /*------------------- Log In Page ---------------------*/
   #login-main {
     flex-direction: column;
     align-items: center;
@@ -1919,6 +1960,13 @@ footer {
     padding: 24px;
     width: 75%;
     justify-content: flex-start;
+  }
+
+  /*------------------- Sign Up Page ---------------------*/
+  .phone-numbers-fields {
+    flex-direction: column;
+    max-width: 220px;
+    gap: 16px;
   }
 
   /*------------------- Footer ---------------------*/
