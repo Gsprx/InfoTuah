@@ -233,37 +233,58 @@
     <main id="signup-main">
       <div class="signup-container">
         <h1>Sign Up</h1>
-        <form class="signup-form" method="POST" action="">
-          <!--User Details-->
-          <fieldset class="fieldset signup-user-details">
-            <h2>Details</h2>
-            <!--Surname-->
-            <div class="field signup-username">
-              <label for="s_surname">Surname</label>
-              <input type="text" id="s_surname" name="s_surname" />
+        <form class="signup-form" method="POST" action="" autocomplete="on">
+          <!--Personal Details-->
+          <fieldset class="fieldset signup-personal-details">
+            <h2>Personal Details</h2>
+            <!--First name-->
+            <div class="field signup-firstname">
+              <label for="s_firstname">First Name</label>
+              <input
+                type="text"
+                id="s_firstname"
+                name="s_firstname"
+                autocomplete="name"
+              />
             </div>
             <!--Last name-->
             <div class="field signup-lastname">
               <label for="s_lastname">Last name</label>
-              <input type="text" id="s_lastname" name="s_lastname" />
+              <input
+                type="text"
+                id="s_lastname"
+                name="s_lastname"
+                autocomplete="family-name"
+              />
             </div>
             <!--Email-->
             <div class="field signup-email">
               <label for="s_email">E-mail</label>
-              <input type="email" id="s_email" name="s_email" />
+              <input
+                type="email"
+                id="s_email"
+                name="s_email"
+                autocomplete="email"
+              />
             </div>
             <!--Address-->
             <div class="field signup-address">
               <label for="s_address">Address</label>
-              <input type="text" id="s_address" name="s_address" />
+              <input
+                type="text"
+                id="s_address"
+                name="s_address"
+                autocomplete="street-address"
+              />
             </div>
             <div class="field signup-birthday">
-              <label for="s_birthday">Address</label>
+              <label for="s_birthday">Birthday</label>
               <input
                 type="date"
                 max="2024-12-01"
                 id="s_birthday"
                 name="s_birthday"
+                autocomplete="bday"
               />
             </div>
             <!--Phone numbers-->
@@ -271,24 +292,26 @@
               <div class="field signup-phonenumbers">
                 <label for="s_phonenumber-one">Phone 1</label>
                 <input
-                  type="text"
+                  type="tel"
                   id="s_phonenumber-one"
                   name="s_phonenumber-one"
+                  autocomplete="tel"
                 />
               </div>
               <div class="field signup-phonenumbers">
                 <label for="s_phonenumber-two">Phone 2</label>
                 <input
-                  type="text"
+                  type="tel"
                   id="s_phonenumber-two"
                   name="s_phonenumber-two"
+                  autocomplete="tel"
                 />
               </div>
             </div>
           </fieldset>
-          <!--User Info-->
-          <fieldset class="fieldset signup-user-info">
-            <h2>Info</h2>
+          <!--Account Info-->
+          <fieldset class="fieldset signup-account-info">
+            <h2>Account Info</h2>
             <!--Username-->
             <div class="field signup-username">
               <label for="s_username">Username</label>
@@ -299,14 +322,90 @@
               <label for="s_password">Password</label>
               <input type="password" id="s_password" name="s_password" />
             </div>
-            <!--Varify Password-->
-            <div class="field signup-varify-password">
-              <label for="s_varify-password">Varify Password</label>
+            <!--Verify Password-->
+            <div class="field signup-verify-password">
+              <label for="s_verify-password">Verify Password</label>
               <input
                 type="password"
-                id="s_varify-password"
-                name="s_varify-password"
+                id="s_verify-password"
+                name="s_verify-password"
               />
+            </div>
+          </fieldset>
+          <!--Communication Options-->
+          <fieldset class="fieldset signup-communications-options">
+            <h2>How should we send you updates?</h2>
+            <label for="s_chk-sms">SMS</label>
+            <input type="checkbox" id="s_chk-sms" name="s_chk-sms" />
+            <label for="s_chk-email">E-mail</label>
+            <input type="checkbox" id="s_chk-email" name="s_chk-email" />
+            <label for="s_chk-viber">Viber</label>
+            <input type="checkbox" id="s_chk-viber" name="s_chk-viber" />
+            <label for="s_chk-whatsapp">WhatsApp</label>
+            <input type="checkbox" id="s_chk-whatsapp" name="s_chk-whatsapp" />
+          </fieldset>
+          <!--Education and Work Experience Survey-->
+          <fieldset class="fieldset signup-education-work-experience-survey">
+            <h2>Education and Work Experience Survey</h2>
+            <div class="field signup-select-education-level">
+              <label for="s_select-education-level"
+                >Select your current education level</label
+              >
+              <select
+                id="s_select-education-level"
+                name="s_select-education-level"
+                required
+              >
+                <option value="opt_elementary-school">Elementary School</option>
+                <option value="opt_middle-school">Middle School</option>
+                <option value="opt_high-school">High School</option>
+                <option value="opt_bachelors">Bachelor's Degree</option>
+                <option value="opt_masters">Master's Degree</option>
+                <option value="opt_doctorate">Doctoral Degree</option>
+              </select>
+            </div>
+            <div class="field signup-education-institute">
+              <label for="s_education-institute"
+                >Enter the name of the Institute of your current education
+                level</label
+              >
+              <input
+                type="text"
+                id="s_education-institute"
+                name="s_education-institute"
+                placeholder="i.e. Athens University of Economics and Business"
+                required
+              />
+            </div>
+            <div class="field signup-work-years">
+              <label for="s_select-work-years"
+                >How many years of work experience do you have?</label
+              >
+              <select
+                id="s_select-work-years"
+                name="s_select-work-years"
+                required
+              >
+                <option value="less-than-1-years">Less than 1 year</option>
+                <option value="1to3-years">1-3 years</option>
+                <option value="4to6-years">4-6 years</option>
+                <option value="7to10-years">7-10 years</option>
+                <option value="more-than-10-years">More than 10 years</option>
+              </select>
+            </div>
+            <div class="field signup-company-name">
+              <label for="s_company-name"
+                >What is the company's name of your current or most recent job?
+                (Optional)</label
+              >
+              <input type="text" id="s_company-name" name="s_company-name" />
+            </div>
+            <div class="field signup-work-title">
+              <label for="s_work-title"
+                >What is your current or most recent job title?
+                (Optional)</label
+              >
+              <input type="text" id="s_work-title" name="s_work-title" />
             </div>
           </fieldset>
         </form>
