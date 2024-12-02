@@ -1363,7 +1363,7 @@ header {
   gap: 24px;
 }
 
-.phone-numbers-fields {
+.inline-fields {
   width: 100%;
   min-width: 220px;
   display: flex;
@@ -1963,7 +1963,7 @@ footer {
   }
 
   /*------------------- Sign Up Page ---------------------*/
-  .phone-numbers-fields {
+  .inline-fields {
     flex-direction: column;
     max-width: 220px;
     gap: 16px;

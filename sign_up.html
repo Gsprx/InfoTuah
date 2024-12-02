@@ -268,15 +268,24 @@
               />
             </div>
             <!--Address-->
-            <div class="field signup-address">
-              <label for="s_address">Address</label>
-              <input
-                type="text"
-                id="s_address"
-                name="s_address"
-                autocomplete="street-address"
-              />
+            <div class="address-fields inline-fields">
+              <div class="field signup-country">
+                <label for="s_country">Country</label>
+                <input
+                  type="text"
+                  id="s_country"
+                  name="s_country"
+                  list="countries"
+                />
+                <datalist id="countries"></datalist>
+              </div>
+              <div class="field signup-city">
+                <label for="s_city">City</label>
+                <input type="text" id="s_city" name="s_city" list="cities" />
+                <datalist id="cities"></datalist>
+              </div>
             </div>
+            <!--Birthday-->
             <div class="field signup-birthday">
               <label for="s_birthday">Birthday</label>
               <input
@@ -288,7 +297,7 @@
               />
             </div>
             <!--Phone numbers-->
-            <div class="phone-numbers-fields">
+            <div class="phone-numbers-fields inline-fields">
               <div class="field signup-phonenumbers">
                 <label for="s_phonenumber-one">Phone 1</label>
                 <input
@@ -500,5 +509,6 @@
 
     <!-- Load scripts -->
     <script src="/navbar.js"></script>
+    <script src="/CountriesAndCities.js"></script>
   </body>
 </html>
