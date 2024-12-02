@@ -1268,7 +1268,9 @@ header {
   gap: 16px;
   border: none;
 }
-
+select {
+  background-color: var(--dark-grey);
+}
 .field {
   display: flex;
   flex-direction: column;
