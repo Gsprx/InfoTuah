@@ -78,7 +78,8 @@ async function fetchCities(selectedCountry) {
 
 // add event listener when the input field for city is selected
 countryInput.addEventListener("input", (e) => {
-  const selectedCountry = e.target.value;
+  const selectedCountry = e.target.value.replace(/ /g, "_");
+  console.log(selectedCountry);
   fetchCities(selectedCountry);
 });
 
