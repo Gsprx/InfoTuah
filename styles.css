@@ -1342,35 +1342,160 @@ select {
 #signup-main {
   grid-column: 1/2;
   grid-row: 2/3;
-  display: flex;
-  justify-content: center;
-}
-
-.signup-container {
-  margin-top: 1em;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
-  width: 100%;
-}
-
-.signup-form {
-  width: 75%;
-  max-width: 420px;
-  min-width: 220px;
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: [header] 10% [form] 90%;
 }
 
 .inline-fields {
   width: 100%;
-  min-width: 220px;
+  min-width: min-content;
   display: flex;
   justify-content: space-between;
   gap: 32px;
+}
+.fieldset-container {
+  margin-left: 3vw;
+  margin-right: 1vw;
+}
+.signup-form {
+  display: grid;
+  grid-column: 1/2;
+  grid-row: 2/3;
+  grid-template-columns: [left] 1fr [center] 1fr [right] 1fr;
+  grid-template-rows: auto;
+  row-gap: 75px;
+  margin-bottom: 15vh;
+}
+
+#signup-main h1 {
+  margin-left: 4vw;
+  margin-right: 4vw;
+}
+
+.signup-communications-options-container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 50px;
+  align-items: flex-start;
+}
+
+/* create a Nx2 grid so that the checkboxes are shown 2 per row */
+.signup-communications-options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-left: 2vw;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+}
+
+/* vertically align the text and SVG icons */
+.checkbox-container label {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-container svg {
+  height: 1.2em;
+  width: 1.2em;
+  margin-left: 6px;
+}
+
+.checkbox-container input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+.signup-personal-details-container {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+.signup-account-info-container {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+
+/* we place these last two containers in the same grid cell and space them using margins so that we dont 
+use another mega-div container to wrap them and keep them seperate and independent */
+.signup-education-work-experience-survey-container {
+  margin-top: 250px;
+  grid-column: 3/4;
+  grid-row: 1/2;
+}
+
+.signup-communications-options-container {
+  grid-column: 3/4;
+  grid-row: 1/2;
+}
+
+.signup-communications-options {
+  font-size: 120%;
+}
+
+/* modify the appearance of the checkboxes */
+input[type="checkbox"] {
+  width: 1.2em;
+  height: 1.2em;
+  /* remove default browser styling and add our own custom one */
+  appearance: none;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  transition: background-color 0.2s ease;
+  /* relative position is used so that the checkmark can use absolute positioning */
+  position: relative;
+}
+
+input[type="checkbox"]:checked {
+  background-color: var(--dark-grey);
+}
+
+input[type="checkbox"]:checked::after {
+  content: "✔";
+  position: absolute;
+  bottom: -3px;
+  right: 0.5px;
+  left: 0.5px;
+  font-size: 14px;
+  color: white;
+}
+
+/* Style and positioning for the button */
+.submit-button {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  margin-top: 800px;
+  margin-left: 8vw;
+  margin-right: 10vw;
+  width: 200px;
+  height: 50px;
+  background-color: #dbdbdb;
+  color: #333;
+  border: none;
+  padding: 12px 24px; /* Padding for button size */
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 50px; /* Fully rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08); /* Subtle shadows */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover effect */
+.submit-button:hover {
+  background-color: #b6b6b6; /* Light gray background on hover */
+  color: #333; /* Keep dark gray text */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15), 0 2px 5px rgba(0, 0, 0, 0.1); /* Stronger shadow on hover */
+}
+
+/* Focus effect for accessibility */
+.submit-button:focus {
+  outline: none; /* Remove default focus outline */
+  box-shadow: 0 0 0 3px rgba(169, 169, 169, 0.4); /* Soft gray focus ring */
 }
 
 /*----------- Footer -----------*/
@@ -1965,10 +2090,45 @@ footer {
   }
 
   /*------------------- Sign Up Page ---------------------*/
+
+  .signup-form {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, min-content);
+    row-gap: 30px;
+    align-items: center;
+    margin-bottom: 10vh;
+  }
+
+  .signup-account-info-container {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+
+  .signup-communications-options-container {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+
+  .signup-education-work-experience-survey-container {
+    grid-column: 1/2;
+    grid-row: 4/5;
+    margin-top: 0px;
+  }
+  .fieldset-container {
+    margin-left: 5vw;
+    margin-right: 5vw;
+  }
+  .field {
+    width: 70%;
+  }
   .inline-fields {
-    flex-direction: column;
-    max-width: 220px;
-    gap: 16px;
+    width: 70%;
+  }
+
+  .submit-button {
+    grid-column: 1/2;
+    grid-row: 5/6;
+    margin-top: 50px;
   }
 
   /*------------------- Footer ---------------------*/
@@ -2104,5 +2264,44 @@ footer {
   .content-body {
     /*change columns from 3 to 2*/
     grid-template-columns: 1fr 4fr;
+  }
+
+  .signup-form {
+    grid-template-columns: [left] 1fr [right] 1fr;
+    grid-template-rows: auto;
+    row-gap: 30px;
+  }
+
+  .signup-account-info-container {
+    grid-column: 1/2;
+    margin-top: 550px;
+  }
+
+  .signup-communications-options-container {
+    grid-column: 2/3;
+    margin-left: 2vw;
+  }
+
+  .signup-education-work-experience-survey-container {
+    grid-column: 2/3;
+    margin-top: 200px;
+    margin-left: 2vw;
+  }
+  .fieldset-container {
+    margin-left: 2vw;
+    margin-right: 1vw;
+  }
+  .field {
+    width: 80%;
+  }
+  .inline-fields {
+    flex-direction: column;
+    max-width: 220px;
+    gap: 16px;
+  }
+
+  .submit-button {
+    grid-column: 2/3;
+    margin-top: 730px;
   }
 }

@@ -231,10 +231,13 @@
     </header>
 
     <main id="signup-main">
-      <div class="signup-container">
-        <h1>Sign Up</h1>
-        <form class="signup-form" method="POST" action="" autocomplete="on">
-          <!--Personal Details-->
+      <h1>
+        Start your personalized learning journey with InfoTuah by becoming a
+        member!
+      </h1>
+      <form class="signup-form" method="POST" action="" autocomplete="on">
+        <!--Personal Details-->
+        <div class="fieldset-container signup-personal-details-container">
           <fieldset class="fieldset signup-personal-details">
             <h2>Personal Details</h2>
             <!--First name-->
@@ -245,6 +248,7 @@
                 id="s_firstname"
                 name="s_firstname"
                 autocomplete="name"
+                required
               />
             </div>
             <!--Last name-->
@@ -255,6 +259,7 @@
                 id="s_lastname"
                 name="s_lastname"
                 autocomplete="family-name"
+                required
               />
             </div>
             <!--Email-->
@@ -265,6 +270,7 @@
                 id="s_email"
                 name="s_email"
                 autocomplete="email"
+                required
               />
             </div>
             <!--Address-->
@@ -276,12 +282,19 @@
                   id="s_country"
                   name="s_country"
                   list="countries"
+                  required
                 />
                 <datalist id="countries"></datalist>
               </div>
               <div class="field signup-city">
                 <label for="s_city">City</label>
-                <input type="text" id="s_city" name="s_city" list="cities" />
+                <input
+                  type="text"
+                  id="s_city"
+                  name="s_city"
+                  list="cities"
+                  required
+                />
                 <datalist id="cities"></datalist>
               </div>
             </div>
@@ -294,6 +307,7 @@
                 id="s_birthday"
                 name="s_birthday"
                 autocomplete="bday"
+                required
               />
             </div>
             <!--Phone numbers-->
@@ -305,10 +319,11 @@
                   id="s_phonenumber-one"
                   name="s_phonenumber-one"
                   autocomplete="tel"
+                  required
                 />
               </div>
               <div class="field signup-phonenumbers">
-                <label for="s_phonenumber-two">Phone 2</label>
+                <label for="s_phonenumber-two">Phone 2 (Optional)</label>
                 <input
                   type="tel"
                   id="s_phonenumber-two"
@@ -318,18 +333,25 @@
               </div>
             </div>
           </fieldset>
-          <!--Account Info-->
+        </div>
+        <!--Account Info-->
+        <div class="fieldset-container signup-account-info-container">
           <fieldset class="fieldset signup-account-info">
             <h2>Account Info</h2>
             <!--Username-->
             <div class="field signup-username">
               <label for="s_username">Username</label>
-              <input type="text" id="s_username" name="s_username" />
+              <input type="text" id="s_username" name="s_username" required />
             </div>
             <!--Password-->
             <div class="field signup-password">
               <label for="s_password">Password</label>
-              <input type="password" id="s_password" name="s_password" />
+              <input
+                type="password"
+                id="s_password"
+                name="s_password"
+                required
+              />
             </div>
             <!--Verify Password-->
             <div class="field signup-verify-password">
@@ -338,22 +360,52 @@
                 type="password"
                 id="s_verify-password"
                 name="s_verify-password"
+                required
               />
             </div>
           </fieldset>
-          <!--Communication Options-->
+        </div>
+        <!--Communication Options-->
+        <div class="fieldset-container signup-communications-options-container">
+          <h2>How should we send you updates?</h2>
           <fieldset class="fieldset signup-communications-options">
-            <h2>How should we send you updates?</h2>
-            <label for="s_chk-sms">SMS</label>
-            <input type="checkbox" id="s_chk-sms" name="s_chk-sms" />
-            <label for="s_chk-email">E-mail</label>
-            <input type="checkbox" id="s_chk-email" name="s_chk-email" />
-            <label for="s_chk-viber">Viber</label>
-            <input type="checkbox" id="s_chk-viber" name="s_chk-viber" />
-            <label for="s_chk-whatsapp">WhatsApp</label>
-            <input type="checkbox" id="s_chk-whatsapp" name="s_chk-whatsapp" />
+            <div class="checkbox-container">
+              <input type="checkbox" id="s_chk-sms" name="s_chk-sms" />
+              <label for="s_chk-sms">SMS </label>
+            </div>
+            <div class="checkbox-container">
+              <input type="checkbox" id="s_chk-email" name="s_chk-email" />
+              <label for="s_chk-email"
+                >E-mail
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2ZM4 6h16l-8 5L4 6Zm16 12H4V8l8 5 8-5v10Z"
+                  />
+                </svg>
+              </label>
+            </div>
+            <div class="checkbox-container">
+              <input type="checkbox" id="s_chk-viber" name="s_chk-viber" />
+              <label for="s_chk-viber">Viber </label>
+            </div>
+            <div class="checkbox-container">
+              <input
+                type="checkbox"
+                id="s_chk-whatsapp"
+                name="s_chk-whatsapp"
+              />
+              <label for="s_chk-whatsapp">WhatsApp </label>
+            </div>
           </fieldset>
-          <!--Education and Work Experience Survey-->
+        </div>
+        <!--Education and Work Experience Survey-->
+        <div
+          class="fieldset-container signup-education-work-experience-survey-container"
+        >
           <fieldset class="fieldset signup-education-work-experience-survey">
             <h2>Education and Work Experience Survey</h2>
             <div class="field signup-select-education-level">
@@ -417,8 +469,17 @@
               <input type="text" id="s_work-title" name="s_work-title" />
             </div>
           </fieldset>
-        </form>
-      </div>
+        </div>
+
+        <button
+          type="submit"
+          class="submit-button"
+          name="submit-button"
+          value="submit-button"
+        >
+          Sign Up
+        </button>
+      </form>
     </main>
 
     <!-- Footer -->
