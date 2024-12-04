@@ -233,7 +233,7 @@
     <main id="login-main">
       <div class="login-container">
         <h1>Log In</h1>
-        <form class="login-form" method="POST" action="">
+        <form class="login-form" method="POST">
           <fieldset class="fieldset login-fields">
             <!--Username-->
             <div class="field login-username">
@@ -247,6 +247,7 @@
             </div>
             <!--Login Btn-->
             <button class="login-submit" type="submit">Login</button>
+            <div class="error-message"></div>
           </fieldset>
         </form>
       </div>
@@ -353,5 +354,6 @@
 
     <!-- Load scripts -->
     <script src="/navbar.js"></script>
+    <script src="/auth.js"></script>
   </body>
 </html>

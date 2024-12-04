@@ -1257,8 +1257,10 @@ header {
 }
 
 .login-form {
-  width: 40%;
+  width: 100%;
   min-width: 170px;
+  display: flex;
+  justify-content: center;
 }
 
 .fieldset {
@@ -1267,10 +1269,23 @@ header {
   align-items: flex-start;
   gap: 16px;
   border: none;
+  width: 40%;
+  height: 200px;
 }
+
+.error-message {
+  visibility: hidden;
+  display: block;
+  word-wrap: break-word;
+  max-width: 200px;
+  color: red;
+  font-size: 0.8em;
+}
+
 select {
   background-color: var(--dark-grey);
 }
+
 .field {
   display: flex;
   flex-direction: column;
