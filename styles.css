@@ -1276,6 +1276,7 @@ select {
   flex-direction: column;
   font-size: 1.2em;
   width: 100%;
+  min-width: 200px;
 }
 
 .field input {
@@ -1349,15 +1350,18 @@ select {
 
 .inline-fields {
   width: 100%;
-  min-width: min-content;
   display: flex;
   justify-content: space-between;
   gap: 32px;
 }
+
 .fieldset-container {
-  margin-left: 3vw;
-  margin-right: 1vw;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
 }
+
 .signup-form {
   display: grid;
   grid-column: 1/2;
@@ -1422,7 +1426,6 @@ select {
 /* we place these last two containers in the same grid cell and space them using margins so that we dont 
 use another mega-div container to wrap them and keep them seperate and independent */
 .signup-education-work-experience-survey-container {
-  margin-top: 250px;
   grid-column: 3/4;
   grid-row: 1/2;
 }
@@ -1465,9 +1468,15 @@ input[type="checkbox"]:checked::after {
 }
 
 /* Style and positioning for the button */
-.submit-button {
+.submit-button-container {
   grid-column: 2/3;
   grid-row: 1/2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.submit-button {
   margin-top: 800px;
   margin-left: 8vw;
   margin-right: 10vw;
@@ -2097,6 +2106,8 @@ footer {
     row-gap: 30px;
     align-items: center;
     margin-bottom: 10vh;
+    margin-left: 4vw;
+    margin-right: 4vw;
   }
 
   .signup-account-info-container {
@@ -2112,23 +2123,33 @@ footer {
   .signup-education-work-experience-survey-container {
     grid-column: 1/2;
     grid-row: 4/5;
-    margin-top: 0px;
   }
   .fieldset-container {
     margin-left: 5vw;
     margin-right: 5vw;
+    align-items: center;
   }
+
+  .fieldset {
+    align-items: center;
+  }
+
   .field {
     width: 70%;
   }
   .inline-fields {
     width: 70%;
+    flex-direction: column;
+    gap: 16px;
   }
 
   .submit-button {
-    grid-column: 1/2;
-    grid-row: 5/6;
     margin-top: 50px;
+  }
+
+  .submit-button-container {
+    grid-column: 1 / 2;
+    grid-row: 5 / 6;
   }
 
   /*------------------- Footer ---------------------*/
@@ -2290,7 +2311,13 @@ footer {
   .fieldset-container {
     margin-left: 2vw;
     margin-right: 1vw;
+    align-items: center;
   }
+
+  .fieldset {
+    align-items: center;
+  }
+
   .field {
     width: 80%;
   }
@@ -2301,7 +2328,10 @@ footer {
   }
 
   .submit-button {
-    grid-column: 2/3;
     margin-top: 730px;
+  }
+
+  .submit-button-container {
+    grid-row: 1/2;
   }
 }
