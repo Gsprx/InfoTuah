@@ -1,13 +1,25 @@
-// get datalist elements
-const countriesDatalist = document.getElementById("countries"); // for countries
-const citiesDatalist = document.getElementById("cities"); // for cities
+window.addEventListener("DOMContentLoaded", () => {
+  // get datalist elements
+  const countriesDatalist = document.getElementById("countries"); // for countries
+  const citiesDatalist = document.getElementById("cities"); // for cities
 
-// get input field for country
-const countryInput = document.getElementById("s_country");
+  // get input field for country
+  const countryInput = document.getElementById("s_country");
+
+  // add event listener when the input field for city is selected
+  countryInput.addEventListener("input", (e) => {
+    const selectedCountry = e.target.value.replace(/ /g, "_");
+    //console.log(selectedCountry);
+    fetchCities(selectedCountry, citiesDatalist);
+  });
+
+  // call initial fetch for countries
+  fetchCountries(countriesDatalist);
+});
 
 // call the Geonames API to find Countries and their cities
 // find all countries Geonames API has to offer and store them in an array
-async function fetchCountries() {
+async function fetchCountries(countriesDatalist) {
   try {
     const response = await fetch(
       "http://api.geonames.org/countryInfoJSON?username=phlorion"
@@ -28,7 +40,7 @@ async function fetchCountries() {
 }
 
 // fetch the cities of the selected country
-async function fetchCities(selectedCountry) {
+async function fetchCities(selectedCountry, citiesDatalist) {
   try {
     // if the country input field is empty, return
     if (!selectedCountry) {
@@ -75,13 +87,3 @@ async function fetchCities(selectedCountry) {
     console.error("Error fetching cities:", error);
   }
 }
-
-// add event listener when the input field for city is selected
-countryInput.addEventListener("input", (e) => {
-  const selectedCountry = e.target.value.replace(/ /g, "_");
-  console.log(selectedCountry);
-  fetchCities(selectedCountry);
-});
-
-// call initial fetch for countries
-fetchCountries();

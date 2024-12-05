@@ -8,6 +8,10 @@
     <meta name="author" content="Avrabos Georgios" />
     <link rel="stylesheet" href="styles.css" />
     <title>InfoTuah | SignUp</title>
+    <!-- Load scripts -->
+    <script src="/scripts/navbar.js"></script>
+    <script src="/scripts/CountriesAndCities.js"></script>
+    <script src="/scripts/validateForm.js"></script>
   </head>
   <body id="signup-body">
     <!-- Navbar -->
@@ -143,7 +147,7 @@
           </li>
           <!-- Login link -->
           <li class="navbar-link">
-            <a href="log_in.html"
+            <a id="login-link" href="log_in.html"
               >Login
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -208,7 +212,7 @@
                   <a href="about_us.html">About Us</a>
                 </li>
                 <li class="navbar-dropdown-link">
-                  <a href="log_in.html"
+                  <a id="b-login-link" href="log_in.html"
                     >Login
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -235,7 +239,12 @@
         Start your personalized learning journey with InfoTuah by becoming a
         member!
       </h1>
-      <form class="signup-form" method="POST" action="" autocomplete="on">
+      <form
+        class="signup-form"
+        method="GET"
+        action="index.html"
+        autocomplete="on"
+      >
         <!--Personal Details-->
         <div class="fieldset-container signup-personal-details-container">
           <fieldset class="fieldset signup-personal-details">
@@ -635,9 +644,5 @@
         </div>
       </div>
     </footer>
-
-    <!-- Load scripts -->
-    <script src="/navbar.js"></script>
-    <script src="/CountriesAndCities.js"></script>
   </body>
 </html>

@@ -1,14 +1,16 @@
-const button = document.querySelector(".login-submit");
-button.addEventListener("click", (e) => {
-  e.preventDefault();
+window.addEventListener("DOMContentLoaded", () => {
+  const button = document.querySelector(".login-submit");
+  button.addEventListener("click", (e) => {
+    e.preventDefault();
 
-  const username = document.getElementById("l_username").value;
-  const password = document.getElementById("l_password").value;
+    const username = document.getElementById("l_username").value;
+    const password = document.getElementById("l_password").value;
 
-  if (auth(username, password)) {
-    localStorage.setItem("auth", username);
-    window.location = "index.html";
-  }
+    if (auth(username, password)) {
+      localStorage.setItem("auth", username);
+      window.location = "index.html";
+    }
+  });
 });
 
 function auth(username, password) {
