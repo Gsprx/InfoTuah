@@ -1514,8 +1514,10 @@ input[type="checkbox"]:checked::after {
   grid-column: 2/3;
   grid-row: 2/3;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
+  height: 120%;
 }
 
 .submit-button {

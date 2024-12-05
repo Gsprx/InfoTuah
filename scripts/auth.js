@@ -33,17 +33,21 @@ function auth(username, password) {
       console.log(usersData);
 
       usersData.forEach((user) => {
+        let good = false;
         if (user.username == username && user.password == password) {
           // if user found and password matches login
+          good = true;
           localStorage.setItem("auth", user.username);
           window.location = "/index.html";
           return;
-        } else {
-          // if user not found or password does not match
-          errorMessage.innerHTML = "Incorrect password or username";
-          errorMessage.style.visibility = "visible";
         }
       });
+
+      if (!good) {
+        // if user not found or password does not match
+        errorMessage.innerHTML = "Incorrect password or username";
+        errorMessage.style.visibility = "visible";
+      }
     })
     .catch((error) => console.error("Error:", error));
 }
