@@ -1296,7 +1296,7 @@ select {
   flex-direction: column;
   font-size: 1.2em;
   width: 100%;
-  min-width: 200px;
+  min-width: 175px;
 }
 
 .field input {
@@ -1380,6 +1380,7 @@ select {
   justify-content: center;
   align-items: flex-start;
   width: 100%;
+  margin: 0 12px;
 }
 
 .signup-form {
@@ -2299,9 +2300,11 @@ footer {
   }
 
   .signup-form {
+    display: grid;
     grid-template-columns: [left] 1fr [right] 1fr;
-    grid-template-rows: auto;
-    row-gap: 30px;
+    grid-template-rows: [main-form] min-content [submit-button] min-content;
+    row-gap: 75px;
+    margin-bottom: 15vh;
   }
 
   .signup-account-info-container {
@@ -2309,40 +2312,28 @@ footer {
     margin-top: 550px;
   }
 
-  .signup-communications-options-container {
+  .communication-education-container {
     grid-column: 2/3;
-    margin-left: 2vw;
   }
 
-  .signup-education-work-experience-survey-container {
-    grid-column: 2/3;
-    margin-top: 200px;
-    margin-left: 2vw;
+  .submit-button-container {
+    grid-row: 2/3;
+    grid-column: 1/2;
   }
+
   .fieldset-container {
-    margin-left: 2vw;
+    margin-left: 1vw;
     margin-right: 1vw;
-    align-items: center;
+    align-items: flex-start;
   }
 
   .fieldset {
-    align-items: center;
+    align-items: flex-start;
   }
 
-  .field {
-    width: 80%;
-  }
   .inline-fields {
     flex-direction: column;
     max-width: 220px;
     gap: 16px;
-  }
-
-  .submit-button {
-    margin-top: 730px;
-  }
-
-  .submit-button-container {
-    grid-row: 1/2;
   }
 }
