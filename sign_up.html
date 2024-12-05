@@ -239,10 +239,10 @@
         <!--Personal Details-->
         <div class="fieldset-container signup-personal-details-container">
           <fieldset class="fieldset signup-personal-details">
-            <h2>Personal Details</h2>
+            <legend><h2>Personal Details</h2></legend>
             <!--First name-->
             <div class="field signup-firstname">
-              <label for="s_firstname">First Name</label>
+              <label for="s_firstname">First Name*</label>
               <input
                 type="text"
                 id="s_firstname"
@@ -253,7 +253,7 @@
             </div>
             <!--Last name-->
             <div class="field signup-lastname">
-              <label for="s_lastname">Last name</label>
+              <label for="s_lastname">Last name*</label>
               <input
                 type="text"
                 id="s_lastname"
@@ -264,7 +264,7 @@
             </div>
             <!--Email-->
             <div class="field signup-email">
-              <label for="s_email">E-mail</label>
+              <label for="s_email">E-mail*</label>
               <input
                 type="email"
                 id="s_email"
@@ -273,10 +273,22 @@
                 required
               />
             </div>
+            <!--Birthday-->
+            <div class="field signup-birthday">
+              <label for="s_birthday">Birthday*</label>
+              <input
+                type="date"
+                max="2024-12-01"
+                id="s_birthday"
+                name="s_birthday"
+                autocomplete="bday"
+                required
+              />
+            </div>
             <!--Address-->
             <div class="address-fields inline-fields">
               <div class="field signup-country">
-                <label for="s_country">Country</label>
+                <label for="s_country">Country*</label>
                 <input
                   type="text"
                   id="s_country"
@@ -287,7 +299,7 @@
                 <datalist id="countries"></datalist>
               </div>
               <div class="field signup-city">
-                <label for="s_city">City</label>
+                <label for="s_city">City*</label>
                 <input
                   type="text"
                   id="s_city"
@@ -298,32 +310,26 @@
                 <datalist id="cities"></datalist>
               </div>
             </div>
-            <!--Birthday-->
-            <div class="field signup-birthday">
-              <label for="s_birthday">Birthday</label>
-              <input
-                type="date"
-                max="2024-12-01"
-                id="s_birthday"
-                name="s_birthday"
-                autocomplete="bday"
-                required
-              />
-            </div>
             <!--Phone numbers-->
             <div class="phone-numbers-fields inline-fields">
               <div class="field signup-phonenumbers">
-                <label for="s_phonenumber-one">Phone 1</label>
+                <label for="s_phonenumber-one">Phone 1*</label>
                 <input
                   type="tel"
                   id="s_phonenumber-one"
                   name="s_phonenumber-one"
                   autocomplete="tel"
+                  pattern="^\d{4}\d{10}$"
+                  placeholder="i.e. 00306912121212"
                   required
                 />
+                <small
+                  >Format: 0000 (4-digit country code) followed by 10-digit
+                  phone number</small
+                >
               </div>
               <div class="field signup-phonenumbers">
-                <label for="s_phonenumber-two">Phone 2 (Optional)</label>
+                <label for="s_phonenumber-two">Phone 2</label>
                 <input
                   type="tel"
                   id="s_phonenumber-two"
@@ -337,15 +343,15 @@
         <!--Account Info-->
         <div class="fieldset-container signup-account-info-container">
           <fieldset class="fieldset signup-account-info">
-            <h2>Account Info</h2>
+            <legend><h2>Account Info</h2></legend>
             <!--Username-->
             <div class="field signup-username">
-              <label for="s_username">Username</label>
+              <label for="s_username">Username*</label>
               <input type="text" id="s_username" name="s_username" required />
             </div>
             <!--Password-->
             <div class="field signup-password">
-              <label for="s_password">Password</label>
+              <label for="s_password">Password*</label>
               <input
                 type="password"
                 id="s_password"
@@ -355,7 +361,7 @@
             </div>
             <!--Verify Password-->
             <div class="field signup-verify-password">
-              <label for="s_verify-password">Verify Password</label>
+              <label for="s_verify-password">Verify Password*</label>
               <input
                 type="password"
                 id="s_verify-password"
@@ -365,116 +371,108 @@
             </div>
           </fieldset>
         </div>
-        <div class="communication-education-container">
-          <!--Communication Options-->
-          <div
-            class="fieldset-container signup-communications-options-container"
-          >
-            <fieldset class="fieldset signup-communications-options">
-              <h2>How should we send you updates?</h2>
-              <div class="checkbox-container">
-                <input type="checkbox" id="s_chk-sms" name="s_chk-sms" />
-                <label for="s_chk-sms">SMS </label>
-              </div>
-              <div class="checkbox-container">
-                <input type="checkbox" id="s_chk-email" name="s_chk-email" />
-                <label for="s_chk-email"
-                  >E-mail
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                  >
-                    <path
-                      d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2ZM4 6h16l-8 5L4 6Zm16 12H4V8l8 5 8-5v10Z"
-                    />
-                  </svg>
-                </label>
-              </div>
-              <div class="checkbox-container">
-                <input type="checkbox" id="s_chk-viber" name="s_chk-viber" />
-                <label for="s_chk-viber">Viber </label>
-              </div>
-              <div class="checkbox-container">
-                <input
-                  type="checkbox"
-                  id="s_chk-whatsapp"
-                  name="s_chk-whatsapp"
-                />
-                <label for="s_chk-whatsapp">WhatsApp </label>
-              </div>
-            </fieldset>
-          </div>
-          <!--Education and Work Experience Survey-->
-          <div
-            class="fieldset-container signup-education-work-experience-survey-container"
-          >
-            <fieldset class="fieldset signup-education-work-experience-survey">
-              <h2>Education and Work Experience Survey</h2>
-              <div class="field signup-select-education-level">
-                <label for="s_select-education-level"
-                  >Select your current education level</label
+        <!--Communication Options-->
+        <div class="fieldset-container signup-communications-options-container">
+          <fieldset class="fieldset signup-communications-options">
+            <legend><h2>How should we update you?</h2></legend>
+            <div class="checkbox-container">
+              <input type="checkbox" id="s_chk-sms" name="s_chk-sms" />
+              <label for="s_chk-sms">SMS </label>
+            </div>
+            <div class="checkbox-container">
+              <input type="checkbox" id="s_chk-email" name="s_chk-email" />
+              <label for="s_chk-email"
+                >E-mail
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
                 >
-                <select
-                  id="s_select-education-level"
-                  name="s_select-education-level"
-                  required
-                >
-                  <option value="opt_elementary-school">
-                    Elementary School
-                  </option>
-                  <option value="opt_middle-school">Middle School</option>
-                  <option value="opt_high-school">High School</option>
-                  <option value="opt_bachelors">Bachelor's Degree</option>
-                  <option value="opt_masters">Master's Degree</option>
-                  <option value="opt_doctorate">Doctoral Degree</option>
-                </select>
-              </div>
-              <div class="field signup-education-institute">
-                <label for="s_education-institute"
-                  >Enter the name of the Institute of your current education
-                  level</label
-                >
-                <input
-                  type="text"
-                  id="s_education-institute"
-                  name="s_education-institute"
-                  placeholder="i.e. Athens University of Economics and Business"
-                  required
-                />
-              </div>
-              <div class="field signup-work-years">
-                <label for="s_select-work-years"
-                  >How many years of work experience do you have?</label
-                >
-                <select
-                  id="s_select-work-years"
-                  name="s_select-work-years"
-                  required
-                >
-                  <option value="less-than-1-years">Less than 1 year</option>
-                  <option value="1to3-years">1-3 years</option>
-                  <option value="4to6-years">4-6 years</option>
-                  <option value="7to10-years">7-10 years</option>
-                  <option value="more-than-10-years">More than 10 years</option>
-                </select>
-              </div>
-              <div class="field signup-company-name">
-                <label for="s_company-name"
-                  >What is the company's name of your current or most recent
-                  job? (Optional)</label
-                >
-                <input type="text" id="s_company-name" name="s_company-name" />
-              </div>
-              <div class="field signup-work-title">
-                <label for="s_work-title"
-                  >What is your current or most recent job title?
-                  (Optional)</label
-                >
-                <input type="text" id="s_work-title" name="s_work-title" />
-              </div>
-            </fieldset>
-          </div>
+                  <path
+                    d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2ZM4 6h16l-8 5L4 6Zm16 12H4V8l8 5 8-5v10Z"
+                  />
+                </svg>
+              </label>
+            </div>
+            <div class="checkbox-container">
+              <input type="checkbox" id="s_chk-viber" name="s_chk-viber" />
+              <label for="s_chk-viber">Viber </label>
+            </div>
+            <div class="checkbox-container">
+              <input
+                type="checkbox"
+                id="s_chk-whatsapp"
+                name="s_chk-whatsapp"
+              />
+              <label for="s_chk-whatsapp">WhatsApp </label>
+            </div>
+          </fieldset>
+        </div>
+        <!--Education and Work Experience Survey-->
+        <div
+          class="fieldset-container signup-education-work-experience-survey-container"
+        >
+          <fieldset class="fieldset signup-education-work-experience-survey">
+            <legend><h2>Short Survey</h2></legend>
+            <div class="field signup-select-education-level">
+              <label for="s_select-education-level"
+                >Select your current education level*</label
+              >
+              <select
+                id="s_select-education-level"
+                name="s_select-education-level"
+                required
+              >
+                <option value="opt_elementary-school">Elementary School</option>
+                <option value="opt_middle-school">Middle School</option>
+                <option value="opt_high-school">High School</option>
+                <option value="opt_bachelors">Bachelor's Degree</option>
+                <option value="opt_masters">Master's Degree</option>
+                <option value="opt_doctorate">Doctoral Degree</option>
+              </select>
+            </div>
+            <div class="field signup-education-institute">
+              <label for="s_education-institute"
+                >Enter the name of the Institute of your current education
+                level*</label
+              >
+              <input
+                type="text"
+                id="s_education-institute"
+                name="s_education-institute"
+                placeholder="i.e. Athens University of Economics and Business"
+                required
+              />
+            </div>
+            <div class="field signup-work-years">
+              <label for="s_select-work-years"
+                >How many years of work experience do you have?*</label
+              >
+              <select
+                id="s_select-work-years"
+                name="s_select-work-years"
+                required
+              >
+                <option value="less-than-1-years">Less than 1 year</option>
+                <option value="1to3-years">1-3 years</option>
+                <option value="4to6-years">4-6 years</option>
+                <option value="7to10-years">7-10 years</option>
+                <option value="more-than-10-years">More than 10 years</option>
+              </select>
+            </div>
+            <div class="field signup-company-name">
+              <label for="s_company-name"
+                >What is the company's name of your current or most recent job?
+              </label>
+              <input type="text" id="s_company-name" name="s_company-name" />
+            </div>
+            <div class="field signup-work-title">
+              <label for="s_work-title"
+                >What is your current or most recent job title?
+              </label>
+              <input type="text" id="s_work-title" name="s_work-title" />
+            </div>
+          </fieldset>
         </div>
 
         <div class="submit-button-container">
