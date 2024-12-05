@@ -2114,12 +2114,12 @@ footer {
 
   .signup-form {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(5, min-content);
-    row-gap: 30px;
-    align-items: center;
-    margin-bottom: 10vh;
-    margin-left: 4vw;
-    margin-right: 4vw;
+    grid-template-rows: [personal-details] min-content [account-info]min-content [communication-and-educationbackground] min-content [submit-button] min-content;
+  }
+
+  .signup-account-personal-details-container {
+    grid-column: 1/2;
+    grid-row: 1/2;
   }
 
   .signup-account-info-container {
@@ -2127,41 +2127,29 @@ footer {
     grid-row: 2/3;
   }
 
-  .signup-communications-options-container {
+  .communication-education-container {
     grid-column: 1/2;
     grid-row: 3/4;
   }
 
-  .signup-education-work-experience-survey-container {
+  .submit-button-container {
     grid-column: 1/2;
     grid-row: 4/5;
   }
+
   .fieldset-container {
-    margin-left: 5vw;
-    margin-right: 5vw;
-    align-items: center;
+    align-items: flex-start;
+    margin: 0;
   }
 
   .fieldset {
-    align-items: center;
+    align-items: flex-start;
   }
 
-  .field {
-    width: 70%;
-  }
   .inline-fields {
-    width: 70%;
+    width: 80%;
     flex-direction: column;
     gap: 16px;
-  }
-
-  .submit-button {
-    margin-top: 50px;
-  }
-
-  .submit-button-container {
-    grid-column: 1 / 2;
-    grid-row: 5 / 6;
   }
 
   /*------------------- Footer ---------------------*/
@@ -2300,11 +2288,8 @@ footer {
   }
 
   .signup-form {
-    display: grid;
     grid-template-columns: [left] 1fr [right] 1fr;
     grid-template-rows: [main-form] min-content [submit-button] min-content;
-    row-gap: 75px;
-    margin-bottom: 15vh;
   }
 
   .signup-account-info-container {
