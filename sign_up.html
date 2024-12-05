@@ -239,10 +239,10 @@
         <!--Personal Details-->
         <div class="fieldset-container signup-personal-details-container">
           <fieldset class="fieldset signup-personal-details">
-            <h2>Personal Details</h2>
+            <legend><h2>Personal Details</h2></legend>
             <!--First name-->
             <div class="field signup-firstname">
-              <label for="s_firstname">First Name</label>
+              <label for="s_firstname">First Name*</label>
               <input
                 type="text"
                 id="s_firstname"
@@ -253,7 +253,7 @@
             </div>
             <!--Last name-->
             <div class="field signup-lastname">
-              <label for="s_lastname">Last name</label>
+              <label for="s_lastname">Last name*</label>
               <input
                 type="text"
                 id="s_lastname"
@@ -264,7 +264,7 @@
             </div>
             <!--Email-->
             <div class="field signup-email">
-              <label for="s_email">E-mail</label>
+              <label for="s_email">E-mail*</label>
               <input
                 type="email"
                 id="s_email"
@@ -273,10 +273,22 @@
                 required
               />
             </div>
+            <!--Birthday-->
+            <div class="field signup-birthday">
+              <label for="s_birthday">Birthday*</label>
+              <input
+                type="date"
+                max="2024-12-01"
+                id="s_birthday"
+                name="s_birthday"
+                autocomplete="bday"
+                required
+              />
+            </div>
             <!--Address-->
             <div class="address-fields inline-fields">
               <div class="field signup-country">
-                <label for="s_country">Country</label>
+                <label for="s_country">Country*</label>
                 <input
                   type="text"
                   id="s_country"
@@ -287,7 +299,7 @@
                 <datalist id="countries"></datalist>
               </div>
               <div class="field signup-city">
-                <label for="s_city">City</label>
+                <label for="s_city">City*</label>
                 <input
                   type="text"
                   id="s_city"
@@ -298,32 +310,26 @@
                 <datalist id="cities"></datalist>
               </div>
             </div>
-            <!--Birthday-->
-            <div class="field signup-birthday">
-              <label for="s_birthday">Birthday</label>
-              <input
-                type="date"
-                max="2024-12-01"
-                id="s_birthday"
-                name="s_birthday"
-                autocomplete="bday"
-                required
-              />
-            </div>
             <!--Phone numbers-->
             <div class="phone-numbers-fields inline-fields">
               <div class="field signup-phonenumbers">
-                <label for="s_phonenumber-one">Phone 1</label>
+                <label for="s_phonenumber-one">Phone 1*</label>
                 <input
                   type="tel"
                   id="s_phonenumber-one"
                   name="s_phonenumber-one"
                   autocomplete="tel"
+                  pattern="^\d{4}\d{10}$"
+                  placeholder="i.e. 00306912121212"
                   required
                 />
+                <small
+                  >Format: 0000 (4-digit country code) followed by 10-digit
+                  phone number</small
+                >
               </div>
               <div class="field signup-phonenumbers">
-                <label for="s_phonenumber-two">Phone 2 (Optional)</label>
+                <label for="s_phonenumber-two">Phone 2</label>
                 <input
                   type="tel"
                   id="s_phonenumber-two"
@@ -337,15 +343,15 @@
         <!--Account Info-->
         <div class="fieldset-container signup-account-info-container">
           <fieldset class="fieldset signup-account-info">
-            <h2>Account Info</h2>
+            <legend><h2>Account Info</h2></legend>
             <!--Username-->
             <div class="field signup-username">
-              <label for="s_username">Username</label>
+              <label for="s_username">Username*</label>
               <input type="text" id="s_username" name="s_username" required />
             </div>
             <!--Password-->
             <div class="field signup-password">
-              <label for="s_password">Password</label>
+              <label for="s_password">Password*</label>
               <input
                 type="password"
                 id="s_password"
@@ -355,7 +361,7 @@
             </div>
             <!--Verify Password-->
             <div class="field signup-verify-password">
-              <label for="s_verify-password">Verify Password</label>
+              <label for="s_verify-password">Verify Password*</label>
               <input
                 type="password"
                 id="s_verify-password"
@@ -365,184 +371,178 @@
             </div>
           </fieldset>
         </div>
-        <div class="communication-education-container">
-          <!--Communication Options-->
-          <div
-            class="fieldset-container signup-communications-options-container"
-          >
-            <fieldset class="fieldset signup-communications-options">
-              <h2>How should we send you updates?</h2>
-              <div class="checkbox-container">
-                <input type="checkbox" id="s_chk-sms" name="s_chk-sms" />
-                <label for="s_chk-sms"
-                  >SMS
-                  <svg
+        <!--Communication Options-->
+        <div class="fieldset-container signup-communications-options-container">
+          <fieldset class="fieldset signup-communications-options">
+            <legend><h2>How should we update you?</h2></legend>
+            <div class="checkbox-container">
+              <input type="checkbox" id="s_chk-sms" name="s_chk-sms" />
+              <label for="s_chk-sms"
+                >SMS
+                <svg
+                  fill="#ffffff"
+                  height="800px"
+                  width="800px"
+                  version="1.1"
+                  id="Layer_1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  viewBox="0 0 512 512"
+                  enable-background="new 0 0 512 512"
+                  xml:space="preserve"
+                >
+                  <path
+                    d="M256,0C114.6,0,0,85.9,0,192c0,75,57.5,139.8,141.1,171.4L85.3,512l160.5-128.4c3.4,0.1,6.7,0.4,10.2,0.4c141.4,0,256-85.9,256-192C512,85.9,397.4,0,256,0z"
+                  />
+                </svg>
+              </label>
+            </div>
+            <div class="checkbox-container">
+              <input type="checkbox" id="s_chk-email" name="s_chk-email" />
+              <label for="s_chk-email"
+                >E-mail
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2ZM4 6h16l-8 5L4 6Zm16 12H4V8l8 5 8-5v10Z"
+                  />
+                </svg>
+              </label>
+            </div>
+            <div class="checkbox-container">
+              <input type="checkbox" id="s_chk-viber" name="s_chk-viber" />
+              <label for="s_chk-viber"
+                >Viber
+                <svg
+                  width="800px"
+                  height="800px"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M13 4C12.4477 4 12 4.44772 12 5C12 5.55228 12.4477 6 13 6C14.2728 6 15.2557 6.41989 15.9179 7.08211C16.5801 7.74433 17 8.72725 17 10C17 10.5523 17.4477 11 18 11C18.5523 11 19 10.5523 19 10C19 8.27275 18.4199 6.75567 17.3321 5.66789C16.2443 4.58011 14.7272 4 13 4Z"
                     fill="#ffffff"
-                    height="800px"
-                    width="800px"
-                    version="1.1"
-                    id="Layer_1"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                    viewBox="0 0 512 512"
-                    enable-background="new 0 0 512 512"
-                    xml:space="preserve"
-                  >
-                    <path
-                      d="M256,0C114.6,0,0,85.9,0,192c0,75,57.5,139.8,141.1,171.4L85.3,512l160.5-128.4c3.4,0.1,6.7,0.4,10.2,0.4c141.4,0,256-85.9,256-192C512,85.9,397.4,0,256,0z"
-                    />
-                  </svg>
-                </label>
-              </div>
-              <div class="checkbox-container">
-                <input type="checkbox" id="s_chk-email" name="s_chk-email" />
-                <label for="s_chk-email"
-                  >E-mail
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                  >
-                    <path
-                      d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2ZM4 6h16l-8 5L4 6Zm16 12H4V8l8 5 8-5v10Z"
-                    />
-                  </svg>
-                </label>
-              </div>
-              <div class="checkbox-container">
-                <input type="checkbox" id="s_chk-viber" name="s_chk-viber" />
-                <label for="s_chk-viber"
-                  >Viber
-                  <svg
-                    width="800px"
-                    height="800px"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M13 4C12.4477 4 12 4.44772 12 5C12 5.55228 12.4477 6 13 6C14.2728 6 15.2557 6.41989 15.9179 7.08211C16.5801 7.74433 17 8.72725 17 10C17 10.5523 17.4477 11 18 11C18.5523 11 19 10.5523 19 10C19 8.27275 18.4199 6.75567 17.3321 5.66789C16.2443 4.58011 14.7272 4 13 4Z"
-                      fill="#ffffff"
-                    />
-                    <path
-                      d="M5.014 8.00613C5.12827 7.1024 6.30277 5.87414 7.23488 6.01043L7.23339 6.00894C8.01251 6.15699 8.65217 7.32965 9.07373 8.10246C9.14298 8.22942 9.20635 8.34559 9.26349 8.44465C9.55041 8.95402 9.3641 9.4701 9.09655 9.68787C9.06561 9.7128 9.03317 9.73855 8.9998 9.76504C8.64376 10.0477 8.18114 10.4149 8.28943 10.7834C8.5 11.5 11 14 12.2296 14.7107C12.6061 14.9283 12.8988 14.5057 13.1495 14.1438C13.2087 14.0583 13.2656 13.9762 13.3207 13.9067C13.5301 13.6271 14.0466 13.46 14.5548 13.736C15.3138 14.178 16.0288 14.6917 16.69 15.27C17.0202 15.546 17.0977 15.9539 16.8689 16.385C16.4659 17.1443 15.3003 18.1456 14.4542 17.9421C12.9764 17.5868 7 15.27 5.08033 8.55801C4.97981 8.26236 4.99645 8.13792 5.01088 8.02991L5.014 8.00613Z"
-                      fill="#ffffff"
-                    />
-                    <path
-                      d="M13 7C12.4477 7 12 7.44772 12 8C12 8.55228 12.4477 9 13 9C13.1748 9 13.4332 9.09745 13.6679 9.33211C13.9025 9.56676 14 9.82523 14 10C14 10.5523 14.4477 11 15 11C15.5523 11 16 10.5523 16 10C16 9.17477 15.5975 8.43324 15.0821 7.91789C14.5668 7.40255 13.8252 7 13 7Z"
-                      fill="#ffffff"
-                    />
-                    <path
-                      fill-rule="evenodd"
-                      clip-rule="evenodd"
-                      d="M7.51742 23.8312C7.54587 23.8469 7.57508 23.8612 7.60492 23.874C8.14762 24.1074 8.81755 23.5863 10.1574 22.5442L11.5 21.5C14.1884 21.589 16.514 21.2362 18.312 20.6071C20.3227 19.9035 21.9036 18.3226 22.6072 16.3119C23.5768 13.541 23.5768 8.45883 22.6072 5.68794C21.9036 3.67722 20.3227 2.0963 18.312 1.39271C15.1103 0.272407 8.82999 0.293306 5.68806 1.39271C3.67733 2.0963 2.09642 3.67722 1.39283 5.68794C0.423255 8.45883 0.423255 13.541 1.39283 16.3119C2.09642 18.3226 3.67733 19.9035 5.68806 20.6071C6.08252 20.7451 6.52371 20.8965 7 21C7 22.6974 7 23.5461 7.51742 23.8312ZM9 20.9107V19.7909C9 19.5557 8.836 19.3524 8.60597 19.3032C7.84407 19.1403 7.08676 18.9776 6.34862 18.7193C4.91238 18.2168 3.78316 17.0875 3.2806 15.6513C2.89871 14.5599 2.66565 12.8453 2.66565 10.9999C2.66565 9.15453 2.89871 7.43987 3.2806 6.3485C3.78316 4.91227 4.91238 3.78304 6.34862 3.28048C7.61625 2.83692 9.71713 2.56282 11.9798 2.56032C14.2422 2.55782 16.3561 2.82723 17.6514 3.28048C19.0876 3.78304 20.2169 4.91227 20.7194 6.3485C21.1013 7.43987 21.3344 9.15453 21.3344 10.9999C21.3344 12.8453 21.1013 14.5599 20.7194 15.6513C20.2169 17.0875 19.0876 18.2168 17.6514 18.7193C15.5197 19.4652 13.259 19.549 11.0239 19.4828C10.9071 19.4794 10.7926 19.5165 10.7004 19.5882L9 20.9107Z"
-                      fill="#ffffff"
-                    />
-                  </svg>
-                </label>
-              </div>
-              <div class="checkbox-container">
-                <input
-                  type="checkbox"
-                  id="s_chk-whatsapp"
-                  name="s_chk-whatsapp"
-                />
-                <label for="s_chk-whatsapp"
-                  >WhatsApp
-                  <svg
-                    width="800px"
-                    height="800px"
-                    viewBox="0 0 48 48"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <defs>
-                      <style>
-                        .a {
-                          fill: white;
-                          stroke: #000000;
-                          stroke-linecap: round;
-                          stroke-linejoin: round;
-                        }
-                      </style>
-                    </defs>
-                    <path
-                      class="a"
-                      d="M42.5,5.77l-7.2511,11.29-25.5482.0191L5.5,42.23l6.8023-10.7835,25.7153-.0716Z"
-                    />
-                  </svg>
-                </label>
-              </div>
-            </fieldset>
-          </div>
-          <!--Education and Work Experience Survey-->
-          <div
-            class="fieldset-container signup-education-work-experience-survey-container"
-          >
-            <fieldset class="fieldset signup-education-work-experience-survey">
-              <h2>Education and Work Experience Survey</h2>
-              <div class="field signup-select-education-level">
-                <label for="s_select-education-level"
-                  >Select your current education level</label
+                  />
+                  <path
+                    d="M5.014 8.00613C5.12827 7.1024 6.30277 5.87414 7.23488 6.01043L7.23339 6.00894C8.01251 6.15699 8.65217 7.32965 9.07373 8.10246C9.14298 8.22942 9.20635 8.34559 9.26349 8.44465C9.55041 8.95402 9.3641 9.4701 9.09655 9.68787C9.06561 9.7128 9.03317 9.73855 8.9998 9.76504C8.64376 10.0477 8.18114 10.4149 8.28943 10.7834C8.5 11.5 11 14 12.2296 14.7107C12.6061 14.9283 12.8988 14.5057 13.1495 14.1438C13.2087 14.0583 13.2656 13.9762 13.3207 13.9067C13.5301 13.6271 14.0466 13.46 14.5548 13.736C15.3138 14.178 16.0288 14.6917 16.69 15.27C17.0202 15.546 17.0977 15.9539 16.8689 16.385C16.4659 17.1443 15.3003 18.1456 14.4542 17.9421C12.9764 17.5868 7 15.27 5.08033 8.55801C4.97981 8.26236 4.99645 8.13792 5.01088 8.02991L5.014 8.00613Z"
+                    fill="#ffffff"
+                  />
+                  <path
+                    d="M13 7C12.4477 7 12 7.44772 12 8C12 8.55228 12.4477 9 13 9C13.1748 9 13.4332 9.09745 13.6679 9.33211C13.9025 9.56676 14 9.82523 14 10C14 10.5523 14.4477 11 15 11C15.5523 11 16 10.5523 16 10C16 9.17477 15.5975 8.43324 15.0821 7.91789C14.5668 7.40255 13.8252 7 13 7Z"
+                    fill="#ffffff"
+                  />
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M7.51742 23.8312C7.54587 23.8469 7.57508 23.8612 7.60492 23.874C8.14762 24.1074 8.81755 23.5863 10.1574 22.5442L11.5 21.5C14.1884 21.589 16.514 21.2362 18.312 20.6071C20.3227 19.9035 21.9036 18.3226 22.6072 16.3119C23.5768 13.541 23.5768 8.45883 22.6072 5.68794C21.9036 3.67722 20.3227 2.0963 18.312 1.39271C15.1103 0.272407 8.82999 0.293306 5.68806 1.39271C3.67733 2.0963 2.09642 3.67722 1.39283 5.68794C0.423255 8.45883 0.423255 13.541 1.39283 16.3119C2.09642 18.3226 3.67733 19.9035 5.68806 20.6071C6.08252 20.7451 6.52371 20.8965 7 21C7 22.6974 7 23.5461 7.51742 23.8312ZM9 20.9107V19.7909C9 19.5557 8.836 19.3524 8.60597 19.3032C7.84407 19.1403 7.08676 18.9776 6.34862 18.7193C4.91238 18.2168 3.78316 17.0875 3.2806 15.6513C2.89871 14.5599 2.66565 12.8453 2.66565 10.9999C2.66565 9.15453 2.89871 7.43987 3.2806 6.3485C3.78316 4.91227 4.91238 3.78304 6.34862 3.28048C7.61625 2.83692 9.71713 2.56282 11.9798 2.56032C14.2422 2.55782 16.3561 2.82723 17.6514 3.28048C19.0876 3.78304 20.2169 4.91227 20.7194 6.3485C21.1013 7.43987 21.3344 9.15453 21.3344 10.9999C21.3344 12.8453 21.1013 14.5599 20.7194 15.6513C20.2169 17.0875 19.0876 18.2168 17.6514 18.7193C15.5197 19.4652 13.259 19.549 11.0239 19.4828C10.9071 19.4794 10.7926 19.5165 10.7004 19.5882L9 20.9107Z"
+                    fill="#ffffff"
+                  />
+                </svg>
+              </label>
+            </div>
+            <div class="checkbox-container">
+              <input
+                type="checkbox"
+                id="s_chk-whatsapp"
+                name="s_chk-whatsapp"
+              />
+              <label for="s_chk-whatsapp"
+                >WhatsApp
+                <svg
+                  width="800px"
+                  height="800px"
+                  viewBox="0 0 48 48"
+                  xmlns="http://www.w3.org/2000/svg"
                 >
-                <select
-                  id="s_select-education-level"
-                  name="s_select-education-level"
-                  required
-                >
-                  <option value="opt_elementary-school">
-                    Elementary School
-                  </option>
-                  <option value="opt_middle-school">Middle School</option>
-                  <option value="opt_high-school">High School</option>
-                  <option value="opt_bachelors">Bachelor's Degree</option>
-                  <option value="opt_masters">Master's Degree</option>
-                  <option value="opt_doctorate">Doctoral Degree</option>
-                </select>
-              </div>
-              <div class="field signup-education-institute">
-                <label for="s_education-institute"
-                  >Enter the name of the Institute of your current education
-                  level</label
-                >
-                <input
-                  type="text"
-                  id="s_education-institute"
-                  name="s_education-institute"
-                  placeholder="i.e. Athens University of Economics and Business"
-                  required
-                />
-              </div>
-              <div class="field signup-work-years">
-                <label for="s_select-work-years"
-                  >How many years of work experience do you have?</label
-                >
-                <select
-                  id="s_select-work-years"
-                  name="s_select-work-years"
-                  required
-                >
-                  <option value="less-than-1-years">Less than 1 year</option>
-                  <option value="1to3-years">1-3 years</option>
-                  <option value="4to6-years">4-6 years</option>
-                  <option value="7to10-years">7-10 years</option>
-                  <option value="more-than-10-years">More than 10 years</option>
-                </select>
-              </div>
-              <div class="field signup-company-name">
-                <label for="s_company-name"
-                  >What is the company's name of your current or most recent
-                  job? (Optional)</label
-                >
-                <input type="text" id="s_company-name" name="s_company-name" />
-              </div>
-              <div class="field signup-work-title">
-                <label for="s_work-title"
-                  >What is your current or most recent job title?
-                  (Optional)</label
-                >
-                <input type="text" id="s_work-title" name="s_work-title" />
-              </div>
-            </fieldset>
-          </div>
+                  <defs>
+                    <style>
+                      .a {
+                        fill: white;
+                        stroke: #000000;
+                        stroke-linecap: round;
+                        stroke-linejoin: round;
+                      }
+                    </style>
+                  </defs>
+                  <path
+                    class="a"
+                    d="M42.5,5.77l-7.2511,11.29-25.5482.0191L5.5,42.23l6.8023-10.7835,25.7153-.0716Z"
+                  />
+                </svg>
+              </label>
+            </div>
+          </fieldset>
+        </div>
+        <!--Education and Work Experience Survey-->
+        <div
+          class="fieldset-container signup-education-work-experience-survey-container"
+        >
+          <fieldset class="fieldset signup-education-work-experience-survey">
+            <h2>Education and Work Experience Survey</h2>
+            <div class="field signup-select-education-level">
+              <label for="s_select-education-level"
+                >Select your current education level</label
+              >
+              <select
+                id="s_select-education-level"
+                name="s_select-education-level"
+                required
+              >
+                <option value="opt_elementary-school">Elementary School</option>
+                <option value="opt_middle-school">Middle School</option>
+                <option value="opt_high-school">High School</option>
+                <option value="opt_bachelors">Bachelor's Degree</option>
+                <option value="opt_masters">Master's Degree</option>
+                <option value="opt_doctorate">Doctoral Degree</option>
+              </select>
+            </div>
+            <div class="field signup-education-institute">
+              <label for="s_education-institute"
+                >Enter the name of the Institute of your current education
+                level</label
+              >
+              <input
+                type="text"
+                id="s_education-institute"
+                name="s_education-institute"
+                placeholder="i.e. Athens University of Economics and Business"
+                required
+              />
+            </div>
+            <div class="field signup-work-years">
+              <label for="s_select-work-years"
+                >How many years of work experience do you have?</label
+              >
+              <select
+                id="s_select-work-years"
+                name="s_select-work-years"
+                required
+              >
+                <option value="less-than-1-years">Less than 1 year</option>
+                <option value="1to3-years">1-3 years</option>
+                <option value="4to6-years">4-6 years</option>
+                <option value="7to10-years">7-10 years</option>
+                <option value="more-than-10-years">More than 10 years</option>
+              </select>
+            </div>
+            <div class="field signup-company-name">
+              <label for="s_company-name"
+                >What is the company's name of your current or most recent job?
+                (Optional)</label
+              >
+              <input type="text" id="s_company-name" name="s_company-name" />
+            </div>
+            <div class="field signup-work-title">
+              <label for="s_work-title"
+                >What is your current or most recent job title?
+                (Optional)</label
+              >
+              <input type="text" id="s_work-title" name="s_work-title" />
+            </div>
+          </fieldset>
         </div>
 
         <div class="submit-button-container">
