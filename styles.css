@@ -1462,7 +1462,7 @@ select {
 }
 
 .left-side-checkbox-container {
-  margin-left: 7vw;
+  margin-left: 2vw;
 }
 .checkbox-container input[type="checkbox"] {
   margin-right: 8px;
@@ -1480,8 +1480,8 @@ select {
 
 /* modify the appearance of the checkboxes */
 input[type="checkbox"] {
-  width: 1.2em;
-  height: 1.2em;
+  width: 1.4em;
+  height: 1.4em;
   /* remove default browser styling and add our own custom one */
   appearance: none;
   border: 2px solid #ccc;
@@ -1502,7 +1502,7 @@ input[type="checkbox"]:checked::after {
   bottom: -3px;
   right: 0.5px;
   left: 0.5px;
-  font-size: 14px;
+  font-size: 1.4em;
   color: white;
 }
 
