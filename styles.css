@@ -1428,6 +1428,7 @@ select {
   display: grid;
   grid-template-rows: [header] min-content [checkboxes] repeat(2, 1fr);
   grid-template-columns: repeat(2, 1fr);
+  padding-bottom: 0px;
   gap: 16px;
 }
 
@@ -1445,6 +1446,7 @@ select {
 .checkbox-container {
   display: flex;
   align-items: center;
+  font-size: 150%;
 }
 
 /* vertically align the text and SVG icons */
@@ -1459,6 +1461,9 @@ select {
   margin-left: 6px;
 }
 
+.left-side-checkbox-container {
+  margin-left: 7vw;
+}
 .checkbox-container input[type="checkbox"] {
   margin-right: 8px;
 }
