@@ -1269,6 +1269,11 @@ header {
   align-items: flex-start;
   gap: 16px;
   border: none;
+  width: 80%;
+}
+
+/*Overwrite width property for login fieldset*/
+.login-fields {
   width: 40%;
   height: 200px;
 }
@@ -1277,7 +1282,7 @@ header {
   visibility: hidden;
   display: block;
   word-wrap: break-word;
-  max-width: 200px;
+  max-width: 400px;
   color: red;
   font-size: 0.8em;
 }
@@ -1382,7 +1387,7 @@ select {
   grid-column: 1/2;
   grid-row: 2/3;
   grid-template-columns: [left] 1fr [center] 1fr [right] 1fr;
-  grid-template-rows: auto;
+  grid-template-rows: [main-form] min-content [submit-button] min-content;
   row-gap: 75px;
   margin-bottom: 15vh;
 }
@@ -1392,19 +1397,26 @@ select {
   margin-right: 4vw;
 }
 
-.signup-communications-options-container {
+.communication-education-container {
+  grid-row: 1/2;
+  grid-column: 3/4;
   display: flex;
   flex-direction: column;
-  row-gap: 50px;
-  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 32px;
 }
 
 /* create a Nx2 grid so that the checkboxes are shown 2 per row */
 .signup-communications-options {
   display: grid;
+  grid-template-rows: [header] min-content [checkboxes] repeat(2, 1fr);
   grid-template-columns: repeat(2, 1fr);
   gap: 16px;
-  margin-left: 2vw;
+}
+
+.signup-communications-options h2 {
+  grid-row: 1/2;
+  grid-column: 1/3;
 }
 
 .checkbox-container {
@@ -1431,27 +1443,13 @@ select {
 .signup-personal-details-container {
   grid-column: 1/2;
   grid-row: 1/2;
+  border-right: 1px solid white;
 }
 
 .signup-account-info-container {
   grid-column: 2/3;
   grid-row: 1/2;
-}
-
-/* we place these last two containers in the same grid cell and space them using margins so that we dont 
-use another mega-div container to wrap them and keep them seperate and independent */
-.signup-education-work-experience-survey-container {
-  grid-column: 3/4;
-  grid-row: 1/2;
-}
-
-.signup-communications-options-container {
-  grid-column: 3/4;
-  grid-row: 1/2;
-}
-
-.signup-communications-options {
-  font-size: 120%;
+  border-right: 1px solid white;
 }
 
 /* modify the appearance of the checkboxes */
@@ -1485,16 +1483,14 @@ input[type="checkbox"]:checked::after {
 /* Style and positioning for the button */
 .submit-button-container {
   grid-column: 2/3;
-  grid-row: 1/2;
+  grid-row: 2/3;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .submit-button {
-  margin-top: 800px;
-  margin-left: 8vw;
-  margin-right: 10vw;
+  margin: 24px;
   width: 200px;
   height: 50px;
   background-color: #dbdbdb;

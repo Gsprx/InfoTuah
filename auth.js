@@ -12,15 +12,15 @@ button.addEventListener("click", (e) => {
 });
 
 function auth(username, password) {
-  const errorMessageSpace = document.querySelector(".error-message");
+  const errorMessage = document.querySelector(".error-message");
 
   // check if invalid values in input fields
   if (!/^[a-zA-Z0-9_]+$/.test(username)) {
-    errorMessageSpace.innerHTML = "Please enter a valid username";
-    errorMessageSpace.style.visibility = "visible";
+    errorMessage.innerHTML = "Please enter a valid username";
+    errorMessage.style.visibility = "visible";
     return;
   } else {
-    errorMessageSpace.style.visibility = "hidden";
+    errorMessage.style.visibility = "hidden";
   }
 
   // check if creds match
@@ -38,8 +38,8 @@ function auth(username, password) {
           return;
         } else {
           // if user not found or password does not match
-          errorMessageSpace.innerHTML = "Incorrect password or username";
-          errorMessageSpace.style.visibility = "visible";
+          errorMessage.innerHTML = "Incorrect password or username";
+          errorMessage.style.visibility = "visible";
         }
       });
     })
