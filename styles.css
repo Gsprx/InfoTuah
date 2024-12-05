@@ -1286,6 +1286,8 @@ fieldset legend {
 .login-fields {
   width: 40%;
   height: 200px;
+  border: none;
+  background-color: transparent;
 }
 
 .error-message {
