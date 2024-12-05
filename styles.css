@@ -1296,7 +1296,6 @@ select {
   flex-direction: column;
   font-size: 1.2em;
   width: 100%;
-  min-width: 175px;
 }
 
 .field input {
