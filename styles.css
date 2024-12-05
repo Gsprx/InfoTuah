@@ -1397,7 +1397,7 @@ select {
 }
 
 .signup-birthday {
-  width: 35%;
+  width: min-content;
 }
 
 .fieldset-container {
@@ -2173,8 +2173,9 @@ footer {
   }
 
   .inline-fields {
-    width: 80%;
-    flex-direction: column;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
     gap: 16px;
   }
 
