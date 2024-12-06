@@ -1407,7 +1407,6 @@ select {
   grid-row: 2/3;
   grid-template-columns: [left] 1fr [center] 1fr [right] 1fr;
   grid-template-rows: [main-form] min-content [submit-button] min-content;
-  margin-bottom: 15vh;
 }
 
 #signup-main h1 {
@@ -1433,7 +1432,8 @@ select {
 .signup-communications-options-container {
   grid-row: 1/2;
   grid-column: 2/3;
-  margin-top: 285px;
+  margin-top: 325px;
+  margin-bottom: 70px;
 }
 
 .checkbox-container {
@@ -2188,6 +2188,7 @@ footer {
   .signup-communications-options-container {
     grid-column: 1/2;
     grid-row: 3/4;
+    margin: 0px;
   }
 
   .signup-education-work-experience-survey-container {
@@ -2366,13 +2367,14 @@ footer {
 
   .signup-communications-options-container {
     grid-column: 1/2;
-    margin-top: 507px;
+    margin-top: 540px;
+    margin-bottom: 70px;
   }
 
   .signup-education-work-experience-survey-container {
     grid-column: 2/3;
     grid-row: 1/2;
-    margin-top: 270px;
+    margin-top: 310px;
   }
   .submit-button-container {
     grid-row: 3/4;

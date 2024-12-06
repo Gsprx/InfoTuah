@@ -17,6 +17,8 @@ function validate() {
   dateOfBirth();
   // validate password match
   passwordMatch();
+  // validate password strength
+  passwordStrength();
 }
 
 // show generic error box with given text as error message
@@ -72,5 +74,19 @@ function passwordMatch() {
   } else {
     //not matching
     showError("Passwords do not match");
+  }
+}
+
+//validates password is sufficiently strong
+function passwordStrength() {
+  const password = document.getElementById("s_password").value;
+  const pattern =
+    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,16}$/;
+
+  if (pattern.test(password)) {
+    //password is strong
+  } else {
+    //password is weak
+    showError("Invalid password format");
   }
 }
