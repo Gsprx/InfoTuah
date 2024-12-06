@@ -1290,15 +1290,6 @@ fieldset legend {
   background-color: transparent;
 }
 
-.error-message {
-  visibility: hidden;
-  display: block;
-  word-wrap: break-word;
-  max-width: 400px;
-  color: red;
-  font-size: 0.8em;
-}
-
 select {
   background-color: var(--dark-grey);
 }
@@ -1416,7 +1407,6 @@ select {
   grid-row: 2/3;
   grid-template-columns: [left] 1fr [center] 1fr [right] 1fr;
   grid-template-rows: [main-form] min-content [submit-button] min-content;
-  row-gap: 75px;
   margin-bottom: 15vh;
 }
 
@@ -1512,7 +1502,7 @@ input[type="checkbox"]:checked::after {
 /* Style and positioning for the button */
 .submit-button-container {
   grid-column: 2/3;
-  grid-row: 2/3;
+  grid-row: 3/4;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -1547,6 +1537,43 @@ input[type="checkbox"]:checked::after {
 .submit-button:focus {
   outline: none; /* Remove default focus outline */
   box-shadow: 0 0 0 3px rgba(169, 169, 169, 0.4); /* Soft gray focus ring */
+}
+
+.error-container {
+  display: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #874e53;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+  border-radius: 5px;
+  margin: 20px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  grid-column: 1/-1;
+  grid-row: 2/3;
+  min-width: min-content;
+  max-width: 60%;
+  justify-self: center;
+}
+.error-container .close-error-button {
+  position: absolute;
+  top: 0px;
+  right: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #721c24;
+  font-size: 16px;
+}
+.error-container .close-error-button:hover {
+  color: #d63341;
+}
+
+.error-message {
+  font-size: 1.3em;
 }
 
 /*----------- Footer -----------*/
@@ -2170,6 +2197,10 @@ footer {
 
   .submit-button-container {
     grid-column: 1/2;
+    grid-row: 6/7;
+  }
+
+  .error-container {
     grid-row: 5/6;
   }
 
@@ -2344,7 +2375,7 @@ footer {
     margin-top: 270px;
   }
   .submit-button-container {
-    grid-row: 2/3;
+    grid-row: 3/4;
     grid-column: 1/3;
   }
 

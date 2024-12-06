@@ -4,20 +4,43 @@ window.addEventListener("DOMContentLoaded", () => {
   submit.addEventListener("click", () => {
     validate();
   });
+
+  //hide on screen error
+  const closeError = document.querySelector(".close-error-button");
+  closeError.addEventListener("click", () => {
+    hideError();
+  });
 });
 
 function validate() {
-  const errorMessage = document.querySelector(".error-message");
   // validate date of birth
-  dateOfBirth(errorMessage);
+  dateOfBirth();
+  // validate password match
+  passwordMatch();
 }
 
-function dateOfBirth(errorMessage) {
+// show generic error box with given text as error message
+function showError(errorText) {
+  const errorBox = document.querySelector(".error-container");
+  const errorMessage = document.querySelector(".error-message");
+  errorMessage.textContent = errorText;
+  errorBox.style.display = "block";
+}
+
+//hide error box
+function hideError() {
+  const errorBox = document.querySelector(".error-container");
+  errorBox.style.display = "none";
+}
+
+//validates age above 13 years old
+function dateOfBirth() {
   const calendar = document.getElementById("s_birthday");
   const registeredDate = new Date(calendar.value);
   const currentDate = new Date();
-  console.log(registeredDate);
-  console.log(currentDate);
+  //debugging
+  console.log("Input date: " + registeredDate);
+  console.log("Current date: " + currentDate);
 
   // get date differences
   let yearDiff = currentDate.getFullYear() - registeredDate.getFullYear();
@@ -31,7 +54,23 @@ function dateOfBirth(errorMessage) {
 
   // check if age is appropriate
   if (yearDiff < 13) {
-    errorMessage.innerHTML = "Age must be 13 and over to use this platform";
-    errorMessage.style.visibility = "visible";
+    showError("Age must be 13 and over to use this platform");
+  }
+}
+
+//validates both passwords matching
+function passwordMatch() {
+  //get both passwords from html inputs
+  const password1 = document.getElementById("s_password").value;
+  const password2 = document.getElementById("s_verify-password").value;
+  console.log("Password 1: " + password1);
+  console.log("Password 2: " + password2);
+
+  //check if passwords match
+  if (password1 === password2) {
+    //matching
+  } else {
+    //not matching
+    showError("Passwords do not match");
   }
 }
