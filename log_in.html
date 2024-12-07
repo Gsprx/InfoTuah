@@ -3,15 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="InfoTuah Website Home Page" />
+    <meta name="description" content="InfoTuah Log In" />
     <meta name="keywords" content="Courses" />
     <meta name="author" content="Avrabos Georgios" />
     <link rel="stylesheet" href="styles.css" />
-    <title>InfoTuah</title>
+    <title>InfoTuah | LogIn</title>
     <!-- Load scripts -->
     <script src="/scripts/navbar.js"></script>
+    <script src="/scripts/auth.js"></script>
   </head>
-  <body id="index-body">
+  <body id="login-body">
     <!-- Navbar -->
     <header>
       <nav class="navbar">
@@ -232,106 +233,45 @@
       </nav>
     </header>
 
-    <!-- Page main -->
-    <main id="index-main">
-      <!-- Hero Section -->
-      <section class="hero-section" id="homepage-hero-section">
-        <!-- Hero Details (title, subtitle, buttons etc.)-->
-        <div class="hero-details">
-          <div class="hero-headers">
-            <h1 id="hero-title1">Welcome to InfoTuah</h1>
-            <h2 id="hero-title2">Here E-learning becomes Easy-Learning</h2>
-          </div>
-          <div class="hero-buttons">
-            <a href="Courses.html" class="button button-primary">
-              Our Courses
-            </a>
-          </div>
-        </div>
-
-        <!-- Hero Image -->
-        <div class="hero-image-wrapper">
-          <img src="public/Info_Tuah_Logo_Final.png" alt="InfoTuahMango" />
-        </div>
-      </section>
-
-      <!-- About Section -->
-      <section class="about-section" id="homepage-about-section">
-        <div id="about-info-box1" class="about-info-box">
-          <div class="about-image-wrapper">
+    <main id="login-main">
+      <div class="login-container">
+        <h1>Log In</h1>
+        <form class="login-form" method="POST">
+          <fieldset class="fieldset login-fields">
+            <!--Username-->
+            <div class="field login-username">
+              <label for="l_username">Username</label>
+              <input type="text" id="l_username" name="l_username" required />
+            </div>
+            <!--Password-->
+            <div class="field login-password">
+              <label for="l_password">Password</label>
+              <input
+                type="password"
+                id="l_password"
+                name="l_password"
+                required
+              />
+            </div>
+            <!--Login Btn-->
+            <button class="login-submit" type="submit">Login</button>
+            <div class="error-message"></div>
+          </fieldset>
+        </form>
+      </div>
+      <div class="login-signup-container">
+        <div class="signup-here">
+          <div class="signup-image-wrapper">
             <img
-              src="public/homepage/1_G1Brtu-tR4nplqWCLbglRA1.jpg"
-              alt="img-about-1"
+              src="public/raccoon_eating_mango.png"
+              alt="raccoon_eating_mango"
             />
           </div>
-          <div class="about-details">
-            <h3>Our Mission at InfoTuah</h3>
-            <p>
-              At InfoTuah, we’re driven by a mission to make Computer Science
-              skills accessible to everyone, regardless of their starting level.
-              In today’s fast-paced digital world, fields like Artificial
-              Intelligence (AI), Software Engineering, and Databases play a
-              major role in how we interact with technology and solve real-world
-              problems. Yet, many people shy away from these areas, believing
-              they’re too complex or only for experts. We want to change this
-              perception by showing that these skills can be within reach for
-              anyone. Whether you’re curious about AI, want to build efficient
-              software, or hope to master data organization in databases,
-              InfoTuah is here to support your journey.
-            </p>
-          </div>
+          <p>
+            Don't have an account?<br />Sign up <a href="sign_up.html">here</a>
+          </p>
         </div>
-        <div id="about-info-box2" class="about-info-box">
-          <div class="about-image-wrapper">
-            <img
-              src="public/homepage/istockphoto-1944413958-612x612.jpg"
-              alt="img-about-2"
-            />
-          </div>
-          <div class="about-details">
-            <h3>Our Approach to Learning</h3>
-            <p>
-              InfoTuah’s learning platform is designed to make these complex
-              topics simple and engaging. We break down each concept into
-              easy-to-understand tutorials, supported by practical examples and
-              hands-on projects. For instance, in our AI course, you’ll learn
-              not only the theory but also work on real projects like creating
-              recommendation systems or basic neural networks. In our Software
-              Engineering course, we guide you through coding best practices,
-              how to design scalable systems, and even provide collaborative
-              coding exercises. With our Databases course, you’ll get to work
-              with SQL and data management techniques through step-by-step labs.
-              By making learning both structured and flexible, we support
-              learners at every level, whether they’re just starting out or
-              looking to refine advanced skills.
-            </p>
-          </div>
-        </div>
-        <div id="about-info-box3" class="about-info-box">
-          <div class="about-image-wrapper">
-            <img
-              src="public/homepage/coffee-amp-laptop-business-work-still-life-free-photo.png"
-              alt="img-about-3"
-            />
-          </div>
-          <div class="about-details">
-            <h3>Building Confidence in Technology</h3>
-            <p>
-              At InfoTuah, we believe that learning is a journey best taken
-              together, so we foster a community that supports and encourages
-              each learner. As you work through our courses, you’ll not only
-              gain technical skills but also build confidence in your ability to
-              solve problems and create solutions. Our community forums and Q&A
-              sessions help answer questions and provide support along the way,
-              ensuring no one feels left behind. Whether you’re looking to
-              explore the transformative power of AI, learn how to design
-              effective software solutions, or master the architecture of
-              databases, our goal is to help you succeed and stay current in
-              today’s tech-driven world.
-            </p>
-          </div>
-        </div>
-      </section>
+      </div>
     </main>
 
     <!-- Footer -->

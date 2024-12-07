@@ -1,0 +1,2398 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Arvo:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+:root {
+  /* Colors */
+  --very-dark-blue: #121417;
+  --dark-blue: #1d2225;
+  --dark-grey: #262b2e;
+}
+
+/* Custom scrollbar */
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #181c1f;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #121417;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+* {
+  font-family: "Arvo", serif;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+html {
+  /* Used for <a> linking to items inside the page so the target isnt hidden by the navbar */
+  scroll-padding-top: 80px;
+  scroll-behavior: smooth;
+}
+
+/* Prevent Default */
+a {
+  text-decoration: none;
+  color: rgb(81, 112, 156);
+}
+
+a:hover {
+  text-decoration: none;
+  color: rgb(47, 62, 112);
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  height: 100vh;
+  background-color: var(--dark-blue);
+}
+
+main {
+  min-height: 100%;
+  padding-bottom: 32px;
+  margin-top: 8px;
+  z-index: 1;
+}
+
+strong {
+  color: rgb(113, 128, 144);
+}
+
+/* Stars (Rating) */
+.fa-star {
+  color: #555;
+}
+
+.star-checked {
+  color: orange;
+}
+
+.stars {
+  width: fit-content;
+}
+
+/* Buttons */
+.button {
+  padding: 12px 32px;
+}
+
+.button-primary {
+  border: #262b2e 1px solid;
+  background-color: #121417;
+  color: white;
+  box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.2);
+
+  transition: transform ease 0.3s, box-shadow ease 0.3s;
+}
+
+.button-primary:hover {
+  transform: scale(1.1);
+  box-shadow: 6px 5px 5px rgba(0, 0, 0, 0.3);
+  color: white;
+}
+
+/*----------- BODY / MAIN -----------*/
+
+/*-- INDEX/HERO --*/
+#index-body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: [nav] 70px [main] min-content [footer] min-content;
+}
+
+#index-main {
+  /* Main subgrid relative to Body grid */
+  display: flex;
+  flex-direction: column;
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+
+.hero-section {
+  /* Hero subgrid relative to Main grid */
+  font-size: 200%;
+  grid-row: 1/2;
+  grid-column: 1/1;
+  display: flex;
+  justify-content: space-around;
+}
+
+.hero-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 128px;
+}
+
+.hero-headers {
+  margin-top: 64px;
+}
+
+#hero-title1 {
+  /* H1 Hero Title positioned in the hero subgrid */
+  font-size: 2em;
+  margin-top: 16px;
+  grid-column: 4/9;
+  grid-row: 1/2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#hero-title2 {
+  /* H2 Hero Title positioned in the hero subgrid */
+  font-size: 1.1em;
+  margin-top: 16px;
+  grid-column: 5/10;
+  grid-row: 2/3;
+  justify-self: center;
+}
+
+.hero-image-wrapper {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  margin-right: 32px;
+  margin-left: 32px;
+}
+
+.hero-image-wrapper img {
+  /* Hero Image Scaling */
+  max-width: 100%;
+  height: auto;
+}
+
+.hero-buttons {
+  /* Specific rule for the hero button (> Our Courses)*/
+  font-size: 1.5em;
+  margin-bottom: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-section {
+  /* About section subgrid relative to Main grid */
+  display: flex;
+  flex-direction: column;
+}
+
+.about-details {
+  /* Generic rule for text inside the about section of the index page */
+  font-size: 1.4em;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 6px;
+  max-height: 100%;
+}
+
+.about-details h3 {
+  font-size: 1.2em;
+}
+
+.about-image-wrapper {
+  width: 200%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-image-wrapper img {
+  /* Image scaling for about text in index */
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.about-info-box {
+  /* Flexbox with text and image */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  column-gap: 32px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  height: 24rem;
+}
+
+#about-info-box1,
+#about-info-box3 {
+  background-color: var(--very-dark-blue);
+}
+
+#about-info-box2 {
+  flex-direction: row-reverse;
+}
+
+/*-------- CONTENT PAGES --------*/
+
+.return-link {
+  /* Styling for the return link found in all pages except index */
+  margin-bottom: 4px;
+  margin-left: 16px;
+  padding: 6px;
+  margin-right: 8px;
+  width: fit-content;
+  height: fit-content;
+  z-index: 2;
+  background-color: #16191c;
+  border: var(--dark-grey) solid 1px;
+  border-radius: 4px;
+  top: 10vh;
+}
+
+.return-link a {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 4px;
+}
+
+.return-link a:hover {
+  text-decoration: underline;
+  color: rgb(81, 112, 156);
+}
+
+.return-link a svg {
+  transition: transform 0.2s ease 0s; /*Transition settings*/
+}
+
+.return-link a:hover svg {
+  transform: translateX(-2px);
+}
+
+/* Courses page */
+#courses-body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: [nav] 70px [header] min-content [main] min-content [footer] min-content;
+}
+
+.courses-header {
+  padding-left: 16px;
+  margin-top: 32px;
+  font-size: 1.4em;
+  grid-row: 2/3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#courses-body main {
+  grid-row: 3/4;
+}
+
+.all-courses {
+  padding-top: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.course-container {
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.course-container:nth-child(odd) {
+  background-color: #16191c;
+}
+.course-container:nth-child(even) {
+  background-color: #19182c;
+}
+
+.courses-description {
+  font-size: 1.1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+}
+
+.courses-subheader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.courses-subheader h2 {
+  font-size: 2em;
+}
+
+.courses-description ul {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  column-gap: 1em;
+}
+
+.courses-description li {
+  max-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.courses-image {
+  /*center the image in the container*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.course-link {
+  /* Course Link is extra sized on the font compared to the previous texts so it is visibly a different part of the description */
+  padding-top: 24px;
+  font-size: 1.2em;
+}
+
+/* Individual Course Pages */
+.course-body {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-rows: [nav] 70px [main-header] min-content [main] min-content [footer] min-content;
+}
+
+/* Course Sidebar */
+.course-sidebar {
+  top: 16vh;
+  background-color: #16191c;
+  height: 70vh;
+  max-width: 300px;
+  padding-top: 12px;
+  border: var(--dark-grey) solid 1px;
+  box-shadow: 5px 3px rgba(18, 20, 23, 0.1);
+  z-index: 3;
+  margin-left: 16px;
+  margin-right: 8px;
+  margin-top: 4px;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.course-sidebar h3 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 16px;
+  padding-bottom: 8px;
+  font-size: 1.1em;
+  font-weight: 400;
+  border-bottom: var(--dark-grey) solid 2px;
+}
+
+.course-sidebar ol {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.course-sidebar li {
+  display: block;
+  padding: 12px;
+}
+
+.course-sidebar a {
+  color: white;
+}
+
+.course-sidebar a:hover {
+  text-decoration: underline;
+}
+
+.content-body .course-sidebar ol {
+  list-style-type: decimal;
+}
+
+/* Course Aside */
+aside {
+  grid-column: 3/4;
+  grid-row: 3/4;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* This aside bar is used on all pages, not just courses. */
+.course-aside {
+  /* flexbox container with aside content */
+  background-color: #16191c;
+  width: 13.5rem;
+  border: var(--dark-grey) solid 1px;
+  box-shadow: -5px -3px rgba(18, 20, 23, 0.1);
+  z-index: 3;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  max-height: 25rem;
+  top: 18vh;
+  margin-bottom: 15vh;
+  margin-right: 16px;
+}
+
+.course-aside-content {
+  width: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.course-aside-content a:hover {
+  text-decoration: underline;
+  color: white;
+}
+
+.course-aside-img-wrapper,
+.course-aside-img-wrapper-reverse {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5%;
+}
+
+.course-aside-img-wrapper img {
+  height: 6rem;
+  width: 10rem;
+}
+.course-aside-img-wrapper-reverse img {
+  width: 7rem;
+  height: 10rem;
+}
+
+.aside-button {
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+.aside-button-left {
+  transform: rotate(180deg);
+}
+
+/* Course Main */
+.course-body main {
+  grid-column: 2/3;
+  grid-row: 3/4;
+  margin-right: 16px;
+}
+
+.course-header {
+  grid-row: 2/3;
+  grid-column: 2/4;
+  font-size: 1.4em;
+}
+
+.course-header h1 {
+  margin-bottom: 24px;
+  margin-left: 16px;
+  margin-top: 8px;
+}
+
+.course-header h2 {
+  font-size: 1.1em;
+  margin-bottom: 24px;
+}
+
+.course-header h3 {
+  font-size: 1.2em;
+  margin-left: 0;
+}
+
+.course-header h3 a {
+  text-decoration: underline;
+}
+.course-description {
+  margin-left: 2%;
+  margin-right: 1%;
+}
+.course-description-text {
+  font-size: 1.1em;
+  margin-bottom: 1.5%;
+}
+
+.course-description ol {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.course-description ol li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 16px 8px;
+}
+
+.course-description ol li:nth-child(odd) {
+  background-color: #16191c;
+}
+.course-description ol li:nth-child(even) {
+  background-color: #19182c;
+}
+
+/* Subcourse page */
+.course-content ul {
+  /* Removes the unwanted styling for each list element */
+  list-style: none;
+}
+
+.subcourse-header h1 {
+  /* Placed inside the course content grid */
+  font-size: 300%;
+  margin-left: 3%;
+  margin-right: 5%;
+}
+
+.subcourse-header h2 {
+  /* Headers styled to achieve an inline look and distinguishable hierarchy with other header ranks */
+  font-size: 260%;
+  margin-left: 5%;
+  margin-top: 3%;
+}
+
+.course-image img {
+  /* Used to place images between course description texts */
+  height: 7%;
+  width: 21%;
+  /* Extra left margin (+1% compared to text) is used to create the look of the image being inside the description textbox */
+  margin-left: 13%;
+  margin-right: 1%;
+  float: left;
+}
+
+/* ---------------- Subcourse Page Specific Layout ---------------- */
+.subcourse-body {
+  /* Basic Grid */
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-rows: [nav] 70px [header] min-content [page-content] min-content [footer] min-content;
+}
+.subcourse-body main {
+  grid-column: 2/3;
+  grid-row: 3/4;
+}
+.subcourse-content {
+  /* Course Content subgrid inside Main grid */
+  display: flex;
+  grid-column: 2/3;
+  grid-row: 3/4;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.subcourse-books {
+  /* Flexbox of books placed inside the course content grid */
+  display: flex;
+  flex-direction: column;
+  margin-right: 10%;
+  margin-left: 8%;
+}
+
+.subcourse-lectures {
+  /* Flexbox of lectures placed inside the course content grid */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-right: 10%;
+  margin-left: 8%;
+  margin-top: 15%;
+}
+
+.subcourse-header {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+/* ------------- Content Page Specific Layout --------------- */
+.content-body {
+  /* Basic Grid */
+  height: 100vh;
+  background-color: var(--dark-blue);
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-rows: [nav] 70px [header] 5em [main] min-content [footer] min-content;
+}
+
+.content-body main {
+  grid-column: 2/3;
+  grid-row: 3/4;
+}
+
+.content-content {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2%;
+  margin-right: 1%;
+}
+
+.content-details {
+  display: flex;
+  flex-direction: column;
+  margin-right: 3%;
+}
+
+.content-header {
+  margin-top: 1%;
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+
+/*-------- Book Card Rules --------*/
+
+.book-card {
+  margin-top: 2%;
+  border: 1px solid var(--dark-grey);
+  box-shadow: 5px 3px rgba(18, 20, 23, 0.1);
+  padding-left: 4%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  border-radius: 6px;
+  background-color: #16191c;
+}
+
+.book-card-image-wrapper img {
+  /* Book Image is floated to the right of the text and wrapped around it */
+  width: 25%;
+  height: 50%;
+  margin-left: 5%;
+  margin-bottom: 1%;
+  margin-right: 5%;
+  float: right;
+}
+
+.book-card-details {
+  /* General rule for the text inside the description box for the book */
+  font-size: 1.4em;
+  margin-right: 5%;
+}
+.book-card-title {
+  /* Specific rule for the title of the book */
+  font-size: 125%;
+  font-style: italic;
+  font-weight: bolder;
+  margin-bottom: 3%;
+}
+
+.book-authors {
+  /* Specific rule for the author(s) of the book */
+  margin-bottom: 1%;
+  font-weight: bolder;
+}
+.book-publishers {
+  /* Specific rule for the publisher(s) of the book */
+  margin-top: 2%;
+  margin-bottom: 2%;
+  font-weight: bolder;
+}
+
+.book-pages {
+  /* Specific rule for the pages of the book */
+  margin-top: 2%;
+  margin-bottom: 1%;
+  font-style: italic;
+}
+
+.book-rating {
+  /* Specific rule for the rating of the book */
+  margin-bottom: 2%;
+  font-style: italic;
+}
+
+.book-description {
+  /* Specific rule for the description of the book */
+  margin-top: 3%;
+}
+
+/*----------- Lecture Card Rules -----------*/
+
+.lecture-card {
+  margin-top: 2%;
+  border: 1px solid var(--dark-grey);
+  box-shadow: 5px 3px rgba(18, 20, 23, 0.1);
+  padding-left: 4%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  border-radius: 6px;
+  background-color: #16191c;
+}
+
+.lecture-card-image-wrapper img {
+  /* Lecture Image is floated to the right of the text and wrapped around it, follows a similar design to book cards */
+  width: 40%;
+  height: 30%;
+  margin-left: 5%;
+  margin-top: 0%;
+  margin-bottom: 1%;
+  margin-right: 20%;
+  float: right;
+}
+
+.lecture-card-details {
+  /* General rule for the text inside the description box for the lecture */
+  font-size: 1.4em;
+  margin-right: 10%;
+}
+
+.lecture-card-title {
+  /* Specific rule for the title of the lecture */
+  font-size: 125%;
+  font-style: italic;
+  font-weight: bolder;
+  margin-bottom: 3%;
+}
+
+.lecture-contributors {
+  /* Specific rule for the contributor(s) of the lecture */
+  margin-bottom: 2%;
+  font-weight: bolder;
+}
+
+.lecture-description {
+  /* Specific rule for the description of the lecture */
+  margin-top: 3%;
+}
+
+.lecture-duration {
+  /* Specific rule for the duration of the lecture */
+  margin-top: 2%;
+  margin-bottom: 1%;
+  font-style: italic;
+}
+
+.lecture-rating {
+  /* Specific rule for the rating of the lecture */
+  margin-bottom: 2%;
+  font-style: italic;
+}
+
+/*--------- Specific Content Rules ---------*/
+.content {
+  /* General rule for the text of a specific content (full book or full lecture showcase) page */
+  font-size: 180%;
+}
+
+.content-header h1 {
+  /* Content headers are styled so that they DO NOT give off an inline look */
+  font-size: 170%;
+  color: rgb(130, 126, 139);
+  margin-bottom: 3%;
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+.content-header h2 {
+  /* Content headers are styled so that they DO NOT give off an inline look */
+  font-size: 160%;
+  color: rgb(93, 90, 100);
+  margin-top: 3%;
+}
+
+.content-title {
+  /* Used in the full book showcase pages to emphasize the full title of the book including edition*/
+  font-size: 150%;
+  margin-bottom: 2%;
+}
+
+.content-creator {
+  /* Specific rule for the creator of content */
+  margin-bottom: 2%;
+}
+
+.content-date {
+  /* Specific rule for the date of content */
+  margin-bottom: 2%;
+}
+
+.content-description {
+  /* Specific rule for the description of content */
+  margin-bottom: 2%;
+}
+
+.content-rating {
+  /* Specific rule for the rating of content */
+  margin-bottom: 2%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 4px;
+}
+
+.content ul {
+  /* Specific rule for the styling of UL for the details of content */
+  list-style-type: square;
+}
+
+.book-chapters,
+.lecture-videos {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 24px;
+}
+
+.lecture-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 6px;
+  padding: 16px;
+}
+
+.lecture-video-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 8px;
+}
+
+.chapter-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 8px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+}
+
+.content-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.content-list li {
+  /* Specific rule for table of content list items to have a small gap*/
+  list-style: none;
+}
+
+.content-list li:nth-child(odd) {
+  /* Rule used to differentiate list items in large lists (used for Table Of Contents and chapter-lecture lists) 
+     makes it easier for the eyes to see each list item seperately. */
+  background-color: var(--very-dark-blue);
+}
+
+.content-list li:nth-child(even) {
+  /* Rule used to differentiate list items in large lists (used for Table Of Contents and chapter-lecture lists) 
+     makes it easier for the eyes to see each list item seperately. */
+  background-color: #19182c;
+}
+
+code {
+  /* Specific rule for the code snippets inside content lists*/
+  background-color: rgb(0, 0, 0);
+  white-space: pre-wrap; /* Allows wrapping and preserves indentation */
+  word-wrap: break-word; /* Breaks long words */
+  overflow-wrap: break-word; /* Alternative for better browser support */
+}
+
+.return-to-top-btn {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 100%;
+  border: none;
+  position: sticky;
+  top: 85vh;
+  bottom: 15vh;
+  background-color: rgb(93, 90, 100);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+  margin-right: 12rem;
+}
+
+.return-to-top-btn a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+/*-------- About Us Page --------*/
+#about_us-body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: [nav] 70px [header] 5em [main] min-content [footer] min-content;
+}
+
+.about-us-header {
+  grid-row: 2/3;
+  font-size: 1.4em;
+  display: flex;
+  align-items: center;
+  padding-left: 16px;
+}
+
+#about_us-body main {
+  grid-row: 3/4;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 64px;
+}
+
+.about-members {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.about-members ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 4px;
+}
+
+.about-members h2 {
+  font-size: 2em;
+  padding-left: 32px;
+}
+
+.member {
+  font-size: 1.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.member-description {
+  font-style: italic;
+  text-align: center;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+.member-image-wrapper img {
+  /* Specific rule for the member's profile picture, inline look*/
+  max-width: 250px;
+}
+
+.about-contact-us {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 16px;
+}
+
+.about-contact-us h2 {
+  font-size: 2em;
+  padding-left: 32px;
+}
+
+.about-contact-us ul {
+  font-size: 1.5em;
+  padding-left: 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 16px;
+}
+
+/*----------- HEADER / NAVBAR -----------*/
+header {
+  position: fixed; /*Fixed header position*/
+  top: 0;
+  width: 100%;
+  z-index: 9999; /*High z-index, always on top in the page*/
+  grid-column: 1/4;
+  grid-row: 1/2;
+}
+
+.navbar {
+  background-color: var(--very-dark-blue);
+  height: 70px;
+  padding: 0 8px;
+  padding-right: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar ul {
+  height: inherit;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2px;
+}
+
+.navbar-link {
+  margin: 0 2px;
+  height: 100%;
+}
+
+.navbar-link a {
+  display: flex;
+  align-items: center;
+  gap: 1px;
+  height: 100%;
+  padding: 0 4px;
+  color: white;
+}
+
+/* Change color and background color on link hover*/
+.navbar-link a:hover {
+  color: var(--very-dark-blue);
+  background-color: white;
+}
+.navbar-link a:hover svg {
+  fill: var(--very-dark-blue);
+}
+
+/* Active dropdown menu on hover only when mouse-like devices are present */
+@media (pointer: fine) {
+  .navbar .courses-dropdown-trigger:hover .courses-dropdown {
+    display: block;
+  }
+}
+.nav-image-wrapper {
+  width: fit-content;
+  height: fit-content;
+}
+
+.nav-image-wrapper a {
+  display: flex;
+  align-items: center;
+}
+
+.navbar img {
+  width: 56px;
+  height: 56px;
+}
+
+/* Navbar Links Dropdown*/
+.courses-dropdown {
+  display: none;
+  width: 14em;
+  background-color: var(--very-dark-blue);
+  position: absolute;
+  top: 70px;
+  right: 4em;
+  z-index: 5;
+}
+
+.courses-dropdown ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.courses-dropdown li {
+  height: 2.5em;
+  width: 100%;
+  margin: 0;
+}
+
+.courses-dropdown li a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: inherit;
+  color: white;
+  padding: 0 12px;
+}
+
+.courses-dropdown li a svg {
+  fill: white;
+  transform: rotate(90deg);
+}
+
+.courses-dropdown li a:hover {
+  color: var(--very-dark-blue);
+  background-color: white;
+}
+
+.courses-dropdown li a:hover svg {
+  fill: var(--very-dark-blue);
+}
+
+.subcourses-dropdown-trigger:hover .subcourses-dropdown {
+  display: block;
+}
+
+.subcourses-dropdown {
+  display: none;
+  width: 14em;
+  background-color: var(--very-dark-blue);
+  position: fixed;
+  right: 18em;
+}
+
+.subcourses-dropdown li {
+  height: 3em;
+}
+
+/*Burger menu*/
+.burger-menu {
+  display: none;
+}
+
+.menu-button {
+  background-color: var(--very-dark-blue);
+  border: none;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.menu-button svg {
+  transition: transform ease 0.5s;
+}
+
+.menu-button:hover svg {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+/*Navbar Dropdown*/
+.navbar-dropdown {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  height: 110vh;
+  width: 100vw;
+  background-color: rgba(18, 20, 23, 0.9);
+}
+
+.navbar-dropdown-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4px;
+  padding-right: 16px;
+  height: 70px;
+  border-bottom: solid 1px rgba(255, 255, 255, 0.7);
+}
+
+.navbar-dropdown-logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+}
+
+.navbar-dropdown ul {
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  margin-top: 32px;
+}
+
+.navbar-dropdown-link {
+  width: 100%;
+}
+
+.navbar-dropdown-link a {
+  font-size: 1.2em;
+  height: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*----------- LogIn Page -----------*/
+#login-body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: [nav] 70px [main] min-content [footer] min-content;
+}
+
+#login-main {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  display: flex;
+  min-height: 56vh;
+}
+
+.login-container {
+  margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  border-right: 2px white solid;
+  padding-right: 12px;
+  width: 50%;
+  min-width: 200px;
+}
+
+.login-form {
+  width: 100%;
+  min-width: 170px;
+  display: flex;
+  justify-content: center;
+}
+
+.fieldset {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  border-radius: 16px;
+  width: 80%;
+  padding-bottom: 24px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 24px;
+  background-color: rgba(0, 0, 0, 0.331);
+}
+
+fieldset legend {
+  text-align: center;
+  font-size: 80%;
+}
+
+/*Overwrite width property for login fieldset*/
+.login-fields {
+  width: 40%;
+  height: 200px;
+  border: none;
+  background-color: transparent;
+}
+
+select {
+  background-color: var(--dark-grey);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2em;
+  width: 100%;
+}
+
+.field small {
+  font-size: 60%;
+  font-style: italic;
+  margin-top: 8px;
+  color: rgba(255, 255, 255, 0.605);
+}
+
+.field input {
+  border: white 1px solid;
+  border-radius: 2px;
+  background-color: transparent;
+  height: 1.8em;
+  padding-left: 2px;
+}
+
+.field input:focus {
+  outline: none;
+}
+
+.login-submit {
+  cursor: pointer;
+  background-color: transparent;
+  border: white 1px solid;
+  border-radius: 2px;
+  padding: 2px;
+  font-size: 1.4em;
+}
+
+.login-submit:hover {
+  background-color: white;
+  color: var(--very-dark-blue);
+}
+
+.login-signup-container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.signup-here {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+}
+
+.signup-image-wrapper {
+  display: flex;
+  justify-content: center;
+  padding-left: 24px;
+}
+
+.signup-image-wrapper img {
+  max-width: 50%;
+  min-width: 200px;
+}
+
+/*----------- SignUp Page -----------*/
+#signup-body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: [nav] 70px [main] min-content [footer] min-content;
+}
+
+#signup-main {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: [header] min-content [form] min-content;
+}
+
+.inline-fields {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.inline-fields .field {
+  width: 45%;
+  align-self: flex-start;
+}
+
+.signup-birthday {
+  width: min-content;
+}
+
+.fieldset-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: min-content;
+}
+
+.signup-form {
+  display: grid;
+  grid-column: 1/2;
+  grid-row: 2/3;
+  grid-template-columns: [left] 1fr [center] 1fr [right] 1fr;
+  grid-template-rows: [main-form] min-content [submit-button] min-content;
+}
+
+#signup-main h1 {
+  margin-left: 4vw;
+  margin-right: 4vw;
+  margin-bottom: 5vh;
+}
+
+/* create a Nx2 grid so that the checkboxes are shown 2 per row */
+.signup-communications-options {
+  display: grid;
+  grid-template-rows: [header] min-content [checkboxes] repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  padding-bottom: 0px;
+  gap: 16px;
+}
+
+.signup-communications-options h2 {
+  grid-row: 1/2;
+  grid-column: 1/3;
+}
+
+.signup-communications-options-container {
+  grid-row: 1/2;
+  grid-column: 2/3;
+  margin-top: 325px;
+  margin-bottom: 70px;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  font-size: 150%;
+}
+
+/* vertically align the text and SVG icons */
+.checkbox-container label {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-container svg {
+  height: 1.2em;
+  width: 1.2em;
+  margin-left: 6px;
+}
+
+.left-side-checkbox-container {
+  margin-left: 2vw;
+}
+.checkbox-container input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+.signup-personal-details-container {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+.signup-account-info-container {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+
+/* modify the appearance of the checkboxes */
+input[type="checkbox"] {
+  width: 1.4em;
+  height: 1.4em;
+  /* remove default browser styling and add our own custom one */
+  appearance: none;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  transition: background-color 0.2s ease;
+  /* relative position is used so that the checkmark can use absolute positioning */
+  position: relative;
+}
+
+input[type="checkbox"]:checked {
+  background-color: var(--dark-grey);
+}
+
+input[type="checkbox"]:checked::after {
+  content: "✔";
+  position: absolute;
+  bottom: -3px;
+  right: 0.5px;
+  left: 0.5px;
+  font-size: 1.4em;
+  color: white;
+}
+
+/* Style and positioning for the button */
+.submit-button-container {
+  grid-column: 2/3;
+  grid-row: 3/4;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 120%;
+}
+
+.submit-button {
+  margin: 24px;
+  width: 200px;
+  height: 50px;
+  background-color: #dbdbdb;
+  color: #333;
+  border: none;
+  padding: 12px 24px; /* Padding for button size */
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 50px; /* Fully rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08); /* Subtle shadows */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover effect */
+.submit-button:hover {
+  background-color: #b6b6b6; /* Light gray background on hover */
+  color: #333; /* Keep dark gray text */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15), 0 2px 5px rgba(0, 0, 0, 0.1); /* Stronger shadow on hover */
+}
+
+/* Focus effect for accessibility */
+.submit-button:focus {
+  outline: none; /* Remove default focus outline */
+  box-shadow: 0 0 0 3px rgba(169, 169, 169, 0.4); /* Soft gray focus ring */
+}
+
+.error-container {
+  display: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #874e53;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+  border-radius: 5px;
+  margin: 20px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  grid-column: 1/-1;
+  grid-row: 2/3;
+  min-width: min-content;
+  max-width: 60%;
+  justify-self: center;
+}
+.error-container .close-error-button {
+  position: absolute;
+  top: 0px;
+  right: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #721c24;
+  font-size: 16px;
+}
+.error-container .close-error-button:hover {
+  color: #d63341;
+}
+
+.error-message {
+  font-size: 1.3em;
+}
+
+/*----------- Footer -----------*/
+footer {
+  grid-row: -1/-2;
+  grid-column: 1/4;
+  background-color: var(--very-dark-blue);
+  padding: 80px;
+  padding-left: 24px;
+  margin-top: 32px;
+}
+
+.footer-contents {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer-left {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+.footer-right {
+  max-width: 550px; /*Max width of footer base contents no more than 550 pixels*/
+}
+
+/*Footer contact us, privacy policy and terms of service links*/
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/*Contact us icons*/
+.footer-contact-us {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+/*Invert the color of the icons*/
+.footer-contact-us a svg {
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(162deg)
+    brightness(101%) contrast(104%);
+}
+
+.footer-contact-us a {
+  display: block;
+  width: 28px; /*Set width same as icon's*/
+  height: 28px; /*Set height same as icon's*/
+
+  transition: transform 0.2s ease 0s; /*Transition settings*/
+}
+
+/*Link hovered transition*/
+.footer-contact-us a:hover {
+  transform: translateY(-4px); /*When link hovered move it up 4 pixels*/
+}
+
+/*Privacy Policy and Terms of Service links*/
+.footer-privacy-terms a {
+  margin: 0 8px;
+}
+/*Underline on hover*/
+.footer-privacy-terms a:hover {
+  text-decoration: underline;
+}
+
+.footer-text {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.footer-text p {
+  font-size: small;
+}
+
+.footer-copyright {
+  margin-top: 24px;
+  font-size: small;
+}
+
+/* Sidebars area */
+.sidebar-area {
+  position: relative;
+  grid-row: 2/4;
+  grid-column: 1/2;
+}
+
+.sidebar-container {
+  position: sticky;
+  top: 5em;
+}
+
+/* For pages with only return button and not a whole sidebar*/
+.button-area {
+  position: fixed;
+  top: 5em;
+  z-index: 2;
+}
+/*------------------------------- Phone Media Query -------------------------------------------*/
+@media screen and (max-width: 750px) {
+  /* Global Rule Attributes */
+
+  main {
+    /* Make all main tag text smaller */
+    font-size: 70%;
+  }
+
+  /* Change navbar links to burger menu */
+  .navbar-link {
+    display: none;
+  }
+
+  .burger-menu {
+    display: block;
+  }
+
+  .return-link {
+    /* make text invisible and only show the return symbol */
+    font-size: 0%;
+    margin-left: 8px;
+    margin-top: 4px;
+  }
+  /*-------- INDEX/HERO --------*/
+  .hero-section {
+    text-align: center;
+  }
+
+  .hero-details {
+    justify-content: center;
+    align-items: center;
+    /*shorten the gap between headers and button in hero-section*/
+    gap: 48px;
+    margin-left: 3vw;
+    margin-right: 3vw;
+  }
+
+  .hero-image-wrapper {
+    /*remove hero image*/
+    display: none;
+  }
+
+  .about-info-box {
+    /*change flex direction in about-section info boxes*/
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    height: fit-content;
+  }
+  #about-info-box2 {
+    flex-direction: column-reverse;
+  }
+
+  .about-image-wrapper {
+    width: 75vw;
+  }
+
+  /*------ Courses ------*/
+
+  .courses-body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: [nav] 70px [main-header] min-content [main] min-content [footer] min-content;
+  }
+
+  .all-courses {
+    padding-top: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .courses-header {
+    margin-top: 8vh;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    font-size: 100%;
+    grid-row: 2/3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+  }
+
+  .course-container {
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 24px;
+  }
+
+  .courses-description {
+    font-size: 1.3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .courses-subheader h2 {
+    font-size: 1.5em;
+  }
+
+  .courses-description ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, min-content);
+    row-gap: 1em;
+  }
+
+  /*Specific grid positioning for courses page*/
+
+  /* first desc paragraph */
+  .courses-description li:nth-child(1) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    grid-row: 1/2;
+  }
+  /* second desc paragraph */
+  .courses-description li:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    grid-row: 2/3;
+  }
+  /* image of desc */
+  .courses-description li:nth-child(3) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    grid-row: 5/6;
+  }
+  /* third desc paragraph */
+  .courses-description li:nth-child(4) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    grid-row: 3/4;
+  }
+  /* fourth desc paragraph */
+  .courses-description li:nth-child(5) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    grid-row: 4/5;
+  }
+
+  .courses-image {
+    /*center the image in the container*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+  }
+
+  .courses-image img {
+    width: 90%;
+  }
+
+  .course-link {
+    /* Course Link is extra sized on the font compared to the previous texts so it is visibly a different part of the description */
+    padding: 0px;
+    font-size: 1.2em;
+    display: flex;
+    text-align: center;
+  }
+
+  /*---------------------- Specific Course Pages ----------------------*/
+
+  /* hide aside suggestion sidebar on phone screens */
+  .course-aside {
+    display: none;
+  }
+
+  /* position aside inside typical main area in pages where its used for the return to top button*/
+  aside {
+    grid-row: 4/5;
+    grid-column: 1;
+  }
+
+  .course-body {
+    font-size: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: [nav] 70px [content-table]min-content [main-header] min-content [main] min-content [footer] min-content;
+  }
+
+  /* Course Main */
+  .course-body main {
+    grid-column: 1;
+    grid-row: 4/5;
+  }
+  .course-header {
+    grid-column: 1;
+    grid-row: 3/4;
+    font-size: 0.9em;
+    margin-right: 8px;
+  }
+
+  .course-header h2 {
+    font-size: 2em;
+    margin-bottom: 8px;
+  }
+
+  .course-header h3 {
+    font-size: 1.8em;
+  }
+  .course-description-text {
+    font-size: 1.5em;
+    margin-bottom: 16px;
+    margin-left: 3vw;
+    margin-right: 2vw;
+  }
+
+  .subcourse-desc {
+    font-size: 1.2em;
+  }
+
+  .course-description ol {
+    margin-right: 2vw;
+    margin-left: 2vw;
+    font-size: 1.2em;
+  }
+  /* Course Sidebar */
+  .course-sidebar {
+    background-color: #16191c;
+    height: min-content;
+    border: var(--dark-grey) solid 1px;
+    box-shadow: 5px 3px rgba(18, 20, 23, 0.1);
+    z-index: 3;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    margin-top: 4px;
+    max-width: 95vw;
+  }
+
+  .course-sidebar ol {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    padding: 8px;
+  }
+
+  .course-sidebar li {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+  .course-sidebar li a {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 8px;
+    margin-right: 4px;
+    margin-left: 4px;
+    white-space: nowrap;
+    border: var(--dark-blue) solid 1px;
+    border-radius: 2%;
+    background-color: #161218;
+  }
+  .course-sidebar li strong {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    white-space: nowrap;
+    font-size: 120%;
+    margin-top: 8px;
+  }
+
+  .course-description {
+    margin-left: 3vw;
+    margin-right: 2vw;
+  }
+
+  /* Sidebars area */
+  .sidebar-area {
+    position: relative;
+    grid-column: 1;
+    grid-row: 2/3;
+  }
+
+  .sidebar-container {
+    z-index: 2;
+    position: sticky;
+    top: 5em;
+  }
+
+  /* For pages with return button only and not a whole sidebar*/
+  .button-area {
+    position: fixed;
+    top: 5em;
+    z-index: 2;
+  }
+
+  /*------------------- Subcourses --------------------*/
+
+  .subcourse-body {
+    font-size: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: [nav] 70px [content-table]min-content [main-header] min-content [main] min-content [footer] min-content;
+  }
+
+  /* Course Main */
+  .subcourse-body main {
+    grid-column: 1;
+    grid-row: 4/5;
+  }
+
+  .subcourse-header {
+    grid-column: 1;
+    grid-row: 3/4;
+    font-size: 0.6em;
+    margin-right: 8px;
+    margin-top: 2vh;
+    text-align: center;
+  }
+  .lecture-card {
+    margin-bottom: 5vh;
+  }
+
+  .lecture-card-image-wrapper img {
+    width: 90%;
+    margin-right: 5vw;
+    margin-left: 0px;
+    margin-bottom: 2vh;
+    margin-top: 2vh;
+  }
+
+  .book-card-image-wrapper img {
+    width: 50%;
+  }
+
+  .book-card {
+    margin-bottom: 5vh;
+  }
+  .subcourse-header h1 {
+    font-size: 270%;
+  }
+  .subcourse-header h2 {
+    margin-left: 2vw;
+    margin-right: 2vw;
+    margin-bottom: 3vh;
+    font-size: 300%;
+  }
+  .subcourse-lectures {
+    margin-top: 2vh;
+  }
+
+  /*------------------- Content Pages --------------------*/
+  .content-body {
+    font-size: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: [nav] 70px [content-table]min-content [main-header] min-content [main] min-content [footer] min-content;
+  }
+  /* Course Main */
+  .content-body main {
+    grid-column: 1;
+    grid-row: 4/5;
+    /* extra bottom space to 'park' the return to top button without hiding content */
+    padding-bottom: 10vh;
+  }
+
+  .content-header {
+    grid-column: 1;
+    grid-row: 3/4;
+    font-size: 0.6em;
+    margin-right: 8px;
+    margin-top: 2vh;
+    text-align: center;
+  }
+
+  .content-header h1 {
+    font-size: 2.4em;
+  }
+
+  .content-details {
+    margin-left: 2vw;
+    margin-right: 2vw;
+  }
+
+  .content-content {
+    font-size: 1.2em;
+  }
+  .content-header h2 {
+    font-size: 2.8em;
+  }
+
+  .return-to-top-btn {
+    z-index: 3;
+    left: 75vw;
+    margin: 0px;
+    height: 3.5rem;
+    width: 3.5rem;
+  }
+
+  .lecture-container {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 6px;
+    padding: 16px;
+  }
+
+  /*------------------ About Us Page --------------------*/
+  #about_us-body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: [nav] 70px [header] min-content [main] min-content [footer] min-content;
+  }
+
+  .about-us-header {
+    grid-row: 2/3;
+    font-size: 1em;
+    margin-top: 16px;
+    margin-bottom: 32px;
+    text-align: center;
+    padding-left: 0px;
+    display: block;
+  }
+
+  .about-members ul {
+    flex-direction: column;
+    row-gap: 48px;
+  }
+
+  .about-members {
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+    margin-top: 0px;
+  }
+
+  .about-members h2 {
+    font-size: 2.2em;
+    padding-left: 0px;
+  }
+
+  .about-contact-us h2 {
+    font-size: 2.2em;
+    padding-left: 0px;
+    text-align: center;
+  }
+
+  .about-contact-us ul {
+    font-size: 1.5em;
+    padding-left: 32px;
+    margin-right: 3vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 32px;
+  }
+
+  /*------------------- Log In Page ---------------------*/
+  #login-main {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 16px;
+  }
+
+  .login-container {
+    border-right: none;
+    border-bottom: 1px white solid;
+    padding: 24px;
+    width: 75%;
+    justify-content: flex-start;
+  }
+
+  /*------------------- Sign Up Page ---------------------*/
+
+  .signup-form {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, min-content);
+    row-gap: 30px;
+  }
+
+  .signup-account-personal-details-container {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+
+  .signup-account-info-container {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+
+  .signup-communications-options-container {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    margin: 0px;
+  }
+
+  .signup-education-work-experience-survey-container {
+    grid-column: 1/2;
+    grid-row: 4/5;
+  }
+
+  .submit-button-container {
+    grid-column: 1/2;
+    grid-row: 6/7;
+  }
+
+  .error-container {
+    grid-row: 5/6;
+  }
+
+  .fieldset-container {
+    align-items: flex-start;
+    margin: 0;
+  }
+
+  .fieldset {
+    align-items: flex-start;
+  }
+
+  .inline-fields {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  /*------------------- Footer ---------------------*/
+  footer {
+    padding: 32px;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer-contents {
+    width: fit-content;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .footer-privacy-terms {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+}
+
+/* ----------------------------------- Tablet Media Query -------------------------------------- */
+@media screen and (min-width: 751px) and (max-width: 1160px) {
+  main {
+    /* Make all main tag text smaller */
+    font-size: 80%;
+  }
+
+  /* Index Page */
+  .hero-image-wrapper {
+    /*remove hero image*/
+    display: none;
+  }
+
+  .hero-details {
+    justify-content: center;
+    align-items: center;
+    /*shorten the gap between headers and button in hero-section*/
+    gap: 64px;
+  }
+
+  .about-info-box {
+    /*change flex direction in about-section info boxes*/
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    height: fit-content;
+  }
+  #about-info-box2 {
+    flex-direction: column-reverse;
+  }
+
+  .about-image-wrapper {
+    width: 70%;
+  }
+
+  /* Footer */
+  footer {
+    padding: 32px;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer-contents {
+    width: fit-content;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  /* Courses Page */
+  .courses-header {
+    margin-top: 56px;
+  }
+
+  .course-container {
+    padding-bottom: 24px;
+  }
+
+  .courses-description {
+    gap: 16px;
+  }
+
+  .courses-description ul {
+    /* create as many columns as needed (auto-fit) */
+    /* the size of each column must be between 100px and 1fr (minmax) */
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    column-gap: 48px;
+    row-gap: 32px;
+  }
+  /* change the ordering of some li elements in the grid */
+  .courses-description ul li:nth-child(3) {
+    /*position image at the bottom row*/
+    grid-row: 3/4;
+    /*center the image between the 2 columns*/
+    grid-column: 1/3;
+    max-width: 100%;
+  }
+  /*shift the text accordingly*/
+  .courses-description ul li:nth-child(4) {
+    grid-column: 1/2;
+  }
+  .courses-description ul li:nth-child(5) {
+    grid-row: 2/3;
+    grid-column: 2/3;
+  }
+
+  /* Individual Course Pages */
+  .course-body {
+    /*change columns from 3 to 2*/
+    grid-template-columns: 1fr 4fr;
+  }
+
+  aside {
+    /*stop displaying aside*/
+    display: none;
+  }
+
+  /* Subcourse Pages */
+  .subcourse-body {
+    /*change columns from 3 to 2*/
+    grid-template-columns: 1fr 4fr;
+  }
+
+  /* Book - Lecture Pages */
+  .content-body {
+    /*change columns from 3 to 2*/
+    grid-template-columns: 1fr 4fr;
+  }
+
+  .signup-form {
+    grid-template-columns: [left] 1fr [right] 1fr;
+    grid-template-rows: [main-form] min-content [submit-button] min-content;
+  }
+
+  .signup-account-info-container {
+    grid-column: 2/3;
+  }
+
+  .signup-communications-options-container {
+    grid-column: 1/2;
+    margin-top: 540px;
+    margin-bottom: 70px;
+  }
+
+  .signup-education-work-experience-survey-container {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    margin-top: 310px;
+  }
+  .submit-button-container {
+    grid-row: 3/4;
+    grid-column: 1/3;
+  }
+
+  .fieldset-container {
+    margin-left: 1vw;
+    margin-right: 1vw;
+    align-items: flex-start;
+  }
+
+  .fieldset {
+    align-items: flex-start;
+  }
+
+  .inline-fields {
+    flex-direction: row;
+    gap: 8px;
+  }
+}
