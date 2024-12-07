@@ -17,17 +17,14 @@ window.addEventListener("DOMContentLoaded", () => {
 function validate() {
   // validate date of birth
   if (!dateOfBirth()) {
-    console.log("Birthday");
     return false;
   }
   // validate password strength
   if (!passwordStrength()) {
-    console.log("Password Strength");
     return false;
   }
   // validate password match
   if (!passwordMatch()) {
-    console.log("Password Match");
     return false;
   }
 
