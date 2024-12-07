@@ -96,7 +96,7 @@ strong {
 /*-------- CONTENT PAGES --------*/
 .return-link {
   /* Styling for the return link found in all pages except index */
-  margin-top: 1%;
+  margin-top: 3%;
   margin-left: 1%;
   margin-bottom: 2%;
   font-style: italic;
