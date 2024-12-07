@@ -1,9 +1,11 @@
 window.addEventListener("DOMContentLoaded", () => {
   // validate form
+  /*
   const submit = document.querySelector(".submit-button");
   submit.addEventListener("click", () => {
     validate();
   });
+  */
 
   //hide on screen error
   const closeError = document.querySelector(".close-error-button");
@@ -14,11 +16,22 @@ window.addEventListener("DOMContentLoaded", () => {
 
 function validate() {
   // validate date of birth
-  dateOfBirth();
-  // validate password match
-  passwordMatch();
+  if (!dateOfBirth()) {
+    console.log("Birthday");
+    return false;
+  }
   // validate password strength
-  passwordStrength();
+  if (!passwordStrength()) {
+    console.log("Password Strength");
+    return false;
+  }
+  // validate password match
+  if (!passwordMatch()) {
+    console.log("Password Match");
+    return false;
+  }
+
+  return true;
 }
 
 // show generic error box with given text as error message
@@ -40,9 +53,6 @@ function dateOfBirth() {
   const calendar = document.getElementById("s_birthday");
   const registeredDate = new Date(calendar.value);
   const currentDate = new Date();
-  //debugging
-  console.log("Input date: " + registeredDate);
-  console.log("Current date: " + currentDate);
 
   // get date differences
   let yearDiff = currentDate.getFullYear() - registeredDate.getFullYear();
@@ -57,7 +67,10 @@ function dateOfBirth() {
   // check if age is appropriate
   if (yearDiff < 13) {
     showError("Age must be 13 and over to use this platform");
+    return false;
   }
+
+  return true;
 }
 
 //validates both passwords matching
@@ -65,15 +78,15 @@ function passwordMatch() {
   //get both passwords from html inputs
   const password1 = document.getElementById("s_password").value;
   const password2 = document.getElementById("s_verify-password").value;
-  console.log("Password 1: " + password1);
-  console.log("Password 2: " + password2);
 
   //check if passwords match
   if (password1 === password2) {
     //matching
+    return true;
   } else {
     //not matching
     showError("Passwords do not match");
+    return false;
   }
 }
 
@@ -85,8 +98,10 @@ function passwordStrength() {
 
   if (pattern.test(password)) {
     //password is strong
+    return true;
   } else {
     //password is weak
     showError("Invalid password format");
+    return false;
   }
 }

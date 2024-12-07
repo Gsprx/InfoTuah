@@ -32,8 +32,8 @@ function auth(username, password) {
       const usersData = data.users;
       console.log(usersData);
 
+      let good = false;
       usersData.forEach((user) => {
-        let good = false;
         if (user.username == username && user.password == password) {
           // if user found and password matches login
           good = true;

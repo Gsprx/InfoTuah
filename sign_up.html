@@ -242,8 +242,9 @@
       <form
         class="signup-form"
         method="GET"
-        action="index.html"
         autocomplete="on"
+        action="log_in.html"
+        onsubmit="return validate();"
       >
         <!--Personal Details-->
         <div class="fieldset-container signup-personal-details-container">
@@ -550,7 +551,7 @@
         </div>
 
         <div class="error-container">
-          <button class="close-error-button">✖</button>
+          <button type="button" class="close-error-button">✖</button>
           <p class="error-message"></p>
         </div>
 
